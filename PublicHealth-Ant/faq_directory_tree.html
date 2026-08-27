@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WhatsApp FAQ Directory Tree</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            margin: 0;
+            padding: 40px;
+        }
+        .tree-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 24px;
+            background-color: #fafbfc;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 22px;
+            color: #24292e;
+            border-bottom: 1px solid #e1e4e8;
+            padding-bottom: 12px;
+        }
+        .root-node {
+            font-weight: bold;
+            font-size: 16px;
+            color: #0366d6;
+            margin-bottom: 8px;
+            cursor: default;
+        }
+        /* Classic Windows Directory CSS Connector Branch Lines */
+        .tree-container ul {
+            list-style-type: none;
+            padding-left: 24px;
+            margin: 4px 0;
+            position: relative;
+        }
+        .tree-container ul ul::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 8px;
+            width: 1px;
+            height: 100%;
+            border-left: 1px dotted #a0a0a0;
+        }
+        .tree-container li {
+            margin: 0;
+            padding: 5px 0 5px 15px;
+            position: relative;
+        }
+        .tree-container li::before {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: -8px;
+            width: 18px;
+            height: 1px;
+            border-top: 1px dotted #a0a0a0;
+        }
+        .tree-container li:last-child::before {
+            height: auto;
+        }
+        /* Interactive click actions style attributes */
+        .folder-label {
+            font-weight: 600;
+            color: #24292e;
+            cursor: pointer;
+            padding: 3px 6px;
+            border-radius: 4px;
+            display: inline-block;
+            user-select: none;
+        }
+        .folder-label:hover {
+            background-color: #eaecef;
+            color: #0366d6;
+        }
+        .leaf-label {
+            color: #444444;
+            padding: 2px 4px;
+            display: inline-block;
+            font-weight: 500;
+        }
+        /* Smooth collapsing branch settings toggled via Javascript functions */
+        .tree-folder > ul {
+            display: block; /* Expanded by default */
+        }
+        .tree-folder.collapsed > ul {
+            display: none; /* Collapses children rows smoothly */
+        }
+        .tree-folder.collapsed > .folder-label {
+            color: #6a737d;
+        }
+        /* Details callout summary plaque styling cards */
+        .leaf-details {
+            margin: 6px 0 12px 24px;
+            padding: 12px 16px;
+            background-color: #ffffff;
+            border-left: 3px solid #2ca02c;
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            font-size: 13px;
+        }
+        .leaf-details p {
+            margin: 4px 0;
+            line-height: 1.5;
+        }
+        .file-code {
+            background-color: #f6f8fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            color: #0366d6;
+        }
+    </style>
+    <script>
+        // Native vanilla JS engine to manage directory toggling transitions instantly
+        function toggleFolderNode(element) {
+            const parentLi = element.parentElement;
+            parentLi.classList.toggle('collapsed');
+
+            // Toggle the folder emoji representation dynamically
+            if (parentLi.classList.contains('collapsed')) {
+                element.innerHTML = element.innerHTML.replace('📁', '📁 (Click to expand...)');
+            } else {
+                element.innerHTML = element.innerHTML.replace('📁 (Click to expand...)', '📁');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="tree-container">
+        <h2>💻 System Directory: Community Health FAQ Content Matrix</h2>
+        <div class="root-node">📁 C:\Production_Environment\FAQ_Booklet_Root</div>
+        <ul>
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 🤰 Maternal Antepartum Care</span>
+                    <ul>
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 System Navigation</span>
+                    <ul>
+                <li class="tree-leaf">
+                    <span class="leaf-label">❓ How Can I View the Available Information Modules?</span>
+                    <div class="leaf-details">
+                        <p><strong>📊 Volume Density:</strong> 433 rows (2.40% traffic)</p>
+                        <p><strong>📝 Core Summary:</strong> Users are issuing a direct, non-specific command to the system to display its content modules, indicating a fundamental need for navigation or access to the main index of available health topics.</p>
+                        <p><strong>📁 Engineering Asset Location:</strong> <code class="file-code">📂 docs/WSA.2.1: Village Health, Sanitation, and Nutrition Day (VHSND) Organizing &amp; Execution</code></p>
+                    </div>
+                </li>
+                
+                <li class="tree-leaf">
+                    <span class="leaf-label">❓ How Do I Go Back to the Main Menu?</span>
+                    <div class="leaf-details">
+                        <p><strong>📊 Volume Density:</strong> 169 rows (0.94% traffic)</p>
+                        <p><strong>📝 Core Summary:</strong> Users are expressing a clear, non-clinical intent to exit their current conversational path and navigate back to the primary main menu of the service.</p>
+                        <p><strong>📁 Engineering Asset Location:</strong> <code class="file-code">📂 docs/SYS.NAV.1.1_MainMenuRequest</code></p>
+                    </div>
+                </li>
+                
+                <li class="tree-leaf">
+                    <span class="leaf-label">❓ How Can I Go Back To The Main Menu?</span>
+                    <div class="leaf-details">
+                        <p><strong>📊 Volume Density:</strong> 80 rows (0.44% traffic)</p>
+                        <p><strong>📝 Core Summary:</strong> Users are issuing a non-clinical system command to exit their current conversational path and return to the main navigation menu.</p>
+                        <p><strong>📁 Engineering Asset Location:</strong> <code class="file-code">📂 docs/WSA.2.1</code></p>
+                    </div>
+                </li>
+                </ul>
+                </li>
+                
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 Gamified Learning</span>
+                    <ul>
+                <li class="tree-leaf">
+                    <span class="leaf-label">❓ How Do I Play The Health Quiz?</span>
+                    <div class="leaf-details">
+                        <p><strong>📊 Volume Density:</strong> 269 rows (1.49% traffic)</p>
+                        <p><strong>📝 Core Summary:</strong> Users are expressing a direct and singular intent to engage with an interactive quiz feature on the platform, likely for educational or gamified learning purposes related to maternal health.</p>
+                        <p><strong>📁 Engineering Asset Location:</strong> <code class="file-code">📂 docs/WSA.2.2</code></p>
+                    </div>
+                </li>
+                </ul>
+                </li>
+                
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 Asha Worker Operations</span>
+                    <ul>
+                <li class="tree-leaf">
+                    <span class="leaf-label">❓ What Are the Core Roles, Responsibilities, and Associated Financial Incentives for an ASHA Worker?</span>
+                    <div class="leaf-details">
+                        <p><strong>📊 Volume Density:</strong> 65 rows (0.36% traffic)</p>
+                        <p><strong>📝 Core Summary:</strong> ASHA workers are seeking comprehensive information about their official roles, specific job-related tasks such as conducting home visits, proper documentation procedures, and a detailed breakdown of the financial incentives they are entitled to for their services.</p>
+                        <p><strong>📁 Engineering Asset Location:</strong> <code class="file-code">📂 docs/PNC.1: Home-Based Newborn Care (HBNC) &amp; HBYC Framework</code></p>
+                    </div>
+                </li>
+                </ul>
+                </li>
+                
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 Icds Operations</span>
+                    <ul>
+                <li class="tree-leaf">
+                    <span class="leaf-label">❓ How Do I Correctly Perform Data Entry and Troubleshoot Common Issues in the Poshan Tracker Application?</span>
+                    <div class="leaf-details">
+                        <p><strong>📊 Volume Density:</strong> 64 rows (0.35% traffic)</p>
+                        <p><strong>📝 Core Summary:</strong> Anganwadi workers are seeking procedural guidance on how to use the Poshan Tracker application for essential data entry tasks, including beneficiary registration, nutrition scheme logging, and troubleshooting common technical errors like face capture.</p>
+                        <p><strong>📁 Engineering Asset Location:</strong> <code class="file-code">📂 docs/MNT.1.1</code></p>
+                    </div>
+                </li>
+                </ul>
+                </li>
+                
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 High-Risk Pregnancy</span>
+                    <ul>
+                <li class="tree-leaf">
+                    <span class="leaf-label">❓ What Are The Primary Causes And Symptoms Used To Identify A High-Risk Pregnancy?</span>
+                    <div class="leaf-details">
+                        <p><strong>📊 Volume Density:</strong> 57 rows (0.32% traffic)</p>
+                        <p><strong>📝 Core Summary:</strong> Users are asking for a comprehensive explanation of what a high-risk pregnancy (HRP) is, seeking to identify its specific causes, symptoms, and the criteria used for its classification and management.</p>
+                        <p><strong>📁 Engineering Asset Location:</strong> <code class="file-code">📂 docs/HRP.1: Risk Factor Stratification</code></p>
+                    </div>
+                </li>
+                </ul>
+                </li>
+                </ul>
+                </li>
+                
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 👶 Pediatric &amp; Infant Wellness</span>
+                    <ul>
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 Child Malnutrition Management</span>
+                    <ul>
+                <li class="tree-leaf">
+                    <span class="leaf-label">❓ What Are the Official Guidelines for Identifying, Differentiating, and Managing SAM and MAM Children?</span>
+                    <div class="leaf-details">
+                        <p><strong>📊 Volume Density:</strong> 79 rows (0.44% traffic)</p>
+                        <p><strong>📝 Core Summary:</strong> Community health workers are seeking clear operational guidance on how to identify, differentiate, manage, and document cases of Severe Acute Malnutrition (SAM) and Moderate Acute Malnutrition (MAM) in children.</p>
+                        <p><strong>📁 Engineering Asset Location:</strong> <code class="file-code">📂 docs/MNT.1.1</code></p>
+                    </div>
+                </li>
+                </ul>
+                </li>
+                
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 Childhood Immunization Schedule</span>
+                    <ul>
+                <li class="tree-leaf">
+                    <span class="leaf-label">❓ What Is the Complete Vaccination Schedule for a Child From Birth to Five Years of Age?</span>
+                    <div class="leaf-details">
+                        <p><strong>📊 Volume Density:</strong> 71 rows (0.39% traffic)</p>
+                        <p><strong>📝 Core Summary:</strong> Mothers are seeking comprehensive information about the national childhood immunization schedule, including which specific vaccines are administered at different ages, the total number of doses required, and which diseases these vaccines prevent.</p>
+                        <p><strong>📁 Engineering Asset Location:</strong> <code class="file-code">📂 docs/PNC.1: Home-Based Newborn Care (HBNC) &amp; HBYC Framework</code></p>
+                    </div>
+                </li>
+                </ul>
+                </li>
+                </ul>
+                </li>
+                
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 🏥 Labor &amp; Delivery Preparation</span>
+                    <ul>
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 Low Birth Weight Care</span>
+                    <ul>
+                <li class="tree-leaf">
+                    <span class="leaf-label">❓ What Are The Essential Care Practices For A Low Birth Weight Newborn?</span>
+                    <div class="leaf-details">
+                        <p><strong>📊 Volume Density:</strong> 66 rows (0.37% traffic)</p>
+                        <p><strong>📝 Core Summary:</strong> Community health workers are seeking comprehensive guidance on the identification, management, and home-based care protocols for low birth weight newborns to improve their survival and growth outcomes.</p>
+                        <p><strong>📁 Engineering Asset Location:</strong> <code class="file-code">📂 docs/PNC.2.2: Thermal Management (Delayed Bathing &gt; 72 hours, Kangaroo Mother Care for LBW)</code></p>
+                    </div>
+                </li>
+                </ul>
+                </li>
+                </ul>
+                </li>
+                </ul>
+    </div>
+</body>
+</html>

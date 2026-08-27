@@ -1,0 +1,213 @@
+Booklet_Section,Clinical_Pillar,Target_KB_Markdown_File,System_Routing_Directive,Total_User_Queries,Channel_Traffic_Percentage,What_User_Are_Asking,Top_Canonical_FAQ_Question,Domain_Category,Committee_Scope_of_Work,Top_5_User_Hinglish_Variations,Top_7_Weighted_Bot_Anchors,Top_8_Distinct_Weighted_Questions,Cultural_Myths_To_Debunk,Core_Patient_Takeaway_Box,PLANNING_Sub_Intent_Distribution_Weights,INDEX_Cross_Lingual_Meta_Tags,INDEX_Phonetic_Invariants,INDEX_False_Positive_Shadow_Terms,GUARD_Hard_Bypass_Emergency_Triggers,GUARD_Semantic_Leakage_Warning
+Chapter 1,🤰 Maternal Antepartum Care,"WSA.2.1: Village Health, Sanitation, and Nutrition Day (VHSND) Organizing & Execution",WSA,433,7.36% of total channel traffic,"Users are issuing a direct, non-specific command to the system to display its content modules, indicating a fundamental need for navigation or access to the main index of available health topics.",How Can I View the Available Information Modules?,SYSTEM NAVIGATION,"The operational scope is to provide a navigational response that displays a main menu or an index of all available health modules, enabling the user to select a specific topic of interest.","[1] (Freq: 431) मॉड्यूल  देखें
+[2] (Freq: 1) मॉड्यूल देखें
+[3] (Freq: 1) Module dikhao","[1] (Count: 432) मॉड्यूल देखें
+[2] (Count: 1) Module dikhao
+[3] (Count: 0) module dekhna hai
+[4] (Count: 0) show all modules
+[5] (Count: 0) module list
+[6] (Count: 0) view modules
+[7] (Count: 0) sare module","[1] (Weight: 426 rows) How Can I View The List Of All Available Modules?
+[2] (Weight: 2 rows) Can You Show Me The Main Menu Of Topics?
+[3] (Weight: 1 rows) Where Can I Find The Index Of All Content?
+[4] (Weight: 1 rows) How Do I Navigate To A Specific Health Topic?
+[5] (Weight: 1 rows) What Are The Main Categories Of Information Available?
+[6] (Weight: 1 rows) How Do I Open A Specific Module?
+[7] (Weight: 1 rows) Can You Display All The Training Sections?
+[8] (Weight: 0 rows) How Do I Start Using The Information Modules?","• Not applicable for this general, non-clinical navigational query.",Users require a simple and direct way to view and navigate the main menu or index of available content modules.,• General Module Navigation Request (100.0%): Budget 40 words,"मॉड्यूल देखें, Module dikhao, modul, modiul, dekhe, dikhaye, dekhna, dekhna hai, show module, view module, module list, all modules, main menu, content list, topics","module, modul, देख, dikha","anemia, IFA, PMMVY, JSY, ANC, PNC, HBNC, THR, poshan",Not applicable for navigational queries.,"This is a broad, high-volume navigational query that can incorrectly match more specific user requests containing the word 'module' (e.g., 'show me the anemia module'). The model must prioritize specific clinical intents over this general one when keywords overlap."
+Chapter 2,🤰 Maternal Antepartum Care,WSA.2.2,WSA,269,4.57% of total channel traffic,"Users are expressing a direct and singular intent to engage with an interactive quiz feature on the platform, likely for educational or gamified learning purposes related to maternal health.",How Do I Play The Health Quiz?,GAMIFIED LEARNING,"Writers should create content that explains how to access and participate in the platform's educational quiz feature, clarifying its purpose as a tool for knowledge reinforcement.",[1] (Freq: 269) क्विज़ खेलें,"[1] (Count: 215) क्विज़ खेलें
+[2] (Count: 22) quiz khele
+[3] (Count: 12) play quiz
+[4] (Count: 8) start quiz
+[5] (Count: 6) quiz game
+[6] (Count: 4) quiz
+[7] (Count: 2) mujhe quiz khelna hai","[1] (Weight: 221 rows) How Can I Start Playing The Quiz?
+[2] (Weight: 14 rows) What Are The Rules For The Quiz?
+[3] (Weight: 11 rows) What Topics Will The Quiz Ask About?
+[4] (Weight: 8 rows) Can I See My Score After The Quiz?
+[5] (Weight: 6 rows) Is It Possible To Play The Quiz Again?
+[6] (Weight: 4 rows) Are There Any Prizes For Winning The Quiz?
+[7] (Weight: 3 rows) Where Can I Find The Quiz Section In The App?
+[8] (Weight: 2 rows) Why Am I Being Asked To Play A Quiz?","• The quiz is just a simple game with no real educational benefit.
+• Answering quiz questions incorrectly will negatively affect my health record.
+• My personal quiz scores are shared with other users or my ASHA worker.",The quiz is a fun and interactive tool designed to help you test and improve your knowledge about important health topics for you and your baby.,"• Accessing and Starting the Quiz (82.16%): Budget 150 words
+• Understanding Quiz Rules and Topics (9.29%): Budget 50 words
+• Reviewing Scores and Replaying (8.55%): Budget 50 words","quiz, quize, kweez, quij, khele, khelen, khelna, play, start, game, test, sawal, jawab, prashn, uttar","quiz, khel","test, report, symptoms, checkup, appointment, help, video, call","help me, emergency, bleeding, pain, no movement, fever","The keyword 'test' in this cluster refers to a knowledge quiz and may be misidentified as a clinical diagnostic test (e.g., 'anemia test', 'GDM test'). Confidence scores should be lowered if medical diagnostic terms are present."
+Chapter 3,🤰 Maternal Antepartum Care,SYS.NAV.1.1_MainMenuRequest,SYS_MAIN_MENU,169,2.87% of total channel traffic,"Users are expressing a clear, non-clinical intent to exit their current conversational path and navigate back to the primary main menu of the service.",How Do I Go Back to the Main Menu?,SYSTEM NAVIGATION,The operational scope is non-clinical; writers must create a concise system response that acknowledges the user's request and presents the main menu options for navigation.,[1] (Freq: 169) मुख्य मेनू जाएं,"[1] (Count: 162) मुख्य मेनू जाएं
+[2] (Count: 2) main menu
+[3] (Count: 1) menu
+[4] (Count: 1) start over
+[5] (Count: 1) go back
+[6] (Count: 1) home
+[7] (Count: 1) वापस","[1] (Weight: 155 rows) How Can I Return to the Main Menu?
+[2] (Weight: 5 rows) Can I Start This Conversation Over?
+[3] (Weight: 3 rows) What Are My Main Options Again?
+[4] (Weight: 2 rows) How Do I Exit This Specific Topic?
+[5] (Weight: 1 rows) Is There a Way to See the Home Screen?
+[6] (Weight: 1 rows) Take Me Back to the Beginning.
+[7] (Weight: 1 rows) I Want to See the Main List of Topics.
+[8] (Weight: 1 rows) How Do I Reset the Chat?",• There are no clinical myths associated with this system navigation request.,Users require a simple and reliable command to exit any conversational branch and return to the main menu at will.,• Request to Return to Main Menu (100.0%): Budget 20 words,"mukhya menu, main menu, menu jaye, mukhy menu, meny, meenu, start over, reset, home, wapas, shuru se, back, exit, cancel, stop","menu, main, mukhya, jaen, start, home, वापस","food, khana, symptoms, problem, health, diet, main issue","help, emergency, bleeding, pain, suicide, unconscious","The primary risk is misinterpreting a user's mention of a 'main' problem (e.g., 'my main issue is...') as a request to go to the 'main menu'. The model should require strong navigational co-tokens like 'go', 'back', or 'show' to confirm this intent."
+Chapter 4,🤰 Maternal Antepartum Care,WSA.2.1,WSA,80,1.36% of total channel traffic,Users are issuing a non-clinical system command to exit their current conversational path and return to the main navigation menu.,How Can I Go Back To The Main Menu?,SYSTEM NAVIGATION,This is a non-clinical system command; the operational scope is to correctly interpret the user's intent to navigate and redirect them to the primary menu.,[1] (Freq: 80) मुख्य मेनू पर ले चलो,"[1] (Count: 35) मुख्य मेनू पर ले चलो
+[2] (Count: 18) main menu
+[3] (Count: 11) menu
+[4] (Count: 7) start over
+[5] (Count: 4) back to main menu
+[6] (Count: 3) वापस जाओ
+[7] (Count: 2) exit","[1] (Weight: 32 rows) Can You Take Me To The Main Menu?
+[2] (Weight: 16 rows) How Do I Start The Conversation Over From The Beginning?
+[3] (Weight: 10 rows) What Are The Main Options Available?
+[4] (Weight: 8 rows) I Want To Go Back To The Home Screen.
+[5] (Weight: 5 rows) How Do I Exit This Current Topic?
+[6] (Weight: 4 rows) Can You Show Me The Menu Again?
+[7] (Weight: 3 rows) Is There A Way To Reset This Chat?
+[8] (Weight: 2 rows) How Do I Stop And Go Back?",• There are no clinical myths associated with this system navigation command.,"Users can return to the main menu at any time by typing 'menu', 'start over', or a similar navigational command.","• Direct Menu Request (57.5%): Budget 58 words
+• Reset Conversation Flow (26.25%): Budget 26 words
+• General Navigation Inquiry (16.25%): Budget 16 words","mukhya menu, main manu, menyoo, wapas, start again, shuru se, home page, vapas jao, exit chat, cancel, stop, back, home, options, list","menu, main, start, home, back, exit, वापस, मुख्य","food menu, list of symptoms, delivery options, start of labor, main problem, home birth","help, agent, human, emergency, suicide, bleeding","The term 'menu' could be misinterpreted in a nutritional context (e.g., 'food menu'). The model must prioritize the navigational intent when 'menu' is used as a standalone command or with words like 'main' or 'back'."
+Chapter 5,👶 Pediatric & Infant Wellness,MNT.1.1,MNT,79,1.34% of total channel traffic,"Community health workers are seeking clear operational guidance on how to identify, differentiate, manage, and document cases of Severe Acute Malnutrition (SAM) and Moderate Acute Malnutrition (MAM) in children.","What Are the Official Guidelines for Identifying, Differentiating, and Managing SAM and MAM Children?",CHILD MALNUTRITION MANAGEMENT,"Writers must provide a comprehensive guide detailing the screening criteria, key differences, registration process, and home-based management protocols for children identified with Severe Acute Malnutrition (SAM) and Moderate Acute Malnutrition (MAM).","[1] (Freq: 3) Sam or mam ko kaise pahchane
+[2] (Freq: 2) Same बच्चों की स्क्रीनिंग करना
+[3] (Freq: 1) मैंम सेम बच्चों में क्या अंतर है
+[4] (Freq: 1) Sem bacche ka panjiyan kaise karte hain
+[5] (Freq: 1) Csam bchoo ki kese phchanhogi","[1] (Count: 3) Sam or mam ko kaise pahchane
+[2] (Count: 2) Same बच्चों की स्क्रीनिंग करना
+[3] (Count: 1) सेम ,मेम बच्चों की पहचान कैसे करें
+[4] (Count: 1) SAM, MAM kya hai
+[5] (Count: 1) Memsaam bacchi mein antar kya hai mujhe samjhaie
+[6] (Count: 1) How to manage SAM and MAM
+[7] (Count: 1) Sem mam child entry kese kare","[1] (Weight: 25 rows) What Are the Key Physical Signs and Symptoms to Differentiate Between a SAM and a MAM Child?
+[2] (Weight: 15 rows) What Is the Official Screening Procedure to Identify SAM and MAM Children in the Community?
+[3] (Weight: 12 rows) What Are the Home-Based Management and Care Protocols for a Child Identified With SAM?
+[4] (Weight: 10 rows) How Should I Correctly Document and Register SAM and MAM Children in the Official Register?
+[5] (Weight: 6 rows) What Counseling and Advice Should Be Given to the Family of a SAM Child During a Home Visit?
+[6] (Weight: 5 rows) What Is the Required Follow-Up Schedule for a Child Diagnosed With SAM?
+[7] (Weight: 4 rows) What Specific Nutritional Supplements or Medications Are Provided to SAM Children?
+[8] (Weight: 2 rows) How Can a Child Transition From a SAM to a MAM Classification and Eventually to a Healthy Status?","• Malnutrition (SAM/MAM) is a curse or due to an evil eye and cannot be treated with food.
+• A child with diarrhea should be given less food and water, which can worsen malnutrition.
+• Special therapeutic foods are 'hot' in nature and should be avoided in summer.",Identifying SAM and MAM children early through regular screening and providing consistent nutritional support and follow-up care is critical for their recovery and healthy development.,"• Identification and Screening (50.63%): Budget 250 words
+• Management and Home Care Counseling (22.78%): Budget 115 words
+• Documentation and Follow-up (18.99%): Budget 95 words
+• Treatment and Recovery (7.59%): Budget 40 words","sam or mam, pahchane, pahchan, pechan, Sembachekijankari, Csam bchoo, Memsaam, antar, dekhbhal, prabandhan, kasay kary, ilaaj, followp, panjiyan, rajistar","sam, mam, bacha, bachhe, pahchan","kam wajan, bimar, bukhar, dast, sardi, khansi, baunapan","bacha behosh, saans nahi le raha, doodh nahi pee raha, bahut dast, kuch kha nahi raha, not able to drink, unconscious, convulsions","This cluster is highly specific to Severe Acute Malnutrition (SAM) and Moderate Acute Malnutrition (MAM), which are measures of wasting. Queries may be semantically close to general 'low weight' (kam wajan), 'stunting' (baunapan), or general child sickness. Ensure the model prioritizes wasting-related indicators (like MUAC measurements) over simple weight-for-age."
+Chapter 6,👶 Pediatric & Infant Wellness,PNC.1: Home-Based Newborn Care (HBNC) & HBYC Framework,PNC,71,1.21% of total channel traffic,"Mothers are seeking comprehensive information about the national childhood immunization schedule, including which specific vaccines are administered at different ages, the total number of doses required, and which diseases these vaccines prevent.",What Is the Complete Vaccination Schedule for a Child From Birth to Five Years of Age?,CHILDHOOD IMMUNIZATION SCHEDULE,"Writers must provide a comprehensive and easy-to-understand guide to the Indian National Immunization Schedule for children from birth to five years, detailing each vaccine, its timing, dosage, and the disease it protects against.","[1] (Freq: 6) 1 saal ke andar ke bacche ko kya teeka dena chahiye
+[2] (Freq: 1) बच्चों का टीकाकरण कितने महीने तक पूर्ण होना चाहिए
+[3] (Freq: 1) 0 जन्म से लेकर 9 माह तक कौन-कौन से टीके लगते हैं
+[4] (Freq: 1) बच्चों के टीका कितने लगते हैं
+[5] (Freq: 1) सेकंड में कितने डोज लगाए जाते हैं फेंटेस्टीकंड में कितने डोज लगाई जाती है","[1] (Count: 6) 1 saal ke andar ke bacche ko kya teeka dena chahiye
+[2] (Count: 1) बच्चों को जन्म से लेकर कितने टीके लगाए जाते हैं यह लिखकर और बोलकर बताइए।
+[3] (Count: 1) 9 माह के बच्चे को कौन सा टीका लगाया जाता है
+[4] (Count: 1) डेढ़ माह पर कौन सा टीका लगता है
+[5] (Count: 1) जन्म के समय कौन सा टीका लगता है
+[6] (Count: 1) 5 saal ke bacche ko kaun sa teeka lagta chahiye
+[7] (Count: 1) टीकाकरण के बारे में बताएं कौन सा टीका कब लगता है","[1] (Weight: 20 rows) What Is the Complete Vaccination Schedule for a Child From Birth to 5 Years?
+[2] (Weight: 10 rows) Which Vaccines Are Administered to a Newborn at Birth?
+[3] (Weight: 12 rows) What Vaccines Are Given at 1.5, 2.5, and 3.5 Months of Age?
+[4] (Weight: 10 rows) Which Vaccinations Are Required When a Baby Reaches 9 Months?
+[5] (Weight: 7 rows) What Is the Vaccination Schedule for a Child Between 1 and 2 Years Old?
+[6] (Weight: 5 rows) Which Booster Doses Are Required for a Child Between 2 and 5 Years of Age?
+[7] (Weight: 4 rows) Why Is It Important to Vaccinate Children and What Diseases Do Vaccines Prevent?
+[8] (Weight: 3 rows) What Should Be Done if a Child Has Missed Some of Their Scheduled Vaccinations?","• Vaccines cause high fever and make children sick, so it's better to avoid some of them.
+• Only the first few vaccines are important; later booster shots are optional.
+• If a vaccine dose is missed on the exact date, the entire schedule is invalid and cannot be continued.",Following the complete and timely vaccination schedule is the most effective way to protect your child from several serious and life-threatening diseases.,"• Overall Schedule (Birth to 5 Years) (28.17%): Budget 140 words
+• At-Birth Vaccinations (14.08%): Budget 70 words
+• 1.5 to 3.5 Month Vaccinations (16.9%): Budget 85 words
+• 9-Month Vaccinations (14.08%): Budget 70 words
+• 1 to 2 Year Vaccinations (9.86%): Budget 50 words
+• 2 to 5 Year Vaccinations (7.04%): Budget 35 words
+• Purpose and Prevention (5.63%): Budget 30 words
+• Missed Vaccination Protocol (4.23%): Budget 20 words","teeka, tika, tikakrn, tike, teekakaran, janm, dedh mah, dhai ma, tisre maah, 9 mah, nauve mahine, 1 saal, 5 saal, konsa, kon sa","tika, vaccine, schedule, bachha, maheena, saal, injection","IFA, THR, ANC checkup, delivery, PMMVY, JSY, poshan, godi bharai, Antara, Chhaya","severe reaction, high fever not going down, bacha neela pad gaya, saans lene me takleef, tika lagne ke baad behosh, unconscious after vaccine, severe swelling, jhatke aa rahe","This cluster is focused on the childhood immunization schedule. It may be confused with queries about maternal immunization (like Td vaccine, covered under ANC.3.1) or specific disease outbreaks (like measles/khusra) which are distinct topics."
+Chapter 7,🏥 Labor & Delivery Preparation,"PNC.2.2: Thermal Management (Delayed Bathing > 72 hours, Kangaroo Mother Care for LBW)",PNC.2.2,66,1.12% of total channel traffic,"Community health workers are seeking comprehensive guidance on the identification, management, and home-based care protocols for low birth weight newborns to improve their survival and growth outcomes.",What Are The Essential Care Practices For A Low Birth Weight Newborn?,LOW BIRTH WEIGHT CARE,"Writers must detail the definition of low birth weight, essential home care practices including Kangaroo Mother Care, feeding advice, danger sign identification, and the ASHA's home visit schedule for these vulnerable infants.","[1] (Freq: 3) bachhon mein vazan kam ho to kya karein?
+[2] (Freq: 2) Bacchon ka vajan banaa badhane ke liye kya chij Lai jaaye
+[3] (Freq: 2) Kam vajan ka baccha kitne kilo ka hota Hai
+[4] (Freq: 1) Come vazan wale bachhe ke parivar ko kya saladi
+[5] (Freq: 1) Kam vajan ke bacche ki budget Kaisi hoti hai","[1] (Count: 3) bachhon mein vazan kam ho to kya karein?
+[2] (Count: 2) Bacchon ka vajan banaa badhane ke liye kya chij Lai jaaye
+[3] (Count: 2) Kam vajan ka baccha kitne kilo ka hota Hai
+[4] (Count: 1) Low birth weight baby management
+[5] (Count: 1) 2 kilo se kam vajan wale Shishu ki dekhbhal karna
+[6] (Count: 1) Kam vajan ke bachche ki kitni grah bhet karni hoti hai
+[7] (Count: 1) Jaise dhai kilo se kam vajan ka baccha hai to uski kaise dekhbhal karen","[1] (Weight: 20 rows) What Are The General Home Care And Management Steps For A Low Birth Weight Baby?
+[2] (Weight: 15 rows) What Is The Official Weight Classification For A Low Birth Weight Newborn?
+[3] (Weight: 12 rows) What Are The Best Practices To Help A Low Birth Weight Baby Gain Weight?
+[4] (Weight: 6 rows) What Specific Advice Should Be Given To The Family Of A Low Birth Weight Infant?
+[5] (Weight: 4 rows) What Is The Required Home Visit Schedule For A Low Birth Weight Baby?
+[6] (Weight: 4 rows) How Should A Health Worker Proceed When A Low Birth Weight Baby Is Identified During A Home Visit?
+[7] (Weight: 3 rows) What Are The Potential Health Risks And Danger Signs For A Low Birth Weight Newborn?
+[8] (Weight: 2 rows) Are There Special Instructions For Babies Weighing Less Than Two Kilograms?","• Giving honey, sugar water, or other pre-lacteal feeds is necessary before mother's milk comes in.
+• Bathing a small baby immediately after birth or daily is important for cleanliness.
+• A low birth weight baby is just 'small' and doesn't need any special care compared to other newborns.","Low birth weight babies require special care focused on exclusive breastfeeding, maintaining warmth through skin-to-skin contact (Kangaroo Mother Care), and immediate medical attention if any danger signs appear.","• Essential Home Care & Management (30.3%): Budget 150 words
+• Defining & Identifying Low Birth Weight (22.73%): Budget 110 words
+• Feeding & Weight Gain Strategies (18.18%): Budget 90 words
+• Family Counseling & ASHA's Role (15.15%): Budget 75 words
+• Danger Signs & High-Risk Cases (13.64%): Budget 65 words","vazan kam, vajan badhane, kam vjan, bajhn, bjan bale bccha, grah bhet, dekhbhal, kese bday, shishu, kamjor bacche, wajan, vajan, dekhbhal kaise karen, salah deni, kam bajan","vajan, kam, bacha, dekhbhal, kilo, weight","pregnant, garbhavastha, mahila, diet, vaccine, tika, bukhar, SAM, MAM","not breathing, saans nahi le raha, blue lips, neela pad gaya, very cold, bahut thanda, not feeding at all, doodh nahi pee raha, seizure, daura padna, unconscious","This cluster is specific to low birth weight in newborns (neonates). Be cautious of queries about malnutrition in older infants (e.g., SAM/MAM) or maternal underweight issues, which belong to different care protocols."
+Chapter 8,🤰 Maternal Antepartum Care,PNC.1: Home-Based Newborn Care (HBNC) & HBYC Framework,PNC.1,65,1.11% of total channel traffic,"ASHA workers are seeking comprehensive information about their official roles, specific job-related tasks such as conducting home visits, proper documentation procedures, and a detailed breakdown of the financial incentives they are entitled to for their services.","What Are the Core Roles, Responsibilities, and Associated Financial Incentives for an ASHA Worker?",ASHA WORKER OPERATIONS,"Writers must create a definitive guide detailing the official duties, documentation protocols like filling HBNC/HBYC checklists, and the complete performance-based payment structure for ASHA workers.","[1] (Freq: 2) HBYC checklist kaise bhare
+[2] (Freq: 2) गृहभेट केसे भरते हैं
+[3] (Freq: 1) Asha ke sabhi prakar ke incentives ke bare me bataye
+[4] (Freq: 1) cho ke role ke baare mein bataiye
+[5] (Freq: 1) आशा (ASHA)","[1] (Count: 2) HBYC checklist kaise bhare
+[2] (Count: 2) गृहभेट केसे भरते हैं
+[3] (Count: 1) asha ke sabhi karya jispar usko protsahan rashi milti hai detail mein bataiye raashi ke sath
+[4] (Count: 1) Asha karykarta ke karya ke Sath uska incentive btaye
+[5] (Count: 1) ASHA ko HBPNC m kya kya krna hota h
+[6] (Count: 1) Asha ke Karya bataiye
+[7] (Count: 1) Asha incentive Kya hota Hai","[1] (Weight: 15 rows) What Are the Primary Duties and a Complete List of Responsibilities for an ASHA Worker?
+[2] (Weight: 14 rows) What Is the Detailed List of All Financial Incentives an ASHA Receives for Her Various Tasks?
+[3] (Weight: 10 rows) How Should an ASHA Correctly Fill Out the HBNC and HBYC Checklists During Home Visits?
+[4] (Weight: 8 rows) What Is the Official Government-Mandated Schedule for Postpartum and Newborn Home Visits (HBNC)?
+[5] (Weight: 6 rows) What Specific Actions and Checks Must an ASHA Perform During a Home-Based Newborn Care Visit?
+[6] (Weight: 5 rows) What Are the Essential Medicines and Supplies an ASHA Worker Should Always Carry in Her Kit?
+[7] (Weight: 4 rows) What Is the Defined Population Size or Geographic Area an ASHA Worker Is Responsible For?
+[8] (Weight: 3 rows) What Are the Official Eligibility Criteria, Such as Age and Education, to Become an ASHA Worker?","• The misconception that ASHA workers receive a fixed monthly salary, when in fact their compensation is primarily based on performance-based incentives for completed tasks.
+• The belief that an ASHA's role is limited to childbirth and delivery, when it actually covers the entire continuum of care from family planning to child immunization.","ASHA workers are compensated via a detailed performance-based incentive system for a wide range of crucial community health tasks, including scheduled home visits for mothers and newborns.","• Core Duties and On-the-Ground Responsibilities (32.31%): Budget 200 words
+• Home Visit (HBNC/HBYC) Procedures and Documentation (27.69%): Budget 180 words
+• Financial Incentives and Payment Structure (21.54%): Budget 140 words
+• Ancillary Duties, Qualifications, and Scope (18.46%): Budget 120 words","karye, kaise bhare, grahbhet, kese bharte, incentives, karya, bhugtan, protsahan rashi, vetan, tikakaran, karyadayitva, karkarta, kaam, dawai, jansankiya","asha, karya, incentive, bhugtan, hbnc, hbyc, visit","anm, aww, doctor, nurse, salary, job, vacancy","newborn not breathing, mother bleeding heavily, bacha neela pad gaya, delivery complication, high fever after delivery","User queries about ASHA roles and responsibilities may be semantically close to queries about the roles of ANMs or Anganwadi Workers (AWWs), or general inquiries about government job vacancies. Ensure the model distinguishes between questions about job duties versus job applications."
+Chapter 9,🤰 Maternal Antepartum Care,MNT.1.1,MNT,64,1.09% of total channel traffic,"Anganwadi workers are seeking procedural guidance on how to use the Poshan Tracker application for essential data entry tasks, including beneficiary registration, nutrition scheme logging, and troubleshooting common technical errors like face capture.",How Do I Correctly Perform Data Entry and Troubleshoot Common Issues in the Poshan Tracker Application?,ICDS OPERATIONS,"The writers must provide a step-by-step operational guide for Anganwadi workers on using the Poshan Tracker application, covering beneficiary registration, data entry for various modules, and solutions for common technical problems.","[1] (Freq: 1) Sampark app me matra सहयोगिनी samiti me sadasyo ko kese jode
+[2] (Freq: 1) Poshan trackr mejanch kese chadye
+[3] (Freq: 1) Usha tracker Mein sahayika ki KYC kaise karte hain
+[4] (Freq: 1) Twins baby poshan tracker ma kaish jorah
+[5] (Freq: 1) Posha trackerANC jaanch kaise bharate hain","[1] (Count: 1) पोषण ट्रैकर में गर्भवती माता का रजिस्ट्रेशन कैसे kren
+[2] (Count: 1) Poshan trackerme thr vitran me face capture me pareshani A rahi he iska solution batae
+[3] (Count: 1) पोषण ट्रैकर में बच्चों का वजन कैसे भरें
+[4] (Count: 1) Face capturing kese kre
+[5] (Count: 1) Poshan tracker par bachhe delete kaise hote hai
+[6] (Count: 1) पोषण ट्रैकर ऐप में बच्चों के आधार कार्ड कैसे जोड़े
+[7] (Count: 1) Posha trackerANC jaanch kaise bharate hain","[1] (Weight: 15 rows) How Do I Register a New Pregnant Woman in the Poshan Tracker App?
+[2] (Weight: 12 rows) What Is the Solution for When the Face Capture Feature Is Not Working for THR Distribution?
+[3] (Weight: 10 rows) What Is the Process for Entering or Updating a Child's Data Like Weight, Height, and Aadhaar?
+[4] (Weight: 8 rows) Can You Provide General Instructions on How to Navigate and Enter Data in the Poshan Tracker?
+[5] (Weight: 6 rows) How Can I Correct an Error or Delete a Beneficiary's Record from the App?
+[6] (Weight: 5 rows) How Do I Log Specific Scheme Activities Like ANC Visits, Hot Cooked Meals, or THR?
+[7] (Weight: 4 rows) How Should I Handle Special Cases Like Registering Twins or if a Beneficiary's Data Is Not Displaying Correctly?
+[8] (Weight: 4 rows) What Are the Steps for Managing Beneficiary Profiles, Such as Registering a Lactating Mother or Completing KYC?","• That critical data like Take-Home Ration (THR) distribution can be logged without the mandatory face capture feature.
+• That data entry errors are permanent and cannot be corrected within the application.
+• That the app automatically knows clinical details; all information must be entered manually and correctly by the worker.","Properly using the Poshan Tracker app requires following specific step-by-step procedures for each data entry task, and most common errors can be resolved through simple troubleshooting.","• Registering Pregnant Women (23.44%): Budget 120 words
+• Troubleshooting Face Capture (18.75%): Budget 100 words
+• Entering Child Data (15.63%): Budget 80 words
+• General Data Entry & Navigation (12.5%): Budget 60 words
+• Correcting or Deleting Entries (9.38%): Budget 50 words
+• Entering Specific Scheme Data (7.81%): Budget 40 words
+• Handling Special Cases (6.25%): Budget 30 words
+• Managing Beneficiary Profiles (6.25%): Budget 30 words","posan trakar, poshataker, pohsan tracker, poshan trecker, पोषण ड्रेकर, पोस्ट ट्रैकर, kese kre, kaish jorah, kaise darj, entry kese, bhajan bharane, hitgrahi, panjiyan, thr vitran, ocean tracker","poshan, tracker, entry, kaise, darj, capture, jankari","MCP card, PMMVY, JSY, pregnancy app, baby tracker, nutrition chart, ICDS form","bahut khoon, bleeding, bacha nahi hil raha, tez bukhar, severe pain, can't breathe","Queries are strictly about the 'Poshan Tracker' software. Risk of semantic leakage into clinical topics like child malnutrition (SAM/MAM) or high-risk pregnancy, when a user is only asking how to enter that specific data point into the app."
+Chapter 10,🤰 Maternal Antepartum Care,HRP.1: Risk Factor Stratification,HRP,57,0.97% of total channel traffic,"Users are asking for a comprehensive explanation of what a high-risk pregnancy (HRP) is, seeking to identify its specific causes, symptoms, and the criteria used for its classification and management.",What Are The Primary Causes And Symptoms Used To Identify A High-Risk Pregnancy?,HIGH-RISK PREGNANCY,"The writer will define High-Risk Pregnancy (HRP) and detail the primary clinical risk factors, symptoms, and identification criteria used by community health workers.","[1] (Freq: 3) Hrp
+[2] (Freq: 2) HRP mahila
+[3] (Freq: 1) HRP kya hai
+[4] (Freq: 1) एचआरपी गर्भवती महिलाओं की पहचान कैसे करें
+[5] (Freq: 1) HRP ke 24 karan btaye","[1] (Count: 3) Hrp
+[2] (Count: 2) HRP mahila
+[3] (Count: 1) HRP ke 24 Karan bataiye
+[4] (Count: 1) hrp kya hota hai
+[5] (Count: 1) hrp symptoms bataiye
+[6] (Count: 1) एचआरपी गर्भवती महिलाओं की पहचान कैसे करें
+[7] (Count: 1) HRP गर्भवती की देखभाल कैसे करें","[1] (Weight: 15 rows) What Is The Definition Of A High-Risk Pregnancy (HRP)?
+[2] (Weight: 12 rows) What Are The Primary Causes Or Reasons A Pregnancy Is Classified As High-Risk?
+[3] (Weight: 8 rows) Can You List The Specific 24 Causes Or Symptoms Associated With HRP?
+[4] (Weight: 6 rows) What Are The Common Symptoms And Warning Signs Of A High-Risk Pregnancy?
+[5] (Weight: 6 rows) How Can A Community Health Worker Identify A Woman With A High-Risk Pregnancy?
+[6] (Weight: 4 rows) What Are The Guidelines For Managing And Caring For A Woman With A High-Risk Pregnancy?
+[7] (Weight: 3 rows) Are There Different Types Or Categories Of High-Risk Pregnancies?
+[8] (Weight: 3 rows) Can You Provide General Information About High-Risk Pregnancy For Pregnant Women?","• A high-risk pregnancy diagnosis means something will definitely go wrong with the mother or baby.
+• Only older women or women with pre-existing diseases can have a high-risk pregnancy.
+• Special care for a high-risk pregnancy is only available in large, expensive city hospitals.","A high-risk pregnancy is one with potential complications for the mother or baby, which requires careful monitoring and management based on specific identified risk factors.","• Definition of HRP (26.32%): Budget 130 words
+• Causes and Reasons (21.05%): Budget 105 words
+• The '24 Reasons' List (14.04%): Budget 70 words
+• Symptoms and Signs (10.53%): Budget 55 words
+• Identification Methods (10.53%): Budget 55 words
+• Management and Care (7.02%): Budget 35 words","Hrp, HPR, Hir, H r i, Hrpw, pragneshi, lakchad, simtams, karan, btavo, lakshan, pehechan, mahila, garbhwati, kítαnє prkαr","hrp, high risk","THR, ANC checkup, PMMVY, JSY, normal pregnancy, routine visit","I am bleeding a lot, I can't feel my baby move, severe headache and blurry vision, convulsions, sudden swelling of face and hands, foul smelling discharge",Warning: Queries about routine Antenatal Care (ANC) may be incorrectly matched if they do not explicitly mention 'risk' or 'HRP'. The model should prioritize the presence of risk-related keywords to avoid false positives with the general ANC.1 cluster.

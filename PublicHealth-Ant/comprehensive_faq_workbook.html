@@ -1,0 +1,414 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
+        body { font-family: sans-serif; background: #fafafa; padding: 15px; color: #333; font-size: 13px; }
+        .wrapper { max-width: 1100px; margin: 0 auto; background: #fff; border: 1px solid #ddd; padding: 25px; border-radius: 4px; }
+        .summary-dashboard { display: flex; gap: 15px; margin-bottom: 15px; text-align: center; }
+        .metric-card { flex: 1; background: #f8fafc; border: 1px solid #cbd5e1; padding: 10px; border-radius: 4px; }
+        .metric-card h3 { margin: 0; font-size: 24px; color: #0284c7; }
+        .metric-card p { margin: 2px 0 0 0; font-size: 11px; color: #475569; }
+        .filter-panel { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 4px; padding: 14px; margin-bottom: 15px; }
+        .checkbox-row { display: flex; flex-wrap: wrap; gap: 12px 20px; margin-bottom: 10px; font-weight: bold; font-size: 12px; }
+        .vol-hdr { background: #edf2f7; font-weight: bold; padding: 10px; margin-top: 10px; cursor: pointer; border-radius: 4px; color: #1e3a8a; border-left: 4px solid #1e3a8a; }
+        .ch-hdr { background: #fffbeb; font-weight: bold; padding: 7px; margin: 6px 0 0 15px; cursor: pointer; border-radius: 4px; color: #92400e; border-left: 4px solid #d97706; }
+        .faq-card { margin: 10px 0 10px 25px; padding: 15px; border-left: 3px solid #94a3b8; background: #f8fafc; }
+        .info-row { background: #fff; padding: 8px 12px; border: 1px solid #e2e8f0; border-radius: 4px; margin-bottom: 5px; }
+        .split-row { display: flex; gap: 15px; margin-top: 10px; }
+        .split-col { flex: 1; background: #fff; border: 1px solid #e2e8f0; border-radius: 4px; padding: 10px; }
+        .sub-list { padding-left: 0; list-style: none; margin: 0; }
+        .sub-list li { display: flex; margin-bottom: 5px; }
+        .list-text { flex: 1; line-height: 1.4; }
+        .badge { font-weight: bold; padding: 1px 5px; border-radius: 8px; font-size: 10px; margin-right: 6px; display: inline-block; flex-shrink: 0; }
+        .badge.weight { background: #dcfce7; color: #15803d; }
+        .badge.freq { background: #e0f2fe; color: #0369a1; }
+        .hide { display: none !important; }
+        h4, h5 { margin: 0 0 4px 0; color: #0f172a; }
+        h5 { font-size: 11px; border-bottom: 1px solid #e2e8f0; padding-bottom: 3px; color: #475569; text-transform: uppercase; }
+        code { background: #f1f5f9; padding: 1px 3px; border-radius: 3px; color: #b45309; }
+        .btn { background: #0284c7; color: white; border: none; padding: 5px 10px; font-size: 12px; font-weight: bold; border-radius: 4px; cursor: pointer; margin-right: 5px; }
+    </style><script>
+        function toggleCol(cb, cls) { document.querySelectorAll('.'+cls).forEach(e => cb.checked ? e.classList.remove('hide') : e.classList.add('hide')); }
+        function toggleVols(exp) { document.querySelectorAll('.c-body').forEach(b => exp ? b.classList.remove('hide') : b.classList.add('hide')); }
+        let lExp = true;
+        function toggleLists() { lExp = !lExp; document.querySelectorAll('.toggleable-details').forEach(r => lExp ? r.classList.remove('hide') : r.classList.add('hide')); document.getElementById('lstBtn').innerText = lExp ? "Collapse Lists ▴" : "Expand Lists ▾"; }
+    </script></head><body><div class="wrapper">
+        <h2>UNIVERSAL BOOKLET DATA MANAGER (ALL CSV COLUMNS CAPTURED)</h2>
+        <div class="summary-dashboard">
+            <div class="metric-card"><h3>10</h3><p>Total FAQ Chapters</p></div>
+            <div class="metric-card"><h3>21</h3><p>High-Impact Questions (&gt;10 rows)</p></div>
+            <div class="metric-card"><h3>7.50%</h3><p>WhatsApp Traffic Covered</p></div>
+        </div>
+        <div class="filter-panel">
+            <div class="checkbox-row">
+                <label><input type="checkbox" checked onclick="toggleCol(this,'meta-0')"> Booklet Section</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-1')"> Target Kb Markdown File</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-2')"> System Routing Directive</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-3')"> Total User Queries</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-4')"> Channel Traffic Percentage</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-5')"> What User Are Asking</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-6')"> Committee Scope Of Work</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-7')"> Top 7 Weighted Bot Anchors</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-8')"> Cultural Myths To Debunk</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-9')"> Core Patient Takeaway Box</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-10')"> Planning Sub Intent Distribution Weights</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-11')"> Index Cross Lingual Meta Tags</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-12')"> Index Phonetic Invariants</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-13')"> Index False Positive Shadow Terms</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-14')"> Guard Hard Bypass Emergency Triggers</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-15')"> Guard Semantic Leakage Warning</label>
+
+                <label><input type="checkbox" checked onclick="toggleCol(this,'class-sub')"> Top Questions List</label>
+                <label><input type="checkbox" checked onclick="toggleCol(this,'class-hin')"> Hinglish Variations List</label>
+            </div>
+            <div style="margin-top:12px;">
+                <button class="btn" onclick="toggleVols(true)">Expand Volumes</button>
+                <button class="btn" style="background:#475569;" onclick="toggleVols(false)">Collapse Volumes</button>
+                <button id="lstBtn" class="btn" onclick="toggleLists()">Collapse Lists ▴</button>
+            </div>
+        </div>
+        <div class="block-node"><div class="vol-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">📘 Volume: 🤰 Maternal Antepartum Care ▾</div><div class="c-body hide"><div class="block-node"><div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: System Navigation ▾</div><div class="c-body hide">
+                <div class="faq-card">
+                    <h4>📖 How Can I View the Available Information Modules?</h4>
+                    <div class="info-row meta-0"><strong>💡 Booklet Section:</strong> Chapter 1</div>
+<div class="info-row meta-1"><strong>💡 Target Kb Markdown File:</strong> WSA.2.1: Village Health, Sanitation, and Nutrition Day (VHSND) Organizing &amp; Execution</div>
+<div class="info-row meta-2"><strong>💡 System Routing Directive:</strong> WSA</div>
+<div class="info-row meta-3"><strong>💡 Total User Queries:</strong> 433</div>
+<div class="info-row meta-4"><strong>💡 Channel Traffic Percentage:</strong> 7.36% of total channel traffic</div>
+<div class="info-row meta-5"><strong>💡 What User Are Asking:</strong> Users are issuing a direct, non-specific command to the system to display its content modules, indicating a fundamental need for navigation or access to the main index of available health topics.</div>
+<div class="info-row meta-6"><strong>💡 Committee Scope Of Work:</strong> The operational scope is to provide a navigational response that displays a main menu or an index of all available health modules, enabling the user to select a specific topic of interest.</div>
+<div class="info-row meta-7"><strong>💡 Top 7 Weighted Bot Anchors:</strong> [1] (Count: 432) मॉड्यूल देखें
+[2] (Count: 1) Module dikhao
+[3] (Count: 0) module dekhna hai
+[4] (Count: 0) show all modules
+[5] (Count: 0) module list
+[6] (Count: 0) view modules
+[7] (Count: 0) sare module</div>
+<div class="info-row meta-8"><strong>💡 Cultural Myths To Debunk:</strong> • Not applicable for this general, non-clinical navigational query.</div>
+<div class="info-row meta-9"><strong>💡 Core Patient Takeaway Box:</strong> Users require a simple and direct way to view and navigate the main menu or index of available content modules.</div>
+<div class="info-row meta-10"><strong>💡 Planning Sub Intent Distribution Weights:</strong> • General Module Navigation Request (100.0%): Budget 40 words</div>
+<div class="info-row meta-11"><strong>💡 Index Cross Lingual Meta Tags:</strong> मॉड्यूल देखें, Module dikhao, modul, modiul, dekhe, dikhaye, dekhna, dekhna hai, show module, view module, module list, all modules, main menu, content list, topics</div>
+<div class="info-row meta-12"><strong>💡 Index Phonetic Invariants:</strong> module, modul, देख, dikha</div>
+<div class="info-row meta-13"><strong>💡 Index False Positive Shadow Terms:</strong> anemia, IFA, PMMVY, JSY, ANC, PNC, HBNC, THR, poshan</div>
+<div class="info-row meta-14"><strong>💡 Guard Hard Bypass Emergency Triggers:</strong> Not applicable for navigational queries.</div>
+<div class="info-row meta-15"><strong>💡 Guard Semantic Leakage Warning:</strong> This is a broad, high-volume navigational query that can incorrectly match more specific user requests containing the word &#x27;module&#x27; (e.g., &#x27;show me the anemia module&#x27;). The model must prioritize specific clinical intents over this general one when keywords overlap.</div>
+
+                    <div class="split-row toggleable-details">
+                        <div class="split-col class-sub"><h5>📍 Top Questions</h5><ul class="sub-list"><li><span class="badge weight">426 rows</span><span class="list-text">How Can I View The List Of All Available Modules?</span></li><li><span class="badge weight">2 rows</span><span class="list-text">Can You Show Me The Main Menu Of Topics?</span></li><li><span class="badge weight">1 rows</span><span class="list-text">Where Can I Find The Index Of All Content?</span></li><li><span class="badge weight">1 rows</span><span class="list-text">How Do I Navigate To A Specific Health Topic?</span></li><li><span class="badge weight">1 rows</span><span class="list-text">What Are The Main Categories Of Information Available?</span></li><li><span class="badge weight">1 rows</span><span class="list-text">How Do I Open A Specific Module?</span></li><li><span class="badge weight">1 rows</span><span class="list-text">Can You Display All The Training Sections?</span></li><li><span class="badge weight">0 rows</span><span class="list-text">How Do I Start Using The Information Modules?</span></li></ul></div>
+                        <div class="split-col class-hin"><h5>🗣️ Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">431 freq</span><span class="list-text"><i>मॉड्यूल  देखें</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>मॉड्यूल देखें</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Module dikhao</i></span></li></ul></div>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h4>📖 How Do I Go Back to the Main Menu?</h4>
+                    <div class="info-row meta-0"><strong>💡 Booklet Section:</strong> Chapter 3</div>
+<div class="info-row meta-1"><strong>💡 Target Kb Markdown File:</strong> SYS.NAV.1.1_MainMenuRequest</div>
+<div class="info-row meta-2"><strong>💡 System Routing Directive:</strong> SYS_MAIN_MENU</div>
+<div class="info-row meta-3"><strong>💡 Total User Queries:</strong> 169</div>
+<div class="info-row meta-4"><strong>💡 Channel Traffic Percentage:</strong> 2.87% of total channel traffic</div>
+<div class="info-row meta-5"><strong>💡 What User Are Asking:</strong> Users are expressing a clear, non-clinical intent to exit their current conversational path and navigate back to the primary main menu of the service.</div>
+<div class="info-row meta-6"><strong>💡 Committee Scope Of Work:</strong> The operational scope is non-clinical; writers must create a concise system response that acknowledges the user&#x27;s request and presents the main menu options for navigation.</div>
+<div class="info-row meta-7"><strong>💡 Top 7 Weighted Bot Anchors:</strong> [1] (Count: 162) मुख्य मेनू जाएं
+[2] (Count: 2) main menu
+[3] (Count: 1) menu
+[4] (Count: 1) start over
+[5] (Count: 1) go back
+[6] (Count: 1) home
+[7] (Count: 1) वापस</div>
+<div class="info-row meta-8"><strong>💡 Cultural Myths To Debunk:</strong> • There are no clinical myths associated with this system navigation request.</div>
+<div class="info-row meta-9"><strong>💡 Core Patient Takeaway Box:</strong> Users require a simple and reliable command to exit any conversational branch and return to the main menu at will.</div>
+<div class="info-row meta-10"><strong>💡 Planning Sub Intent Distribution Weights:</strong> • Request to Return to Main Menu (100.0%): Budget 20 words</div>
+<div class="info-row meta-11"><strong>💡 Index Cross Lingual Meta Tags:</strong> mukhya menu, main menu, menu jaye, mukhy menu, meny, meenu, start over, reset, home, wapas, shuru se, back, exit, cancel, stop</div>
+<div class="info-row meta-12"><strong>💡 Index Phonetic Invariants:</strong> menu, main, mukhya, jaen, start, home, वापस</div>
+<div class="info-row meta-13"><strong>💡 Index False Positive Shadow Terms:</strong> food, khana, symptoms, problem, health, diet, main issue</div>
+<div class="info-row meta-14"><strong>💡 Guard Hard Bypass Emergency Triggers:</strong> help, emergency, bleeding, pain, suicide, unconscious</div>
+<div class="info-row meta-15"><strong>💡 Guard Semantic Leakage Warning:</strong> The primary risk is misinterpreting a user&#x27;s mention of a &#x27;main&#x27; problem (e.g., &#x27;my main issue is...&#x27;) as a request to go to the &#x27;main menu&#x27;. The model should require strong navigational co-tokens like &#x27;go&#x27;, &#x27;back&#x27;, or &#x27;show&#x27; to confirm this intent.</div>
+
+                    <div class="split-row toggleable-details">
+                        <div class="split-col class-sub"><h5>📍 Top Questions</h5><ul class="sub-list"><li><span class="badge weight">155 rows</span><span class="list-text">How Can I Return to the Main Menu?</span></li><li><span class="badge weight">5 rows</span><span class="list-text">Can I Start This Conversation Over?</span></li><li><span class="badge weight">3 rows</span><span class="list-text">What Are My Main Options Again?</span></li><li><span class="badge weight">2 rows</span><span class="list-text">How Do I Exit This Specific Topic?</span></li><li><span class="badge weight">1 rows</span><span class="list-text">Is There a Way to See the Home Screen?</span></li><li><span class="badge weight">1 rows</span><span class="list-text">Take Me Back to the Beginning.</span></li><li><span class="badge weight">1 rows</span><span class="list-text">I Want to See the Main List of Topics.</span></li><li><span class="badge weight">1 rows</span><span class="list-text">How Do I Reset the Chat?</span></li></ul></div>
+                        <div class="split-col class-hin"><h5>🗣️ Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">169 freq</span><span class="list-text"><i>मुख्य मेनू जाएं</i></span></li></ul></div>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h4>📖 How Can I Go Back To The Main Menu?</h4>
+                    <div class="info-row meta-0"><strong>💡 Booklet Section:</strong> Chapter 4</div>
+<div class="info-row meta-1"><strong>💡 Target Kb Markdown File:</strong> WSA.2.1</div>
+<div class="info-row meta-2"><strong>💡 System Routing Directive:</strong> WSA</div>
+<div class="info-row meta-3"><strong>💡 Total User Queries:</strong> 80</div>
+<div class="info-row meta-4"><strong>💡 Channel Traffic Percentage:</strong> 1.36% of total channel traffic</div>
+<div class="info-row meta-5"><strong>💡 What User Are Asking:</strong> Users are issuing a non-clinical system command to exit their current conversational path and return to the main navigation menu.</div>
+<div class="info-row meta-6"><strong>💡 Committee Scope Of Work:</strong> This is a non-clinical system command; the operational scope is to correctly interpret the user&#x27;s intent to navigate and redirect them to the primary menu.</div>
+<div class="info-row meta-7"><strong>💡 Top 7 Weighted Bot Anchors:</strong> [1] (Count: 35) मुख्य मेनू पर ले चलो
+[2] (Count: 18) main menu
+[3] (Count: 11) menu
+[4] (Count: 7) start over
+[5] (Count: 4) back to main menu
+[6] (Count: 3) वापस जाओ
+[7] (Count: 2) exit</div>
+<div class="info-row meta-8"><strong>💡 Cultural Myths To Debunk:</strong> • There are no clinical myths associated with this system navigation command.</div>
+<div class="info-row meta-9"><strong>💡 Core Patient Takeaway Box:</strong> Users can return to the main menu at any time by typing &#x27;menu&#x27;, &#x27;start over&#x27;, or a similar navigational command.</div>
+<div class="info-row meta-10"><strong>💡 Planning Sub Intent Distribution Weights:</strong> • Direct Menu Request (57.5%): Budget 58 words
+• Reset Conversation Flow (26.25%): Budget 26 words
+• General Navigation Inquiry (16.25%): Budget 16 words</div>
+<div class="info-row meta-11"><strong>💡 Index Cross Lingual Meta Tags:</strong> mukhya menu, main manu, menyoo, wapas, start again, shuru se, home page, vapas jao, exit chat, cancel, stop, back, home, options, list</div>
+<div class="info-row meta-12"><strong>💡 Index Phonetic Invariants:</strong> menu, main, start, home, back, exit, वापस, मुख्य</div>
+<div class="info-row meta-13"><strong>💡 Index False Positive Shadow Terms:</strong> food menu, list of symptoms, delivery options, start of labor, main problem, home birth</div>
+<div class="info-row meta-14"><strong>💡 Guard Hard Bypass Emergency Triggers:</strong> help, agent, human, emergency, suicide, bleeding</div>
+<div class="info-row meta-15"><strong>💡 Guard Semantic Leakage Warning:</strong> The term &#x27;menu&#x27; could be misinterpreted in a nutritional context (e.g., &#x27;food menu&#x27;). The model must prioritize the navigational intent when &#x27;menu&#x27; is used as a standalone command or with words like &#x27;main&#x27; or &#x27;back&#x27;.</div>
+
+                    <div class="split-row toggleable-details">
+                        <div class="split-col class-sub"><h5>📍 Top Questions</h5><ul class="sub-list"><li><span class="badge weight">32 rows</span><span class="list-text">Can You Take Me To The Main Menu?</span></li><li><span class="badge weight">16 rows</span><span class="list-text">How Do I Start The Conversation Over From The Beginning?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">What Are The Main Options Available?</span></li><li><span class="badge weight">8 rows</span><span class="list-text">I Want To Go Back To The Home Screen.</span></li><li><span class="badge weight">5 rows</span><span class="list-text">How Do I Exit This Current Topic?</span></li><li><span class="badge weight">4 rows</span><span class="list-text">Can You Show Me The Menu Again?</span></li><li><span class="badge weight">3 rows</span><span class="list-text">Is There A Way To Reset This Chat?</span></li><li><span class="badge weight">2 rows</span><span class="list-text">How Do I Stop And Go Back?</span></li></ul></div>
+                        <div class="split-col class-hin"><h5>🗣️ Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">80 freq</span><span class="list-text"><i>मुख्य मेनू पर ले चलो</i></span></li></ul></div>
+                    </div>
+                </div></div></div><div class="block-node"><div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Gamified Learning ▾</div><div class="c-body hide">
+                <div class="faq-card">
+                    <h4>📖 How Do I Play The Health Quiz?</h4>
+                    <div class="info-row meta-0"><strong>💡 Booklet Section:</strong> Chapter 2</div>
+<div class="info-row meta-1"><strong>💡 Target Kb Markdown File:</strong> WSA.2.2</div>
+<div class="info-row meta-2"><strong>💡 System Routing Directive:</strong> WSA</div>
+<div class="info-row meta-3"><strong>💡 Total User Queries:</strong> 269</div>
+<div class="info-row meta-4"><strong>💡 Channel Traffic Percentage:</strong> 4.57% of total channel traffic</div>
+<div class="info-row meta-5"><strong>💡 What User Are Asking:</strong> Users are expressing a direct and singular intent to engage with an interactive quiz feature on the platform, likely for educational or gamified learning purposes related to maternal health.</div>
+<div class="info-row meta-6"><strong>💡 Committee Scope Of Work:</strong> Writers should create content that explains how to access and participate in the platform&#x27;s educational quiz feature, clarifying its purpose as a tool for knowledge reinforcement.</div>
+<div class="info-row meta-7"><strong>💡 Top 7 Weighted Bot Anchors:</strong> [1] (Count: 215) क्विज़ खेलें
+[2] (Count: 22) quiz khele
+[3] (Count: 12) play quiz
+[4] (Count: 8) start quiz
+[5] (Count: 6) quiz game
+[6] (Count: 4) quiz
+[7] (Count: 2) mujhe quiz khelna hai</div>
+<div class="info-row meta-8"><strong>💡 Cultural Myths To Debunk:</strong> • The quiz is just a simple game with no real educational benefit.
+• Answering quiz questions incorrectly will negatively affect my health record.
+• My personal quiz scores are shared with other users or my ASHA worker.</div>
+<div class="info-row meta-9"><strong>💡 Core Patient Takeaway Box:</strong> The quiz is a fun and interactive tool designed to help you test and improve your knowledge about important health topics for you and your baby.</div>
+<div class="info-row meta-10"><strong>💡 Planning Sub Intent Distribution Weights:</strong> • Accessing and Starting the Quiz (82.16%): Budget 150 words
+• Understanding Quiz Rules and Topics (9.29%): Budget 50 words
+• Reviewing Scores and Replaying (8.55%): Budget 50 words</div>
+<div class="info-row meta-11"><strong>💡 Index Cross Lingual Meta Tags:</strong> quiz, quize, kweez, quij, khele, khelen, khelna, play, start, game, test, sawal, jawab, prashn, uttar</div>
+<div class="info-row meta-12"><strong>💡 Index Phonetic Invariants:</strong> quiz, khel</div>
+<div class="info-row meta-13"><strong>💡 Index False Positive Shadow Terms:</strong> test, report, symptoms, checkup, appointment, help, video, call</div>
+<div class="info-row meta-14"><strong>💡 Guard Hard Bypass Emergency Triggers:</strong> help me, emergency, bleeding, pain, no movement, fever</div>
+<div class="info-row meta-15"><strong>💡 Guard Semantic Leakage Warning:</strong> The keyword &#x27;test&#x27; in this cluster refers to a knowledge quiz and may be misidentified as a clinical diagnostic test (e.g., &#x27;anemia test&#x27;, &#x27;GDM test&#x27;). Confidence scores should be lowered if medical diagnostic terms are present.</div>
+
+                    <div class="split-row toggleable-details">
+                        <div class="split-col class-sub"><h5>📍 Top Questions</h5><ul class="sub-list"><li><span class="badge weight">221 rows</span><span class="list-text">How Can I Start Playing The Quiz?</span></li><li><span class="badge weight">14 rows</span><span class="list-text">What Are The Rules For The Quiz?</span></li><li><span class="badge weight">11 rows</span><span class="list-text">What Topics Will The Quiz Ask About?</span></li><li><span class="badge weight">8 rows</span><span class="list-text">Can I See My Score After The Quiz?</span></li><li><span class="badge weight">6 rows</span><span class="list-text">Is It Possible To Play The Quiz Again?</span></li><li><span class="badge weight">4 rows</span><span class="list-text">Are There Any Prizes For Winning The Quiz?</span></li><li><span class="badge weight">3 rows</span><span class="list-text">Where Can I Find The Quiz Section In The App?</span></li><li><span class="badge weight">2 rows</span><span class="list-text">Why Am I Being Asked To Play A Quiz?</span></li></ul></div>
+                        <div class="split-col class-hin"><h5>🗣️ Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">269 freq</span><span class="list-text"><i>क्विज़ खेलें</i></span></li></ul></div>
+                    </div>
+                </div></div></div><div class="block-node"><div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Asha Worker Operations ▾</div><div class="c-body hide">
+                <div class="faq-card">
+                    <h4>📖 What Are the Core Roles, Responsibilities, and Associated Financial Incentives for an ASHA Worker?</h4>
+                    <div class="info-row meta-0"><strong>💡 Booklet Section:</strong> Chapter 8</div>
+<div class="info-row meta-1"><strong>💡 Target Kb Markdown File:</strong> PNC.1: Home-Based Newborn Care (HBNC) &amp; HBYC Framework</div>
+<div class="info-row meta-2"><strong>💡 System Routing Directive:</strong> PNC.1</div>
+<div class="info-row meta-3"><strong>💡 Total User Queries:</strong> 65</div>
+<div class="info-row meta-4"><strong>💡 Channel Traffic Percentage:</strong> 1.11% of total channel traffic</div>
+<div class="info-row meta-5"><strong>💡 What User Are Asking:</strong> ASHA workers are seeking comprehensive information about their official roles, specific job-related tasks such as conducting home visits, proper documentation procedures, and a detailed breakdown of the financial incentives they are entitled to for their services.</div>
+<div class="info-row meta-6"><strong>💡 Committee Scope Of Work:</strong> Writers must create a definitive guide detailing the official duties, documentation protocols like filling HBNC/HBYC checklists, and the complete performance-based payment structure for ASHA workers.</div>
+<div class="info-row meta-7"><strong>💡 Top 7 Weighted Bot Anchors:</strong> [1] (Count: 2) HBYC checklist kaise bhare
+[2] (Count: 2) गृहभेट केसे भरते हैं
+[3] (Count: 1) asha ke sabhi karya jispar usko protsahan rashi milti hai detail mein bataiye raashi ke sath
+[4] (Count: 1) Asha karykarta ke karya ke Sath uska incentive btaye
+[5] (Count: 1) ASHA ko HBPNC m kya kya krna hota h
+[6] (Count: 1) Asha ke Karya bataiye
+[7] (Count: 1) Asha incentive Kya hota Hai</div>
+<div class="info-row meta-8"><strong>💡 Cultural Myths To Debunk:</strong> • The misconception that ASHA workers receive a fixed monthly salary, when in fact their compensation is primarily based on performance-based incentives for completed tasks.
+• The belief that an ASHA&#x27;s role is limited to childbirth and delivery, when it actually covers the entire continuum of care from family planning to child immunization.</div>
+<div class="info-row meta-9"><strong>💡 Core Patient Takeaway Box:</strong> ASHA workers are compensated via a detailed performance-based incentive system for a wide range of crucial community health tasks, including scheduled home visits for mothers and newborns.</div>
+<div class="info-row meta-10"><strong>💡 Planning Sub Intent Distribution Weights:</strong> • Core Duties and On-the-Ground Responsibilities (32.31%): Budget 200 words
+• Home Visit (HBNC/HBYC) Procedures and Documentation (27.69%): Budget 180 words
+• Financial Incentives and Payment Structure (21.54%): Budget 140 words
+• Ancillary Duties, Qualifications, and Scope (18.46%): Budget 120 words</div>
+<div class="info-row meta-11"><strong>💡 Index Cross Lingual Meta Tags:</strong> karye, kaise bhare, grahbhet, kese bharte, incentives, karya, bhugtan, protsahan rashi, vetan, tikakaran, karyadayitva, karkarta, kaam, dawai, jansankiya</div>
+<div class="info-row meta-12"><strong>💡 Index Phonetic Invariants:</strong> asha, karya, incentive, bhugtan, hbnc, hbyc, visit</div>
+<div class="info-row meta-13"><strong>💡 Index False Positive Shadow Terms:</strong> anm, aww, doctor, nurse, salary, job, vacancy</div>
+<div class="info-row meta-14"><strong>💡 Guard Hard Bypass Emergency Triggers:</strong> newborn not breathing, mother bleeding heavily, bacha neela pad gaya, delivery complication, high fever after delivery</div>
+<div class="info-row meta-15"><strong>💡 Guard Semantic Leakage Warning:</strong> User queries about ASHA roles and responsibilities may be semantically close to queries about the roles of ANMs or Anganwadi Workers (AWWs), or general inquiries about government job vacancies. Ensure the model distinguishes between questions about job duties versus job applications.</div>
+
+                    <div class="split-row toggleable-details">
+                        <div class="split-col class-sub"><h5>📍 Top Questions</h5><ul class="sub-list"><li><span class="badge weight">15 rows</span><span class="list-text">What Are the Primary Duties and a Complete List of Responsibilities for an ASHA Worker?</span></li><li><span class="badge weight">14 rows</span><span class="list-text">What Is the Detailed List of All Financial Incentives an ASHA Receives for Her Various Tasks?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">How Should an ASHA Correctly Fill Out the HBNC and HBYC Checklists During Home Visits?</span></li><li><span class="badge weight">8 rows</span><span class="list-text">What Is the Official Government-Mandated Schedule for Postpartum and Newborn Home Visits (HBNC)?</span></li><li><span class="badge weight">6 rows</span><span class="list-text">What Specific Actions and Checks Must an ASHA Perform During a Home-Based Newborn Care Visit?</span></li><li><span class="badge weight">5 rows</span><span class="list-text">What Are the Essential Medicines and Supplies an ASHA Worker Should Always Carry in Her Kit?</span></li><li><span class="badge weight">4 rows</span><span class="list-text">What Is the Defined Population Size or Geographic Area an ASHA Worker Is Responsible For?</span></li><li><span class="badge weight">3 rows</span><span class="list-text">What Are the Official Eligibility Criteria, Such as Age and Education, to Become an ASHA Worker?</span></li></ul></div>
+                        <div class="split-col class-hin"><h5>🗣️ Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">2 freq</span><span class="list-text"><i>HBYC checklist kaise bhare</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>गृहभेट केसे भरते हैं</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Asha ke sabhi prakar ke incentives ke bare me bataye</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>cho ke role ke baare mein bataiye</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>आशा (ASHA)</i></span></li></ul></div>
+                    </div>
+                </div></div></div><div class="block-node"><div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Icds Operations ▾</div><div class="c-body hide">
+                <div class="faq-card">
+                    <h4>📖 How Do I Correctly Perform Data Entry and Troubleshoot Common Issues in the Poshan Tracker Application?</h4>
+                    <div class="info-row meta-0"><strong>💡 Booklet Section:</strong> Chapter 9</div>
+<div class="info-row meta-1"><strong>💡 Target Kb Markdown File:</strong> MNT.1.1</div>
+<div class="info-row meta-2"><strong>💡 System Routing Directive:</strong> MNT</div>
+<div class="info-row meta-3"><strong>💡 Total User Queries:</strong> 64</div>
+<div class="info-row meta-4"><strong>💡 Channel Traffic Percentage:</strong> 1.09% of total channel traffic</div>
+<div class="info-row meta-5"><strong>💡 What User Are Asking:</strong> Anganwadi workers are seeking procedural guidance on how to use the Poshan Tracker application for essential data entry tasks, including beneficiary registration, nutrition scheme logging, and troubleshooting common technical errors like face capture.</div>
+<div class="info-row meta-6"><strong>💡 Committee Scope Of Work:</strong> The writers must provide a step-by-step operational guide for Anganwadi workers on using the Poshan Tracker application, covering beneficiary registration, data entry for various modules, and solutions for common technical problems.</div>
+<div class="info-row meta-7"><strong>💡 Top 7 Weighted Bot Anchors:</strong> [1] (Count: 1) पोषण ट्रैकर में गर्भवती माता का रजिस्ट्रेशन कैसे kren
+[2] (Count: 1) Poshan trackerme thr vitran me face capture me pareshani A rahi he iska solution batae
+[3] (Count: 1) पोषण ट्रैकर में बच्चों का वजन कैसे भरें
+[4] (Count: 1) Face capturing kese kre
+[5] (Count: 1) Poshan tracker par bachhe delete kaise hote hai
+[6] (Count: 1) पोषण ट्रैकर ऐप में बच्चों के आधार कार्ड कैसे जोड़े
+[7] (Count: 1) Posha trackerANC jaanch kaise bharate hain</div>
+<div class="info-row meta-8"><strong>💡 Cultural Myths To Debunk:</strong> • That critical data like Take-Home Ration (THR) distribution can be logged without the mandatory face capture feature.
+• That data entry errors are permanent and cannot be corrected within the application.
+• That the app automatically knows clinical details; all information must be entered manually and correctly by the worker.</div>
+<div class="info-row meta-9"><strong>💡 Core Patient Takeaway Box:</strong> Properly using the Poshan Tracker app requires following specific step-by-step procedures for each data entry task, and most common errors can be resolved through simple troubleshooting.</div>
+<div class="info-row meta-10"><strong>💡 Planning Sub Intent Distribution Weights:</strong> • Registering Pregnant Women (23.44%): Budget 120 words
+• Troubleshooting Face Capture (18.75%): Budget 100 words
+• Entering Child Data (15.63%): Budget 80 words
+• General Data Entry &amp; Navigation (12.5%): Budget 60 words
+• Correcting or Deleting Entries (9.38%): Budget 50 words
+• Entering Specific Scheme Data (7.81%): Budget 40 words
+• Handling Special Cases (6.25%): Budget 30 words
+• Managing Beneficiary Profiles (6.25%): Budget 30 words</div>
+<div class="info-row meta-11"><strong>💡 Index Cross Lingual Meta Tags:</strong> posan trakar, poshataker, pohsan tracker, poshan trecker, पोषण ड्रेकर, पोस्ट ट्रैकर, kese kre, kaish jorah, kaise darj, entry kese, bhajan bharane, hitgrahi, panjiyan, thr vitran, ocean tracker</div>
+<div class="info-row meta-12"><strong>💡 Index Phonetic Invariants:</strong> poshan, tracker, entry, kaise, darj, capture, jankari</div>
+<div class="info-row meta-13"><strong>💡 Index False Positive Shadow Terms:</strong> MCP card, PMMVY, JSY, pregnancy app, baby tracker, nutrition chart, ICDS form</div>
+<div class="info-row meta-14"><strong>💡 Guard Hard Bypass Emergency Triggers:</strong> bahut khoon, bleeding, bacha nahi hil raha, tez bukhar, severe pain, can&#x27;t breathe</div>
+<div class="info-row meta-15"><strong>💡 Guard Semantic Leakage Warning:</strong> Queries are strictly about the &#x27;Poshan Tracker&#x27; software. Risk of semantic leakage into clinical topics like child malnutrition (SAM/MAM) or high-risk pregnancy, when a user is only asking how to enter that specific data point into the app.</div>
+
+                    <div class="split-row toggleable-details">
+                        <div class="split-col class-sub"><h5>📍 Top Questions</h5><ul class="sub-list"><li><span class="badge weight">15 rows</span><span class="list-text">How Do I Register a New Pregnant Woman in the Poshan Tracker App?</span></li><li><span class="badge weight">12 rows</span><span class="list-text">What Is the Solution for When the Face Capture Feature Is Not Working for THR Distribution?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">What Is the Process for Entering or Updating a Child&#x27;s Data Like Weight, Height, and Aadhaar?</span></li><li><span class="badge weight">8 rows</span><span class="list-text">Can You Provide General Instructions on How to Navigate and Enter Data in the Poshan Tracker?</span></li><li><span class="badge weight">6 rows</span><span class="list-text">How Can I Correct an Error or Delete a Beneficiary&#x27;s Record from the App?</span></li><li><span class="badge weight">5 rows</span><span class="list-text">How Do I Log Specific Scheme Activities Like ANC Visits, Hot Cooked Meals, or THR?</span></li><li><span class="badge weight">4 rows</span><span class="list-text">How Should I Handle Special Cases Like Registering Twins or if a Beneficiary&#x27;s Data Is Not Displaying Correctly?</span></li><li><span class="badge weight">4 rows</span><span class="list-text">What Are the Steps for Managing Beneficiary Profiles, Such as Registering a Lactating Mother or Completing KYC?</span></li></ul></div>
+                        <div class="split-col class-hin"><h5>🗣️ Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">1 freq</span><span class="list-text"><i>Sampark app me matra सहयोगिनी samiti me sadasyo ko kese jode</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Poshan trackr mejanch kese chadye</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Usha tracker Mein sahayika ki KYC kaise karte hain</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Twins baby poshan tracker ma kaish jorah</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Posha trackerANC jaanch kaise bharate hain</i></span></li></ul></div>
+                    </div>
+                </div></div></div><div class="block-node"><div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: High-Risk Pregnancy ▾</div><div class="c-body hide">
+                <div class="faq-card">
+                    <h4>📖 What Are The Primary Causes And Symptoms Used To Identify A High-Risk Pregnancy?</h4>
+                    <div class="info-row meta-0"><strong>💡 Booklet Section:</strong> Chapter 10</div>
+<div class="info-row meta-1"><strong>💡 Target Kb Markdown File:</strong> HRP.1: Risk Factor Stratification</div>
+<div class="info-row meta-2"><strong>💡 System Routing Directive:</strong> HRP</div>
+<div class="info-row meta-3"><strong>💡 Total User Queries:</strong> 57</div>
+<div class="info-row meta-4"><strong>💡 Channel Traffic Percentage:</strong> 0.97% of total channel traffic</div>
+<div class="info-row meta-5"><strong>💡 What User Are Asking:</strong> Users are asking for a comprehensive explanation of what a high-risk pregnancy (HRP) is, seeking to identify its specific causes, symptoms, and the criteria used for its classification and management.</div>
+<div class="info-row meta-6"><strong>💡 Committee Scope Of Work:</strong> The writer will define High-Risk Pregnancy (HRP) and detail the primary clinical risk factors, symptoms, and identification criteria used by community health workers.</div>
+<div class="info-row meta-7"><strong>💡 Top 7 Weighted Bot Anchors:</strong> [1] (Count: 3) Hrp
+[2] (Count: 2) HRP mahila
+[3] (Count: 1) HRP ke 24 Karan bataiye
+[4] (Count: 1) hrp kya hota hai
+[5] (Count: 1) hrp symptoms bataiye
+[6] (Count: 1) एचआरपी गर्भवती महिलाओं की पहचान कैसे करें
+[7] (Count: 1) HRP गर्भवती की देखभाल कैसे करें</div>
+<div class="info-row meta-8"><strong>💡 Cultural Myths To Debunk:</strong> • A high-risk pregnancy diagnosis means something will definitely go wrong with the mother or baby.
+• Only older women or women with pre-existing diseases can have a high-risk pregnancy.
+• Special care for a high-risk pregnancy is only available in large, expensive city hospitals.</div>
+<div class="info-row meta-9"><strong>💡 Core Patient Takeaway Box:</strong> A high-risk pregnancy is one with potential complications for the mother or baby, which requires careful monitoring and management based on specific identified risk factors.</div>
+<div class="info-row meta-10"><strong>💡 Planning Sub Intent Distribution Weights:</strong> • Definition of HRP (26.32%): Budget 130 words
+• Causes and Reasons (21.05%): Budget 105 words
+• The &#x27;24 Reasons&#x27; List (14.04%): Budget 70 words
+• Symptoms and Signs (10.53%): Budget 55 words
+• Identification Methods (10.53%): Budget 55 words
+• Management and Care (7.02%): Budget 35 words</div>
+<div class="info-row meta-11"><strong>💡 Index Cross Lingual Meta Tags:</strong> Hrp, HPR, Hir, H r i, Hrpw, pragneshi, lakchad, simtams, karan, btavo, lakshan, pehechan, mahila, garbhwati, kítαnє prkαr</div>
+<div class="info-row meta-12"><strong>💡 Index Phonetic Invariants:</strong> hrp, high risk</div>
+<div class="info-row meta-13"><strong>💡 Index False Positive Shadow Terms:</strong> THR, ANC checkup, PMMVY, JSY, normal pregnancy, routine visit</div>
+<div class="info-row meta-14"><strong>💡 Guard Hard Bypass Emergency Triggers:</strong> I am bleeding a lot, I can&#x27;t feel my baby move, severe headache and blurry vision, convulsions, sudden swelling of face and hands, foul smelling discharge</div>
+<div class="info-row meta-15"><strong>💡 Guard Semantic Leakage Warning:</strong> Warning: Queries about routine Antenatal Care (ANC) may be incorrectly matched if they do not explicitly mention &#x27;risk&#x27; or &#x27;HRP&#x27;. The model should prioritize the presence of risk-related keywords to avoid false positives with the general ANC.1 cluster.</div>
+
+                    <div class="split-row toggleable-details">
+                        <div class="split-col class-sub"><h5>📍 Top Questions</h5><ul class="sub-list"><li><span class="badge weight">15 rows</span><span class="list-text">What Is The Definition Of A High-Risk Pregnancy (HRP)?</span></li><li><span class="badge weight">12 rows</span><span class="list-text">What Are The Primary Causes Or Reasons A Pregnancy Is Classified As High-Risk?</span></li><li><span class="badge weight">8 rows</span><span class="list-text">Can You List The Specific 24 Causes Or Symptoms Associated With HRP?</span></li><li><span class="badge weight">6 rows</span><span class="list-text">What Are The Common Symptoms And Warning Signs Of A High-Risk Pregnancy?</span></li><li><span class="badge weight">6 rows</span><span class="list-text">How Can A Community Health Worker Identify A Woman With A High-Risk Pregnancy?</span></li><li><span class="badge weight">4 rows</span><span class="list-text">What Are The Guidelines For Managing And Caring For A Woman With A High-Risk Pregnancy?</span></li><li><span class="badge weight">3 rows</span><span class="list-text">Are There Different Types Or Categories Of High-Risk Pregnancies?</span></li><li><span class="badge weight">3 rows</span><span class="list-text">Can You Provide General Information About High-Risk Pregnancy For Pregnant Women?</span></li></ul></div>
+                        <div class="split-col class-hin"><h5>🗣️ Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">3 freq</span><span class="list-text"><i>Hrp</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>HRP mahila</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>HRP kya hai</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>एचआरपी गर्भवती महिलाओं की पहचान कैसे करें</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>HRP ke 24 karan btaye</i></span></li></ul></div>
+                    </div>
+                </div></div></div></div></div><div class="block-node"><div class="vol-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">📘 Volume: 👶 Pediatric &amp; Infant Wellness ▾</div><div class="c-body hide"><div class="block-node"><div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Child Malnutrition Management ▾</div><div class="c-body hide">
+                <div class="faq-card">
+                    <h4>📖 What Are the Official Guidelines for Identifying, Differentiating, and Managing SAM and MAM Children?</h4>
+                    <div class="info-row meta-0"><strong>💡 Booklet Section:</strong> Chapter 5</div>
+<div class="info-row meta-1"><strong>💡 Target Kb Markdown File:</strong> MNT.1.1</div>
+<div class="info-row meta-2"><strong>💡 System Routing Directive:</strong> MNT</div>
+<div class="info-row meta-3"><strong>💡 Total User Queries:</strong> 79</div>
+<div class="info-row meta-4"><strong>💡 Channel Traffic Percentage:</strong> 1.34% of total channel traffic</div>
+<div class="info-row meta-5"><strong>💡 What User Are Asking:</strong> Community health workers are seeking clear operational guidance on how to identify, differentiate, manage, and document cases of Severe Acute Malnutrition (SAM) and Moderate Acute Malnutrition (MAM) in children.</div>
+<div class="info-row meta-6"><strong>💡 Committee Scope Of Work:</strong> Writers must provide a comprehensive guide detailing the screening criteria, key differences, registration process, and home-based management protocols for children identified with Severe Acute Malnutrition (SAM) and Moderate Acute Malnutrition (MAM).</div>
+<div class="info-row meta-7"><strong>💡 Top 7 Weighted Bot Anchors:</strong> [1] (Count: 3) Sam or mam ko kaise pahchane
+[2] (Count: 2) Same बच्चों की स्क्रीनिंग करना
+[3] (Count: 1) सेम ,मेम बच्चों की पहचान कैसे करें
+[4] (Count: 1) SAM, MAM kya hai
+[5] (Count: 1) Memsaam bacchi mein antar kya hai mujhe samjhaie
+[6] (Count: 1) How to manage SAM and MAM
+[7] (Count: 1) Sem mam child entry kese kare</div>
+<div class="info-row meta-8"><strong>💡 Cultural Myths To Debunk:</strong> • Malnutrition (SAM/MAM) is a curse or due to an evil eye and cannot be treated with food.
+• A child with diarrhea should be given less food and water, which can worsen malnutrition.
+• Special therapeutic foods are &#x27;hot&#x27; in nature and should be avoided in summer.</div>
+<div class="info-row meta-9"><strong>💡 Core Patient Takeaway Box:</strong> Identifying SAM and MAM children early through regular screening and providing consistent nutritional support and follow-up care is critical for their recovery and healthy development.</div>
+<div class="info-row meta-10"><strong>💡 Planning Sub Intent Distribution Weights:</strong> • Identification and Screening (50.63%): Budget 250 words
+• Management and Home Care Counseling (22.78%): Budget 115 words
+• Documentation and Follow-up (18.99%): Budget 95 words
+• Treatment and Recovery (7.59%): Budget 40 words</div>
+<div class="info-row meta-11"><strong>💡 Index Cross Lingual Meta Tags:</strong> sam or mam, pahchane, pahchan, pechan, Sembachekijankari, Csam bchoo, Memsaam, antar, dekhbhal, prabandhan, kasay kary, ilaaj, followp, panjiyan, rajistar</div>
+<div class="info-row meta-12"><strong>💡 Index Phonetic Invariants:</strong> sam, mam, bacha, bachhe, pahchan</div>
+<div class="info-row meta-13"><strong>💡 Index False Positive Shadow Terms:</strong> kam wajan, bimar, bukhar, dast, sardi, khansi, baunapan</div>
+<div class="info-row meta-14"><strong>💡 Guard Hard Bypass Emergency Triggers:</strong> bacha behosh, saans nahi le raha, doodh nahi pee raha, bahut dast, kuch kha nahi raha, not able to drink, unconscious, convulsions</div>
+<div class="info-row meta-15"><strong>💡 Guard Semantic Leakage Warning:</strong> This cluster is highly specific to Severe Acute Malnutrition (SAM) and Moderate Acute Malnutrition (MAM), which are measures of wasting. Queries may be semantically close to general &#x27;low weight&#x27; (kam wajan), &#x27;stunting&#x27; (baunapan), or general child sickness. Ensure the model prioritizes wasting-related indicators (like MUAC measurements) over simple weight-for-age.</div>
+
+                    <div class="split-row toggleable-details">
+                        <div class="split-col class-sub"><h5>📍 Top Questions</h5><ul class="sub-list"><li><span class="badge weight">25 rows</span><span class="list-text">What Are the Key Physical Signs and Symptoms to Differentiate Between a SAM and a MAM Child?</span></li><li><span class="badge weight">15 rows</span><span class="list-text">What Is the Official Screening Procedure to Identify SAM and MAM Children in the Community?</span></li><li><span class="badge weight">12 rows</span><span class="list-text">What Are the Home-Based Management and Care Protocols for a Child Identified With SAM?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">How Should I Correctly Document and Register SAM and MAM Children in the Official Register?</span></li><li><span class="badge weight">6 rows</span><span class="list-text">What Counseling and Advice Should Be Given to the Family of a SAM Child During a Home Visit?</span></li><li><span class="badge weight">5 rows</span><span class="list-text">What Is the Required Follow-Up Schedule for a Child Diagnosed With SAM?</span></li><li><span class="badge weight">4 rows</span><span class="list-text">What Specific Nutritional Supplements or Medications Are Provided to SAM Children?</span></li><li><span class="badge weight">2 rows</span><span class="list-text">How Can a Child Transition From a SAM to a MAM Classification and Eventually to a Healthy Status?</span></li></ul></div>
+                        <div class="split-col class-hin"><h5>🗣️ Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">3 freq</span><span class="list-text"><i>Sam or mam ko kaise pahchane</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Same बच्चों की स्क्रीनिंग करना</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>मैंम सेम बच्चों में क्या अंतर है</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Sem bacche ka panjiyan kaise karte hain</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Csam bchoo ki kese phchanhogi</i></span></li></ul></div>
+                    </div>
+                </div></div></div><div class="block-node"><div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Childhood Immunization Schedule ▾</div><div class="c-body hide">
+                <div class="faq-card">
+                    <h4>📖 What Is the Complete Vaccination Schedule for a Child From Birth to Five Years of Age?</h4>
+                    <div class="info-row meta-0"><strong>💡 Booklet Section:</strong> Chapter 6</div>
+<div class="info-row meta-1"><strong>💡 Target Kb Markdown File:</strong> PNC.1: Home-Based Newborn Care (HBNC) &amp; HBYC Framework</div>
+<div class="info-row meta-2"><strong>💡 System Routing Directive:</strong> PNC</div>
+<div class="info-row meta-3"><strong>💡 Total User Queries:</strong> 71</div>
+<div class="info-row meta-4"><strong>💡 Channel Traffic Percentage:</strong> 1.21% of total channel traffic</div>
+<div class="info-row meta-5"><strong>💡 What User Are Asking:</strong> Mothers are seeking comprehensive information about the national childhood immunization schedule, including which specific vaccines are administered at different ages, the total number of doses required, and which diseases these vaccines prevent.</div>
+<div class="info-row meta-6"><strong>💡 Committee Scope Of Work:</strong> Writers must provide a comprehensive and easy-to-understand guide to the Indian National Immunization Schedule for children from birth to five years, detailing each vaccine, its timing, dosage, and the disease it protects against.</div>
+<div class="info-row meta-7"><strong>💡 Top 7 Weighted Bot Anchors:</strong> [1] (Count: 6) 1 saal ke andar ke bacche ko kya teeka dena chahiye
+[2] (Count: 1) बच्चों को जन्म से लेकर कितने टीके लगाए जाते हैं यह लिखकर और बोलकर बताइए।
+[3] (Count: 1) 9 माह के बच्चे को कौन सा टीका लगाया जाता है
+[4] (Count: 1) डेढ़ माह पर कौन सा टीका लगता है
+[5] (Count: 1) जन्म के समय कौन सा टीका लगता है
+[6] (Count: 1) 5 saal ke bacche ko kaun sa teeka lagta chahiye
+[7] (Count: 1) टीकाकरण के बारे में बताएं कौन सा टीका कब लगता है</div>
+<div class="info-row meta-8"><strong>💡 Cultural Myths To Debunk:</strong> • Vaccines cause high fever and make children sick, so it&#x27;s better to avoid some of them.
+• Only the first few vaccines are important; later booster shots are optional.
+• If a vaccine dose is missed on the exact date, the entire schedule is invalid and cannot be continued.</div>
+<div class="info-row meta-9"><strong>💡 Core Patient Takeaway Box:</strong> Following the complete and timely vaccination schedule is the most effective way to protect your child from several serious and life-threatening diseases.</div>
+<div class="info-row meta-10"><strong>💡 Planning Sub Intent Distribution Weights:</strong> • Overall Schedule (Birth to 5 Years) (28.17%): Budget 140 words
+• At-Birth Vaccinations (14.08%): Budget 70 words
+• 1.5 to 3.5 Month Vaccinations (16.9%): Budget 85 words
+• 9-Month Vaccinations (14.08%): Budget 70 words
+• 1 to 2 Year Vaccinations (9.86%): Budget 50 words
+• 2 to 5 Year Vaccinations (7.04%): Budget 35 words
+• Purpose and Prevention (5.63%): Budget 30 words
+• Missed Vaccination Protocol (4.23%): Budget 20 words</div>
+<div class="info-row meta-11"><strong>💡 Index Cross Lingual Meta Tags:</strong> teeka, tika, tikakrn, tike, teekakaran, janm, dedh mah, dhai ma, tisre maah, 9 mah, nauve mahine, 1 saal, 5 saal, konsa, kon sa</div>
+<div class="info-row meta-12"><strong>💡 Index Phonetic Invariants:</strong> tika, vaccine, schedule, bachha, maheena, saal, injection</div>
+<div class="info-row meta-13"><strong>💡 Index False Positive Shadow Terms:</strong> IFA, THR, ANC checkup, delivery, PMMVY, JSY, poshan, godi bharai, Antara, Chhaya</div>
+<div class="info-row meta-14"><strong>💡 Guard Hard Bypass Emergency Triggers:</strong> severe reaction, high fever not going down, bacha neela pad gaya, saans lene me takleef, tika lagne ke baad behosh, unconscious after vaccine, severe swelling, jhatke aa rahe</div>
+<div class="info-row meta-15"><strong>💡 Guard Semantic Leakage Warning:</strong> This cluster is focused on the childhood immunization schedule. It may be confused with queries about maternal immunization (like Td vaccine, covered under ANC.3.1) or specific disease outbreaks (like measles/khusra) which are distinct topics.</div>
+
+                    <div class="split-row toggleable-details">
+                        <div class="split-col class-sub"><h5>📍 Top Questions</h5><ul class="sub-list"><li><span class="badge weight">20 rows</span><span class="list-text">What Is the Complete Vaccination Schedule for a Child From Birth to 5 Years?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">Which Vaccines Are Administered to a Newborn at Birth?</span></li><li><span class="badge weight">12 rows</span><span class="list-text">What Vaccines Are Given at 1.5, 2.5, and 3.5 Months of Age?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">Which Vaccinations Are Required When a Baby Reaches 9 Months?</span></li><li><span class="badge weight">7 rows</span><span class="list-text">What Is the Vaccination Schedule for a Child Between 1 and 2 Years Old?</span></li><li><span class="badge weight">5 rows</span><span class="list-text">Which Booster Doses Are Required for a Child Between 2 and 5 Years of Age?</span></li><li><span class="badge weight">4 rows</span><span class="list-text">Why Is It Important to Vaccinate Children and What Diseases Do Vaccines Prevent?</span></li><li><span class="badge weight">3 rows</span><span class="list-text">What Should Be Done if a Child Has Missed Some of Their Scheduled Vaccinations?</span></li></ul></div>
+                        <div class="split-col class-hin"><h5>🗣️ Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">6 freq</span><span class="list-text"><i>1 saal ke andar ke bacche ko kya teeka dena chahiye</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>बच्चों का टीकाकरण कितने महीने तक पूर्ण होना चाहिए</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>0 जन्म से लेकर 9 माह तक कौन-कौन से टीके लगते हैं</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>बच्चों के टीका कितने लगते हैं</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>सेकंड में कितने डोज लगाए जाते हैं फेंटेस्टीकंड में कितने डोज लगाई जाती है</i></span></li></ul></div>
+                    </div>
+                </div></div></div></div></div><div class="block-node"><div class="vol-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">📘 Volume: 🏥 Labor &amp; Delivery Preparation ▾</div><div class="c-body hide"><div class="block-node"><div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Low Birth Weight Care ▾</div><div class="c-body hide">
+                <div class="faq-card">
+                    <h4>📖 What Are The Essential Care Practices For A Low Birth Weight Newborn?</h4>
+                    <div class="info-row meta-0"><strong>💡 Booklet Section:</strong> Chapter 7</div>
+<div class="info-row meta-1"><strong>💡 Target Kb Markdown File:</strong> PNC.2.2: Thermal Management (Delayed Bathing &gt; 72 hours, Kangaroo Mother Care for LBW)</div>
+<div class="info-row meta-2"><strong>💡 System Routing Directive:</strong> PNC.2.2</div>
+<div class="info-row meta-3"><strong>💡 Total User Queries:</strong> 66</div>
+<div class="info-row meta-4"><strong>💡 Channel Traffic Percentage:</strong> 1.12% of total channel traffic</div>
+<div class="info-row meta-5"><strong>💡 What User Are Asking:</strong> Community health workers are seeking comprehensive guidance on the identification, management, and home-based care protocols for low birth weight newborns to improve their survival and growth outcomes.</div>
+<div class="info-row meta-6"><strong>💡 Committee Scope Of Work:</strong> Writers must detail the definition of low birth weight, essential home care practices including Kangaroo Mother Care, feeding advice, danger sign identification, and the ASHA&#x27;s home visit schedule for these vulnerable infants.</div>
+<div class="info-row meta-7"><strong>💡 Top 7 Weighted Bot Anchors:</strong> [1] (Count: 3) bachhon mein vazan kam ho to kya karein?
+[2] (Count: 2) Bacchon ka vajan banaa badhane ke liye kya chij Lai jaaye
+[3] (Count: 2) Kam vajan ka baccha kitne kilo ka hota Hai
+[4] (Count: 1) Low birth weight baby management
+[5] (Count: 1) 2 kilo se kam vajan wale Shishu ki dekhbhal karna
+[6] (Count: 1) Kam vajan ke bachche ki kitni grah bhet karni hoti hai
+[7] (Count: 1) Jaise dhai kilo se kam vajan ka baccha hai to uski kaise dekhbhal karen</div>
+<div class="info-row meta-8"><strong>💡 Cultural Myths To Debunk:</strong> • Giving honey, sugar water, or other pre-lacteal feeds is necessary before mother&#x27;s milk comes in.
+• Bathing a small baby immediately after birth or daily is important for cleanliness.
+• A low birth weight baby is just &#x27;small&#x27; and doesn&#x27;t need any special care compared to other newborns.</div>
+<div class="info-row meta-9"><strong>💡 Core Patient Takeaway Box:</strong> Low birth weight babies require special care focused on exclusive breastfeeding, maintaining warmth through skin-to-skin contact (Kangaroo Mother Care), and immediate medical attention if any danger signs appear.</div>
+<div class="info-row meta-10"><strong>💡 Planning Sub Intent Distribution Weights:</strong> • Essential Home Care &amp; Management (30.3%): Budget 150 words
+• Defining &amp; Identifying Low Birth Weight (22.73%): Budget 110 words
+• Feeding &amp; Weight Gain Strategies (18.18%): Budget 90 words
+• Family Counseling &amp; ASHA&#x27;s Role (15.15%): Budget 75 words
+• Danger Signs &amp; High-Risk Cases (13.64%): Budget 65 words</div>
+<div class="info-row meta-11"><strong>💡 Index Cross Lingual Meta Tags:</strong> vazan kam, vajan badhane, kam vjan, bajhn, bjan bale bccha, grah bhet, dekhbhal, kese bday, shishu, kamjor bacche, wajan, vajan, dekhbhal kaise karen, salah deni, kam bajan</div>
+<div class="info-row meta-12"><strong>💡 Index Phonetic Invariants:</strong> vajan, kam, bacha, dekhbhal, kilo, weight</div>
+<div class="info-row meta-13"><strong>💡 Index False Positive Shadow Terms:</strong> pregnant, garbhavastha, mahila, diet, vaccine, tika, bukhar, SAM, MAM</div>
+<div class="info-row meta-14"><strong>💡 Guard Hard Bypass Emergency Triggers:</strong> not breathing, saans nahi le raha, blue lips, neela pad gaya, very cold, bahut thanda, not feeding at all, doodh nahi pee raha, seizure, daura padna, unconscious</div>
+<div class="info-row meta-15"><strong>💡 Guard Semantic Leakage Warning:</strong> This cluster is specific to low birth weight in newborns (neonates). Be cautious of queries about malnutrition in older infants (e.g., SAM/MAM) or maternal underweight issues, which belong to different care protocols.</div>
+
+                    <div class="split-row toggleable-details">
+                        <div class="split-col class-sub"><h5>📍 Top Questions</h5><ul class="sub-list"><li><span class="badge weight">20 rows</span><span class="list-text">What Are The General Home Care And Management Steps For A Low Birth Weight Baby?</span></li><li><span class="badge weight">15 rows</span><span class="list-text">What Is The Official Weight Classification For A Low Birth Weight Newborn?</span></li><li><span class="badge weight">12 rows</span><span class="list-text">What Are The Best Practices To Help A Low Birth Weight Baby Gain Weight?</span></li><li><span class="badge weight">6 rows</span><span class="list-text">What Specific Advice Should Be Given To The Family Of A Low Birth Weight Infant?</span></li><li><span class="badge weight">4 rows</span><span class="list-text">What Is The Required Home Visit Schedule For A Low Birth Weight Baby?</span></li><li><span class="badge weight">4 rows</span><span class="list-text">How Should A Health Worker Proceed When A Low Birth Weight Baby Is Identified During A Home Visit?</span></li><li><span class="badge weight">3 rows</span><span class="list-text">What Are The Potential Health Risks And Danger Signs For A Low Birth Weight Newborn?</span></li><li><span class="badge weight">2 rows</span><span class="list-text">Are There Special Instructions For Babies Weighing Less Than Two Kilograms?</span></li></ul></div>
+                        <div class="split-col class-hin"><h5>🗣️ Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">3 freq</span><span class="list-text"><i>bachhon mein vazan kam ho to kya karein?</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Bacchon ka vajan banaa badhane ke liye kya chij Lai jaaye</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Kam vajan ka baccha kitne kilo ka hota Hai</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Come vazan wale bachhe ke parivar ko kya saladi</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Kam vajan ke bacche ki budget Kaisi hoti hai</i></span></li></ul></div>
+                    </div>
+                </div></div></div></div></div>
+    </div></body></html>

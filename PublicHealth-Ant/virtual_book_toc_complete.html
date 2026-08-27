@@ -1,0 +1,220 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
+        body { font-family: sans-serif; background: #fafafa; padding: 15px; color: #333; }
+        .wrapper { max-width: 1000px; margin: 0 auto; background: #fff; border: 1px solid #ddd; padding: 25px; border-radius: 4px; }
+        .summary-dashboard { display: flex; gap: 15px; margin-bottom: 15px; }
+        .metric-card { flex: 1; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 4px; padding: 12px; text-align: center; }
+        .metric-card h3 { margin: 0; font-size: 24px; color: #0284c7; }
+        .metric-card p { margin: 2px 0 0 0; font-size: 12px; color: #475569; }
+        .control-bar { background: #f1f5f9; padding: 10px; border: 1px solid #e2e8f0; border-radius: 4px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; font-size: 12px; color: #64748b; }
+        .btn { background: #0284c7; color: white; border: none; padding: 6px 12px; font-weight: bold; border-radius: 4px; cursor: pointer; }
+        .vol-hdr { background: #f0f4f8; font-weight: bold; padding: 10px; margin-top: 10px; cursor: pointer; border-radius: 4px; color: #1e3a8a; }
+        .ch-hdr { background: #fef3c7; font-weight: bold; padding: 7px; margin: 6px 0 0 15px; cursor: pointer; border-radius: 4px; color: #92400e; }
+        .faq-card { margin: 10px 0 10px 25px; padding: 15px; border-left: 4px solid #94a3b8; background: #f8fafc; font-size: 13px; }
+        .card-side-badge { font-weight: bold; font-size: 11px; color: #475569; background: #e2e8f0; padding: 3px 8px; border-radius: 4px; margin-bottom: 8px; display: inline-block; }
+        .info-grid { background: #ffffff; padding: 10px; border: 1px solid #e2e8f0; border-radius: 4px; margin: 8px 0; line-height: 1.4; }
+        .split-row { display: flex; gap: 15px; margin-top: 10px; }
+        .split-col { flex: 1; min-width: 0; }
+        .sub-list { padding-left: 0; list-style: none; font-size: 12px; color: #444; }
+        .sub-list li { display: flex; align-items: flex-start; margin-bottom: 6px; }
+        .list-text { flex: 1; min-width: 0; }
+        .badge { font-weight: bold; padding: 1px 5px; border-radius: 8px; font-size: 10px; margin-right: 6px; display: inline-block; white-space: nowrap; flex-shrink: 0; }
+        .badge.weight { background: #dcfce7; color: #15803d; }
+        .badge.freq { background: #e0f2fe; color: #0369a1; }
+        .hide { display: none !important; }
+        h4, h5 { margin: 0 0 6px 0; color: #0f172a; }
+        h5 { font-size: 11px; color: #64748b; text-transform: uppercase; border-bottom: 1px solid #e2e8f0; padding-bottom: 2px; }
+        code { background: #f1f5f9; padding: 1px 3px; border-radius: 3px; color: #b45309; font-family: monospace; }
+    </style><script>
+        let expanded = true;
+        function toggleAll() {
+            expanded = !expanded;
+            document.querySelectorAll('.toggleable-details').forEach(r => expanded ? r.classList.remove('hide') : r.classList.add('hide'));
+            document.getElementById('toggleBtn').innerText = expanded ? "Master Collapse Lists ▴" : "Master Expand Lists ▾";
+        }
+    </script></head><body><div class="wrapper">
+        <h2>BOOK CONTENT INDEX ARCHITECTURE</h2>
+        <div class="summary-dashboard">
+            <div class="metric-card"><h3>10</h3><p>Total FAQ Chapters</p></div>
+            <div class="metric-card"><h3>21</h3><p>High-Impact Questions (&gt;10 rows)</p></div>
+            <div class="metric-card"><h3>7.50%</h3><p>Total WhatsApp Traffic Handled</p></div>
+        </div>
+        <div class="control-bar">
+            <button id="toggleBtn" class="btn" onclick="toggleAll()">Master Collapse Lists ▴</button>
+            <span>(Toggles all Question & Variation fields globally without closing volume panels)</span>
+        </div>
+        
+                <div class="block">
+                    <div class="vol-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">📘 Volume: 🤰 Maternal Antepartum Care ▾</div>
+                    <div>
+                <div class="block">
+                    <div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: System Navigation ▾</div>
+                    <div>
+                <div class="faq-card">
+                    <div class="card-side-badge">📊 7.36% of total channel traffic (433 queries)</div>
+                    <h4>📖 How Can I View the Available Information Modules?</h4>
+                    <div class="info-grid">
+                        <div><strong>💡 Intent:</strong> Users are issuing a direct, non-specific command to the system to display its content modules, indicating a fundamental need for navigation or access to the main index of available health topics.</div>
+                        <div style="margin-top:4px;"><strong>🛠️ Scope:</strong> The operational scope is to provide a navigational response that displays a main menu or an index of all available health modules, enabling the user to select a specific topic of interest.</div>
+                        <div style="margin-top:4px;"><strong>📁 Asset:</strong> <code>docs/WSA.2.1: Village Health, Sanitation, and Nutrition Day (VHSND) Organizing &amp; Execution</code></div>
+                    </div>
+                    <div class="split-row toggleable-details">
+                        <div class="split-col"><h5>📍 Top 8 Distinct Questions</h5><ul class="sub-list"><li><span class="badge weight">426 rows</span><span class="list-text">How Can I View The List Of All Available Modules?</span></li><li><span class="badge weight">2 rows</span><span class="list-text">Can You Show Me The Main Menu Of Topics?</span></li><li><span class="badge weight">1 rows</span><span class="list-text">Where Can I Find The Index Of All Content?</span></li><li><span class="badge weight">1 rows</span><span class="list-text">How Do I Navigate To A Specific Health Topic?</span></li><li><span class="badge weight">1 rows</span><span class="list-text">What Are The Main Categories Of Information Available?</span></li><li><span class="badge weight">1 rows</span><span class="list-text">How Do I Open A Specific Module?</span></li><li><span class="badge weight">1 rows</span><span class="list-text">Can You Display All The Training Sections?</span></li><li><span class="badge weight">0 rows</span><span class="list-text">How Do I Start Using The Information Modules?</span></li></ul></div>
+                        <div class="split-col"><h5>🗣️ Top 5 Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">431 freq</span><span class="list-text"><i>मॉड्यूल  देखें</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>मॉड्यूल देखें</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Module dikhao</i></span></li></ul></div>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <div class="card-side-badge">📊 2.87% of total channel traffic (169 queries)</div>
+                    <h4>📖 How Do I Go Back to the Main Menu?</h4>
+                    <div class="info-grid">
+                        <div><strong>💡 Intent:</strong> Users are expressing a clear, non-clinical intent to exit their current conversational path and navigate back to the primary main menu of the service.</div>
+                        <div style="margin-top:4px;"><strong>🛠️ Scope:</strong> The operational scope is non-clinical; writers must create a concise system response that acknowledges the user&#x27;s request and presents the main menu options for navigation.</div>
+                        <div style="margin-top:4px;"><strong>📁 Asset:</strong> <code>docs/SYS.NAV.1.1_MainMenuRequest</code></div>
+                    </div>
+                    <div class="split-row toggleable-details">
+                        <div class="split-col"><h5>📍 Top 8 Distinct Questions</h5><ul class="sub-list"><li><span class="badge weight">155 rows</span><span class="list-text">How Can I Return to the Main Menu?</span></li><li><span class="badge weight">5 rows</span><span class="list-text">Can I Start This Conversation Over?</span></li><li><span class="badge weight">3 rows</span><span class="list-text">What Are My Main Options Again?</span></li><li><span class="badge weight">2 rows</span><span class="list-text">How Do I Exit This Specific Topic?</span></li><li><span class="badge weight">1 rows</span><span class="list-text">Is There a Way to See the Home Screen?</span></li><li><span class="badge weight">1 rows</span><span class="list-text">Take Me Back to the Beginning.</span></li><li><span class="badge weight">1 rows</span><span class="list-text">I Want to See the Main List of Topics.</span></li><li><span class="badge weight">1 rows</span><span class="list-text">How Do I Reset the Chat?</span></li></ul></div>
+                        <div class="split-col"><h5>🗣️ Top 5 Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">169 freq</span><span class="list-text"><i>मुख्य मेनू जाएं</i></span></li></ul></div>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <div class="card-side-badge">📊 1.36% of total channel traffic (80 queries)</div>
+                    <h4>📖 How Can I Go Back To The Main Menu?</h4>
+                    <div class="info-grid">
+                        <div><strong>💡 Intent:</strong> Users are issuing a non-clinical system command to exit their current conversational path and return to the main navigation menu.</div>
+                        <div style="margin-top:4px;"><strong>🛠️ Scope:</strong> This is a non-clinical system command; the operational scope is to correctly interpret the user&#x27;s intent to navigate and redirect them to the primary menu.</div>
+                        <div style="margin-top:4px;"><strong>📁 Asset:</strong> <code>docs/WSA.2.1</code></div>
+                    </div>
+                    <div class="split-row toggleable-details">
+                        <div class="split-col"><h5>📍 Top 8 Distinct Questions</h5><ul class="sub-list"><li><span class="badge weight">32 rows</span><span class="list-text">Can You Take Me To The Main Menu?</span></li><li><span class="badge weight">16 rows</span><span class="list-text">How Do I Start The Conversation Over From The Beginning?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">What Are The Main Options Available?</span></li><li><span class="badge weight">8 rows</span><span class="list-text">I Want To Go Back To The Home Screen.</span></li><li><span class="badge weight">5 rows</span><span class="list-text">How Do I Exit This Current Topic?</span></li><li><span class="badge weight">4 rows</span><span class="list-text">Can You Show Me The Menu Again?</span></li><li><span class="badge weight">3 rows</span><span class="list-text">Is There A Way To Reset This Chat?</span></li><li><span class="badge weight">2 rows</span><span class="list-text">How Do I Stop And Go Back?</span></li></ul></div>
+                        <div class="split-col"><h5>🗣️ Top 5 Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">80 freq</span><span class="list-text"><i>मुख्य मेनू पर ले चलो</i></span></li></ul></div>
+                    </div>
+                </div></div>
+                </div>
+                <div class="block">
+                    <div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Gamified Learning ▾</div>
+                    <div>
+                <div class="faq-card">
+                    <div class="card-side-badge">📊 4.57% of total channel traffic (269 queries)</div>
+                    <h4>📖 How Do I Play The Health Quiz?</h4>
+                    <div class="info-grid">
+                        <div><strong>💡 Intent:</strong> Users are expressing a direct and singular intent to engage with an interactive quiz feature on the platform, likely for educational or gamified learning purposes related to maternal health.</div>
+                        <div style="margin-top:4px;"><strong>🛠️ Scope:</strong> Writers should create content that explains how to access and participate in the platform&#x27;s educational quiz feature, clarifying its purpose as a tool for knowledge reinforcement.</div>
+                        <div style="margin-top:4px;"><strong>📁 Asset:</strong> <code>docs/WSA.2.2</code></div>
+                    </div>
+                    <div class="split-row toggleable-details">
+                        <div class="split-col"><h5>📍 Top 8 Distinct Questions</h5><ul class="sub-list"><li><span class="badge weight">221 rows</span><span class="list-text">How Can I Start Playing The Quiz?</span></li><li><span class="badge weight">14 rows</span><span class="list-text">What Are The Rules For The Quiz?</span></li><li><span class="badge weight">11 rows</span><span class="list-text">What Topics Will The Quiz Ask About?</span></li><li><span class="badge weight">8 rows</span><span class="list-text">Can I See My Score After The Quiz?</span></li><li><span class="badge weight">6 rows</span><span class="list-text">Is It Possible To Play The Quiz Again?</span></li><li><span class="badge weight">4 rows</span><span class="list-text">Are There Any Prizes For Winning The Quiz?</span></li><li><span class="badge weight">3 rows</span><span class="list-text">Where Can I Find The Quiz Section In The App?</span></li><li><span class="badge weight">2 rows</span><span class="list-text">Why Am I Being Asked To Play A Quiz?</span></li></ul></div>
+                        <div class="split-col"><h5>🗣️ Top 5 Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">269 freq</span><span class="list-text"><i>क्विज़ खेलें</i></span></li></ul></div>
+                    </div>
+                </div></div>
+                </div>
+                <div class="block">
+                    <div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Asha Worker Operations ▾</div>
+                    <div>
+                <div class="faq-card">
+                    <div class="card-side-badge">📊 1.11% of total channel traffic (65 queries)</div>
+                    <h4>📖 What Are the Core Roles, Responsibilities, and Associated Financial Incentives for an ASHA Worker?</h4>
+                    <div class="info-grid">
+                        <div><strong>💡 Intent:</strong> ASHA workers are seeking comprehensive information about their official roles, specific job-related tasks such as conducting home visits, proper documentation procedures, and a detailed breakdown of the financial incentives they are entitled to for their services.</div>
+                        <div style="margin-top:4px;"><strong>🛠️ Scope:</strong> Writers must create a definitive guide detailing the official duties, documentation protocols like filling HBNC/HBYC checklists, and the complete performance-based payment structure for ASHA workers.</div>
+                        <div style="margin-top:4px;"><strong>📁 Asset:</strong> <code>docs/PNC.1: Home-Based Newborn Care (HBNC) &amp; HBYC Framework</code></div>
+                    </div>
+                    <div class="split-row toggleable-details">
+                        <div class="split-col"><h5>📍 Top 8 Distinct Questions</h5><ul class="sub-list"><li><span class="badge weight">15 rows</span><span class="list-text">What Are the Primary Duties and a Complete List of Responsibilities for an ASHA Worker?</span></li><li><span class="badge weight">14 rows</span><span class="list-text">What Is the Detailed List of All Financial Incentives an ASHA Receives for Her Various Tasks?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">How Should an ASHA Correctly Fill Out the HBNC and HBYC Checklists During Home Visits?</span></li><li><span class="badge weight">8 rows</span><span class="list-text">What Is the Official Government-Mandated Schedule for Postpartum and Newborn Home Visits (HBNC)?</span></li><li><span class="badge weight">6 rows</span><span class="list-text">What Specific Actions and Checks Must an ASHA Perform During a Home-Based Newborn Care Visit?</span></li><li><span class="badge weight">5 rows</span><span class="list-text">What Are the Essential Medicines and Supplies an ASHA Worker Should Always Carry in Her Kit?</span></li><li><span class="badge weight">4 rows</span><span class="list-text">What Is the Defined Population Size or Geographic Area an ASHA Worker Is Responsible For?</span></li><li><span class="badge weight">3 rows</span><span class="list-text">What Are the Official Eligibility Criteria, Such as Age and Education, to Become an ASHA Worker?</span></li></ul></div>
+                        <div class="split-col"><h5>🗣️ Top 5 Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">2 freq</span><span class="list-text"><i>HBYC checklist kaise bhare</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>गृहभेट केसे भरते हैं</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Asha ke sabhi prakar ke incentives ke bare me bataye</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>cho ke role ke baare mein bataiye</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>आशा (ASHA)</i></span></li></ul></div>
+                    </div>
+                </div></div>
+                </div>
+                <div class="block">
+                    <div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Icds Operations ▾</div>
+                    <div>
+                <div class="faq-card">
+                    <div class="card-side-badge">📊 1.09% of total channel traffic (64 queries)</div>
+                    <h4>📖 How Do I Correctly Perform Data Entry and Troubleshoot Common Issues in the Poshan Tracker Application?</h4>
+                    <div class="info-grid">
+                        <div><strong>💡 Intent:</strong> Anganwadi workers are seeking procedural guidance on how to use the Poshan Tracker application for essential data entry tasks, including beneficiary registration, nutrition scheme logging, and troubleshooting common technical errors like face capture.</div>
+                        <div style="margin-top:4px;"><strong>🛠️ Scope:</strong> The writers must provide a step-by-step operational guide for Anganwadi workers on using the Poshan Tracker application, covering beneficiary registration, data entry for various modules, and solutions for common technical problems.</div>
+                        <div style="margin-top:4px;"><strong>📁 Asset:</strong> <code>docs/MNT.1.1</code></div>
+                    </div>
+                    <div class="split-row toggleable-details">
+                        <div class="split-col"><h5>📍 Top 8 Distinct Questions</h5><ul class="sub-list"><li><span class="badge weight">15 rows</span><span class="list-text">How Do I Register a New Pregnant Woman in the Poshan Tracker App?</span></li><li><span class="badge weight">12 rows</span><span class="list-text">What Is the Solution for When the Face Capture Feature Is Not Working for THR Distribution?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">What Is the Process for Entering or Updating a Child&#x27;s Data Like Weight, Height, and Aadhaar?</span></li><li><span class="badge weight">8 rows</span><span class="list-text">Can You Provide General Instructions on How to Navigate and Enter Data in the Poshan Tracker?</span></li><li><span class="badge weight">6 rows</span><span class="list-text">How Can I Correct an Error or Delete a Beneficiary&#x27;s Record from the App?</span></li><li><span class="badge weight">5 rows</span><span class="list-text">How Do I Log Specific Scheme Activities Like ANC Visits, Hot Cooked Meals, or THR?</span></li><li><span class="badge weight">4 rows</span><span class="list-text">How Should I Handle Special Cases Like Registering Twins or if a Beneficiary&#x27;s Data Is Not Displaying Correctly?</span></li><li><span class="badge weight">4 rows</span><span class="list-text">What Are the Steps for Managing Beneficiary Profiles, Such as Registering a Lactating Mother or Completing KYC?</span></li></ul></div>
+                        <div class="split-col"><h5>🗣️ Top 5 Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">1 freq</span><span class="list-text"><i>Sampark app me matra सहयोगिनी samiti me sadasyo ko kese jode</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Poshan trackr mejanch kese chadye</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Usha tracker Mein sahayika ki KYC kaise karte hain</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Twins baby poshan tracker ma kaish jorah</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Posha trackerANC jaanch kaise bharate hain</i></span></li></ul></div>
+                    </div>
+                </div></div>
+                </div>
+                <div class="block">
+                    <div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: High-Risk Pregnancy ▾</div>
+                    <div>
+                <div class="faq-card">
+                    <div class="card-side-badge">📊 0.97% of total channel traffic (57 queries)</div>
+                    <h4>📖 What Are The Primary Causes And Symptoms Used To Identify A High-Risk Pregnancy?</h4>
+                    <div class="info-grid">
+                        <div><strong>💡 Intent:</strong> Users are asking for a comprehensive explanation of what a high-risk pregnancy (HRP) is, seeking to identify its specific causes, symptoms, and the criteria used for its classification and management.</div>
+                        <div style="margin-top:4px;"><strong>🛠️ Scope:</strong> The writer will define High-Risk Pregnancy (HRP) and detail the primary clinical risk factors, symptoms, and identification criteria used by community health workers.</div>
+                        <div style="margin-top:4px;"><strong>📁 Asset:</strong> <code>docs/HRP.1: Risk Factor Stratification</code></div>
+                    </div>
+                    <div class="split-row toggleable-details">
+                        <div class="split-col"><h5>📍 Top 8 Distinct Questions</h5><ul class="sub-list"><li><span class="badge weight">15 rows</span><span class="list-text">What Is The Definition Of A High-Risk Pregnancy (HRP)?</span></li><li><span class="badge weight">12 rows</span><span class="list-text">What Are The Primary Causes Or Reasons A Pregnancy Is Classified As High-Risk?</span></li><li><span class="badge weight">8 rows</span><span class="list-text">Can You List The Specific 24 Causes Or Symptoms Associated With HRP?</span></li><li><span class="badge weight">6 rows</span><span class="list-text">What Are The Common Symptoms And Warning Signs Of A High-Risk Pregnancy?</span></li><li><span class="badge weight">6 rows</span><span class="list-text">How Can A Community Health Worker Identify A Woman With A High-Risk Pregnancy?</span></li><li><span class="badge weight">4 rows</span><span class="list-text">What Are The Guidelines For Managing And Caring For A Woman With A High-Risk Pregnancy?</span></li><li><span class="badge weight">3 rows</span><span class="list-text">Are There Different Types Or Categories Of High-Risk Pregnancies?</span></li><li><span class="badge weight">3 rows</span><span class="list-text">Can You Provide General Information About High-Risk Pregnancy For Pregnant Women?</span></li></ul></div>
+                        <div class="split-col"><h5>🗣️ Top 5 Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">3 freq</span><span class="list-text"><i>Hrp</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>HRP mahila</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>HRP kya hai</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>एचआरपी गर्भवती महिलाओं की पहचान कैसे करें</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>HRP ke 24 karan btaye</i></span></li></ul></div>
+                    </div>
+                </div></div>
+                </div></div>
+                </div>
+                <div class="block">
+                    <div class="vol-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">📘 Volume: 👶 Pediatric &amp; Infant Wellness ▾</div>
+                    <div>
+                <div class="block">
+                    <div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Child Malnutrition Management ▾</div>
+                    <div>
+                <div class="faq-card">
+                    <div class="card-side-badge">📊 1.34% of total channel traffic (79 queries)</div>
+                    <h4>📖 What Are the Official Guidelines for Identifying, Differentiating, and Managing SAM and MAM Children?</h4>
+                    <div class="info-grid">
+                        <div><strong>💡 Intent:</strong> Community health workers are seeking clear operational guidance on how to identify, differentiate, manage, and document cases of Severe Acute Malnutrition (SAM) and Moderate Acute Malnutrition (MAM) in children.</div>
+                        <div style="margin-top:4px;"><strong>🛠️ Scope:</strong> Writers must provide a comprehensive guide detailing the screening criteria, key differences, registration process, and home-based management protocols for children identified with Severe Acute Malnutrition (SAM) and Moderate Acute Malnutrition (MAM).</div>
+                        <div style="margin-top:4px;"><strong>📁 Asset:</strong> <code>docs/MNT.1.1</code></div>
+                    </div>
+                    <div class="split-row toggleable-details">
+                        <div class="split-col"><h5>📍 Top 8 Distinct Questions</h5><ul class="sub-list"><li><span class="badge weight">25 rows</span><span class="list-text">What Are the Key Physical Signs and Symptoms to Differentiate Between a SAM and a MAM Child?</span></li><li><span class="badge weight">15 rows</span><span class="list-text">What Is the Official Screening Procedure to Identify SAM and MAM Children in the Community?</span></li><li><span class="badge weight">12 rows</span><span class="list-text">What Are the Home-Based Management and Care Protocols for a Child Identified With SAM?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">How Should I Correctly Document and Register SAM and MAM Children in the Official Register?</span></li><li><span class="badge weight">6 rows</span><span class="list-text">What Counseling and Advice Should Be Given to the Family of a SAM Child During a Home Visit?</span></li><li><span class="badge weight">5 rows</span><span class="list-text">What Is the Required Follow-Up Schedule for a Child Diagnosed With SAM?</span></li><li><span class="badge weight">4 rows</span><span class="list-text">What Specific Nutritional Supplements or Medications Are Provided to SAM Children?</span></li><li><span class="badge weight">2 rows</span><span class="list-text">How Can a Child Transition From a SAM to a MAM Classification and Eventually to a Healthy Status?</span></li></ul></div>
+                        <div class="split-col"><h5>🗣️ Top 5 Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">3 freq</span><span class="list-text"><i>Sam or mam ko kaise pahchane</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Same बच्चों की स्क्रीनिंग करना</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>मैंम सेम बच्चों में क्या अंतर है</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Sem bacche ka panjiyan kaise karte hain</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Csam bchoo ki kese phchanhogi</i></span></li></ul></div>
+                    </div>
+                </div></div>
+                </div>
+                <div class="block">
+                    <div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Childhood Immunization Schedule ▾</div>
+                    <div>
+                <div class="faq-card">
+                    <div class="card-side-badge">📊 1.21% of total channel traffic (71 queries)</div>
+                    <h4>📖 What Is the Complete Vaccination Schedule for a Child From Birth to Five Years of Age?</h4>
+                    <div class="info-grid">
+                        <div><strong>💡 Intent:</strong> Mothers are seeking comprehensive information about the national childhood immunization schedule, including which specific vaccines are administered at different ages, the total number of doses required, and which diseases these vaccines prevent.</div>
+                        <div style="margin-top:4px;"><strong>🛠️ Scope:</strong> Writers must provide a comprehensive and easy-to-understand guide to the Indian National Immunization Schedule for children from birth to five years, detailing each vaccine, its timing, dosage, and the disease it protects against.</div>
+                        <div style="margin-top:4px;"><strong>📁 Asset:</strong> <code>docs/PNC.1: Home-Based Newborn Care (HBNC) &amp; HBYC Framework</code></div>
+                    </div>
+                    <div class="split-row toggleable-details">
+                        <div class="split-col"><h5>📍 Top 8 Distinct Questions</h5><ul class="sub-list"><li><span class="badge weight">20 rows</span><span class="list-text">What Is the Complete Vaccination Schedule for a Child From Birth to 5 Years?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">Which Vaccines Are Administered to a Newborn at Birth?</span></li><li><span class="badge weight">12 rows</span><span class="list-text">What Vaccines Are Given at 1.5, 2.5, and 3.5 Months of Age?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">Which Vaccinations Are Required When a Baby Reaches 9 Months?</span></li><li><span class="badge weight">7 rows</span><span class="list-text">What Is the Vaccination Schedule for a Child Between 1 and 2 Years Old?</span></li><li><span class="badge weight">5 rows</span><span class="list-text">Which Booster Doses Are Required for a Child Between 2 and 5 Years of Age?</span></li><li><span class="badge weight">4 rows</span><span class="list-text">Why Is It Important to Vaccinate Children and What Diseases Do Vaccines Prevent?</span></li><li><span class="badge weight">3 rows</span><span class="list-text">What Should Be Done if a Child Has Missed Some of Their Scheduled Vaccinations?</span></li></ul></div>
+                        <div class="split-col"><h5>🗣️ Top 5 Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">6 freq</span><span class="list-text"><i>1 saal ke andar ke bacche ko kya teeka dena chahiye</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>बच्चों का टीकाकरण कितने महीने तक पूर्ण होना चाहिए</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>0 जन्म से लेकर 9 माह तक कौन-कौन से टीके लगते हैं</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>बच्चों के टीका कितने लगते हैं</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>सेकंड में कितने डोज लगाए जाते हैं फेंटेस्टीकंड में कितने डोज लगाई जाती है</i></span></li></ul></div>
+                    </div>
+                </div></div>
+                </div></div>
+                </div>
+                <div class="block">
+                    <div class="vol-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">📘 Volume: 🏥 Labor &amp; Delivery Preparation ▾</div>
+                    <div>
+                <div class="block">
+                    <div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Low Birth Weight Care ▾</div>
+                    <div>
+                <div class="faq-card">
+                    <div class="card-side-badge">📊 1.12% of total channel traffic (66 queries)</div>
+                    <h4>📖 What Are The Essential Care Practices For A Low Birth Weight Newborn?</h4>
+                    <div class="info-grid">
+                        <div><strong>💡 Intent:</strong> Community health workers are seeking comprehensive guidance on the identification, management, and home-based care protocols for low birth weight newborns to improve their survival and growth outcomes.</div>
+                        <div style="margin-top:4px;"><strong>🛠️ Scope:</strong> Writers must detail the definition of low birth weight, essential home care practices including Kangaroo Mother Care, feeding advice, danger sign identification, and the ASHA&#x27;s home visit schedule for these vulnerable infants.</div>
+                        <div style="margin-top:4px;"><strong>📁 Asset:</strong> <code>docs/PNC.2.2: Thermal Management (Delayed Bathing &gt; 72 hours, Kangaroo Mother Care for LBW)</code></div>
+                    </div>
+                    <div class="split-row toggleable-details">
+                        <div class="split-col"><h5>📍 Top 8 Distinct Questions</h5><ul class="sub-list"><li><span class="badge weight">20 rows</span><span class="list-text">What Are The General Home Care And Management Steps For A Low Birth Weight Baby?</span></li><li><span class="badge weight">15 rows</span><span class="list-text">What Is The Official Weight Classification For A Low Birth Weight Newborn?</span></li><li><span class="badge weight">12 rows</span><span class="list-text">What Are The Best Practices To Help A Low Birth Weight Baby Gain Weight?</span></li><li><span class="badge weight">6 rows</span><span class="list-text">What Specific Advice Should Be Given To The Family Of A Low Birth Weight Infant?</span></li><li><span class="badge weight">4 rows</span><span class="list-text">What Is The Required Home Visit Schedule For A Low Birth Weight Baby?</span></li><li><span class="badge weight">4 rows</span><span class="list-text">How Should A Health Worker Proceed When A Low Birth Weight Baby Is Identified During A Home Visit?</span></li><li><span class="badge weight">3 rows</span><span class="list-text">What Are The Potential Health Risks And Danger Signs For A Low Birth Weight Newborn?</span></li><li><span class="badge weight">2 rows</span><span class="list-text">Are There Special Instructions For Babies Weighing Less Than Two Kilograms?</span></li></ul></div>
+                        <div class="split-col"><h5>🗣️ Top 5 Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">3 freq</span><span class="list-text"><i>bachhon mein vazan kam ho to kya karein?</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Bacchon ka vajan banaa badhane ke liye kya chij Lai jaaye</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Kam vajan ka baccha kitne kilo ka hota Hai</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Come vazan wale bachhe ke parivar ko kya saladi</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Kam vajan ke bacche ki budget Kaisi hoti hai</i></span></li></ul></div>
+                    </div>
+                </div></div>
+                </div></div>
+                </div>
+    </div></body></html>
