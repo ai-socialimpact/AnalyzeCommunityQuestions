@@ -1,18 +1,24 @@
-Status as on 7 Oct 2026
-This code is tested to work.
-Also, the below colab URL it edited . It is easy to run in few simple steps
-How to run (Simple)
-Open the URL in colab. (it uses the GPU for the fast clustering simulations)
+# Status as on 7 Oct 2026
 
-Upload the file (glific_messages_funnel.csv) to colab
+1. This code is tested to work.  
+2. Also, the below colab URL it edited . It is easy to run in few simple steps
 
-Enter GEMINI API key.
+# How to run (Simple)
 
-Just click Run all.
+1. Open the URL in colab. (it uses the GPU for the fast clustering simulations)
 
-The entire reports will be ready in few minutes and will be downloaded to your laptop.
+2. Upload the file (glific_messages_funnel.csv) to colab 
 
-Resources
-Colab URL : https://colab.research.google.com/drive/1iQmlDGusa0HmAcBjf21ddl8AgpRJZ1LJ?usp=sharing
+3. Enter GEMINI API key.
 
-glific_messages_funnel.csv:  in the local folder
+4. Just click Run all.
+
+5. The entire reports will be ready in few minutes and will be downloaded to your laptop.
+
+# Resources 
+
+1. Colab URL : https://colab.research.google.com/drive/1iQmlDGusa0HmAcBjf21ddl8AgpRJZ1LJ?usp=sharing
+
+2. glific_messages_funnel.csv:  in the local folder
+ 
+ 
