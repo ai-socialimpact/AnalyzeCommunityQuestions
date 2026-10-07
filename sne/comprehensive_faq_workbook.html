@@ -1,0 +1,428 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
+        body { font-family: sans-serif; background: #fafafa; padding: 15px; color: #333; font-size: 13px; }
+        .wrapper { max-width: 1100px; margin: 0 auto; background: #fff; border: 1px solid #ddd; padding: 25px; border-radius: 4px; }
+        .summary-dashboard { display: flex; gap: 15px; margin-bottom: 15px; text-align: center; }
+        .metric-card { flex: 1; background: #f8fafc; border: 1px solid #cbd5e1; padding: 10px; border-radius: 4px; }
+        .metric-card h3 { margin: 0; font-size: 24px; color: #0284c7; }
+        .metric-card p { margin: 2px 0 0 0; font-size: 11px; color: #475569; }
+        .filter-panel { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 4px; padding: 14px; margin-bottom: 15px; }
+        .checkbox-row { display: flex; flex-wrap: wrap; gap: 12px 20px; margin-bottom: 10px; font-weight: bold; font-size: 12px; }
+        .vol-hdr { background: #edf2f7; font-weight: bold; padding: 10px; margin-top: 10px; cursor: pointer; border-radius: 4px; color: #1e3a8a; border-left: 4px solid #1e3a8a; }
+        .ch-hdr { background: #fffbeb; font-weight: bold; padding: 7px; margin: 6px 0 0 15px; cursor: pointer; border-radius: 4px; color: #92400e; border-left: 4px solid #d97706; }
+        .faq-card { margin: 10px 0 10px 25px; padding: 15px; border-left: 3px solid #94a3b8; background: #f8fafc; }
+        .info-row { background: #fff; padding: 8px 12px; border: 1px solid #e2e8f0; border-radius: 4px; margin-bottom: 5px; }
+        .split-row { display: flex; gap: 15px; margin-top: 10px; }
+        .split-col { flex: 1; background: #fff; border: 1px solid #e2e8f0; border-radius: 4px; padding: 10px; }
+        .sub-list { padding-left: 0; list-style: none; margin: 0; }
+        .sub-list li { display: flex; margin-bottom: 5px; }
+        .list-text { flex: 1; line-height: 1.4; }
+        .badge { font-weight: bold; padding: 1px 5px; border-radius: 8px; font-size: 10px; margin-right: 6px; display: inline-block; flex-shrink: 0; }
+        .badge.weight { background: #dcfce7; color: #15803d; }
+        .badge.freq { background: #e0f2fe; color: #0369a1; }
+        .hide { display: none !important; }
+        h4, h5 { margin: 0 0 4px 0; color: #0f172a; }
+        h5 { font-size: 11px; border-bottom: 1px solid #e2e8f0; padding-bottom: 3px; color: #475569; text-transform: uppercase; }
+        code { background: #f1f5f9; padding: 1px 3px; border-radius: 3px; color: #b45309; }
+        .btn { background: #0284c7; color: white; border: none; padding: 5px 10px; font-size: 12px; font-weight: bold; border-radius: 4px; cursor: pointer; margin-right: 5px; }
+    </style><script>
+        function toggleCol(cb, cls) { document.querySelectorAll('.'+cls).forEach(e => cb.checked ? e.classList.remove('hide') : e.classList.add('hide')); }
+        function toggleVols(exp) { document.querySelectorAll('.c-body').forEach(b => exp ? b.classList.remove('hide') : b.classList.add('hide')); }
+        let lExp = true;
+        function toggleLists() { lExp = !lExp; document.querySelectorAll('.toggleable-details').forEach(r => lExp ? r.classList.remove('hide') : r.classList.add('hide')); document.getElementById('lstBtn').innerText = lExp ? "Collapse Lists ▴" : "Expand Lists ▾"; }
+    </script></head><body><div class="wrapper">
+        <h2>UNIVERSAL BOOKLET DATA MANAGER (ALL CSV COLUMNS CAPTURED)</h2>
+        <div class="summary-dashboard">
+            <div class="metric-card"><h3>10</h3><p>Total FAQ Chapters</p></div>
+            <div class="metric-card"><h3>70</h3><p>High-Impact Questions (&gt;10 rows)</p></div>
+            <div class="metric-card"><h3>15.67%</h3><p>WhatsApp Traffic Covered</p></div>
+        </div>
+        <div class="filter-panel">
+            <div class="checkbox-row">
+                <label><input type="checkbox" checked onclick="toggleCol(this,'meta-0')"> Booklet Section</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-1')"> Target Kb Markdown File</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-2')"> System Routing Directive</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-3')"> Total User Queries</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-4')"> Channel Traffic Percentage</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-5')"> What User Are Asking</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-6')"> Committee Scope Of Work</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-7')"> Top 7 Weighted Bot Anchors</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-8')"> Cultural Myths To Debunk</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-9')"> Core Patient Takeaway Box</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-10')"> Planning Sub Intent Distribution Weights</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-11')"> Index Cross Lingual Meta Tags</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-12')"> Index Phonetic Invariants</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-13')"> Index False Positive Shadow Terms</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-14')"> Guard Hard Bypass Emergency Triggers</label>
+<label><input type="checkbox" checked onclick="toggleCol(this,'meta-15')"> Guard Semantic Leakage Warning</label>
+
+                <label><input type="checkbox" checked onclick="toggleCol(this,'class-sub')"> Top Questions List</label>
+                <label><input type="checkbox" checked onclick="toggleCol(this,'class-hin')"> Hinglish Variations List</label>
+            </div>
+            <div style="margin-top:12px;">
+                <button class="btn" onclick="toggleVols(true)">Expand Volumes</button>
+                <button class="btn" style="background:#475569;" onclick="toggleVols(false)">Collapse Volumes</button>
+                <button id="lstBtn" class="btn" onclick="toggleLists()">Collapse Lists ▴</button>
+            </div>
+        </div>
+        <div class="block-node"><div class="vol-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">📘 Volume: 👶 Pediatric &amp; Infant Wellness ▾</div><div class="c-body hide"><div class="block-node"><div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Child Immunization ▾</div><div class="c-body hide">
+                <div class="faq-card">
+                    <h4>📖 What Is The Complete Immunization Schedule For My Child And How Should I Manage Post-Vaccination Side Effects?</h4>
+                    <div class="info-row meta-0"><strong>💡 Booklet Section:</strong> Chapter 1</div>
+<div class="info-row meta-1"><strong>💡 Target Kb Markdown File:</strong> immunization_schedule_and_basics.md</div>
+<div class="info-row meta-2"><strong>💡 System Routing Directive:</strong> ACTIVATE_IMMUNIZATION_MASTER_POOL</div>
+<div class="info-row meta-3"><strong>💡 Total User Queries:</strong> 467</div>
+<div class="info-row meta-4"><strong>💡 Channel Traffic Percentage:</strong> 2.59% of total channel traffic</div>
+<div class="info-row meta-5"><strong>💡 What User Are Asking:</strong> Mothers are seeking comprehensive information about the immunization schedule for their children and themselves during pregnancy, including which vaccines are required at specific ages, and how to manage common side effects like fever, pain, and swelling at the injection site.</div>
+<div class="info-row meta-6"><strong>💡 Committee Scope Of Work:</strong> Writers must provide a comprehensive guide covering the national immunization schedule, the purpose of each vaccine, and the management of common, non-severe post-vaccination side effects.</div>
+<div class="info-row meta-7"><strong>💡 Top 7 Weighted Bot Anchors:</strong> [1] (Count: 6) Mera baby six month ka hua hai abhi usko 3:30 mahine ka sui lagaya hai 3 din ho gaya hai usko barf bhi Laga rahi hun aur main cream bhi Laga rahi hun to bhi gand jaisa banaa hai to kya karna chahie
+[2] (Count: 3) Jahan per sui mare Na vahin per guard jaisa hua Hai Baki aur kuchh nahin
+[3] (Count: 2) Maa ko abhi garbh wati hai 3 month started hai aur aj tika laga hai jha tika laga woh hath dukh rha hai tu kya kare
+[4] (Count: 2) Opv kya hota hai
+[5] (Count: 2) Hepatitis b kya hota hai
+[6] (Count: 2) Teeken kab aur kon kon se lagte hai
+[7] (Count: 2) Mujhe ye janana tha ki 1.5 mahine ke bache ko kitne tike lagte hai</div>
+<div class="info-row meta-8"><strong>💡 Cultural Myths To Debunk:</strong> • Vaccines cause severe illness or are unnecessary.
+• You cannot vaccinate a child who has a mild cold or fever.
+• Applying traditional remedies or unprescribed creams on injection lumps is the best solution.</div>
+<div class="info-row meta-9"><strong>💡 Core Patient Takeaway Box:</strong> Following the national immunization schedule is crucial for protecting your child&#x27;s health, and common side effects like mild fever or swelling are normal and can be managed at home.</div>
+<div class="info-row meta-10"><strong>💡 Planning Sub Intent Distribution Weights:</strong> • Post-Vaccination Side Effects Management (31.05%): Budget 150 words
+• Child Vaccine Schedule Details (23.55%): Budget 115 words
+• Pregnancy Vaccination Schedule (11.78%): Budget 60 words
+• Specific Vaccine Information (9.64%): Budget 50 words
+• Necessity and Importance of Vaccines (6.42%): Budget 30 words
+• Logistics and Location (5.99%): Budget 30 words
+• Missed or Delayed Doses (5.78%): Budget 30 words
+• Understanding the Vaccine Card (5.78%): Budget 30 words</div>
+<div class="info-row meta-11"><strong>💡 Index Cross Lingual Meta Tags:</strong> sui, tika, teeka, soi, suui, tike, tikka, injection, injaksan, jekshan, exjection, sohee, suri, teekha, tikkey</div>
+<div class="info-row meta-12"><strong>💡 Index Phonetic Invariants:</strong> sui, tika, vaccine, injection</div>
+<div class="info-row meta-13"><strong>💡 Index False Positive Shadow Terms:</strong> iron injection, anemia, blood test, sonography, checkup, delivery pain</div>
+<div class="info-row meta-14"><strong>💡 Guard Hard Bypass Emergency Triggers:</strong> rabbit caat liya, billi ka nails lag gya, hiv positive, severe reaction, unconscious, not breathing</div>
+<div class="info-row meta-15"><strong>💡 Guard Semantic Leakage Warning:</strong> Queries about &#x27;iron injection&#x27; or &#x27;IFA&#x27; should be carefully routed to the Anemia cluster, not this general immunization cluster. Similarly, &#x27;injection&#x27; for pain relief during labor belongs to the Childbirth cluster.</div>
+
+                    <div class="split-row toggleable-details">
+                        <div class="split-col class-sub"><h5>📍 Top Questions</h5><ul class="sub-list"><li><span class="badge weight">145 rows</span><span class="list-text">What Should I Do About The Lump, Swelling, Or Pain At The Injection Site After My Baby&#x27;s Vaccination?</span></li><li><span class="badge weight">110 rows</span><span class="list-text">What Is The Schedule Of Vaccines For My Baby At 1.5, 2.5, 3.5, And 9 Months?</span></li><li><span class="badge weight">55 rows</span><span class="list-text">Which Tetanus (TT) Injections Are Required During Pregnancy And When Should They Be Taken?</span></li><li><span class="badge weight">45 rows</span><span class="list-text">Can You Explain What The OPV, Hepatitis B, And BCG Vaccines Are For?</span></li><li><span class="badge weight">30 rows</span><span class="list-text">Is It Absolutely Necessary For My Child To Get All The Recommended Vaccinations?</span></li><li><span class="badge weight">28 rows</span><span class="list-text">Where Can I Go To Get My Child Vaccinated?</span></li><li><span class="badge weight">27 rows</span><span class="list-text">What Should I Do If My Child Has Missed A Scheduled Vaccine Dose?</span></li><li><span class="badge weight">27 rows</span><span class="list-text">How Can I Understand My Child&#x27;s Immunization Card To See Which Vaccines Are Due?</span></li></ul></div>
+                        <div class="split-col class-hin"><h5>🗣️ Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">6 freq</span><span class="list-text"><i>Mera baby six month ka hua hai abhi usko 3:30 mahine ka sui lagaya hai 3 din ho gaya hai usko barf bhi Laga rahi hun aur main cream bhi Laga rahi hun to bhi gand jaisa banaa hai to kya karna chahie</i></span></li><li><span class="badge freq">3 freq</span><span class="list-text"><i>Jahan per sui mare Na vahin per guard jaisa hua Hai Baki aur kuchh nahin</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Maa ko abhi garbh wati hai 3 month started hai aur aj tika laga hai jha tika laga woh hath dukh rha hai tu kya kare</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Opv kya hota hai</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Hepatitis b kya hota hai</i></span></li></ul></div>
+                    </div>
+                </div></div></div><div class="block-node"><div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Infant And Child Feeding ▾</div><div class="c-body hide">
+                <div class="faq-card">
+                    <h4>📖 How Can I Increase My Breast Milk Supply and Ensure My Baby Is Feeding Correctly?</h4>
+                    <div class="info-row meta-0"><strong>💡 Booklet Section:</strong> Chapter 9</div>
+<div class="info-row meta-1"><strong>💡 Target Kb Markdown File:</strong> breastfeeding_guidance.md</div>
+<div class="info-row meta-2"><strong>💡 System Routing Directive:</strong> ACTIVATE_BREASTFEEDING_CORE_POOL</div>
+<div class="info-row meta-3"><strong>💡 Total User Queries:</strong> 200</div>
+<div class="info-row meta-4"><strong>💡 Channel Traffic Percentage:</strong> 1.11% of total channel traffic</div>
+<div class="info-row meta-5"><strong>💡 What User Are Asking:</strong> New mothers are seeking guidance on how to successfully breastfeed, with a primary focus on addressing concerns about insufficient milk supply and proper feeding techniques.</div>
+<div class="info-row meta-6"><strong>💡 Committee Scope Of Work:</strong> Writers must provide comprehensive guidance on establishing and maintaining an adequate breast milk supply, correct breastfeeding techniques, and troubleshooting common feeding problems.</div>
+<div class="info-row meta-7"><strong>💡 Top 7 Weighted Bot Anchors:</strong> [1] (Count: 3) Kiya sex karne se dudh nahi aaya
+[2] (Count: 3) Maa ka dudh q nahi hota
+[3] (Count: 3) Maa ka dudh ke liye kiya karna chahiye
+[4] (Count: 3) Maa ka dudh na ho to kiya kare
+[5] (Count: 2) Maa ka dudh na bane to kya kre
+[6] (Count: 2) Mera dhoodh km aya h
+[7] (Count: 2) Maa ka dudh agar kam aane lage to kiya karye</div>
+<div class="info-row meta-8"><strong>💡 Cultural Myths To Debunk:</strong> • Having sex does not cause a mother&#x27;s breast milk to stop or dry up.
+• While a healthy diet is important, there is no single magic food that will instantly increase milk supply; consistent and effective removal of milk is the primary driver.
+• It is a cultural taboo and not recommended for a husband to drink his wife&#x27;s breast milk, which is specifically produced for the infant&#x27;s nutritional needs.</div>
+<div class="info-row meta-9"><strong>💡 Core Patient Takeaway Box:</strong> With proper latching techniques, a nutritious diet, and frequent feeding on demand, most mothers can establish a sufficient milk supply for their baby.</div>
+<div class="info-row meta-10"><strong>💡 Planning Sub Intent Distribution Weights:</strong> • Addressing Low Milk Supply (35.0%): Budget 150 words
+• Diet and Nutrition for Lactation (20.0%): Budget 100 words
+• Proper Latching and Positioning (12.5%): Budget 75 words
+• Signs of Adequate Feeding (10.0%): Budget 60 words
+• Using Formula and Other Concerns (22.5%): Budget 115 words</div>
+<div class="info-row meta-11"><strong>💡 Index Cross Lingual Meta Tags:</strong> dudh, doodh, doot, dhoodh, nahi hota, kam aya, kya kare, kaese krae, latching, pilaana, bukha, jeyada, bottel, sukh gaya, barhne</div>
+<div class="info-row meta-12"><strong>💡 Index Phonetic Invariants:</strong> dudh, doodh, milk, breastfeed, feed, pila</div>
+<div class="info-row meta-13"><strong>💡 Index False Positive Shadow Terms:</strong> pregnancy, delivery, formula, solid food, weaning, vaccine, fever, c-section</div>
+<div class="info-row meta-14"><strong>💡 Guard Hard Bypass Emergency Triggers:</strong> baby not feeding at all, baby is very weak, mother has high fever, severe breast pain with fever, lump in breast is very painful</div>
+<div class="info-row meta-15"><strong>💡 Guard Semantic Leakage Warning:</strong> This cluster is focused on breastfeeding supply and technique. Be cautious of queries about formula preparation, introducing solid foods (complementary feeding), or general newborn care, which are distinct topics.</div>
+
+                    <div class="split-row toggleable-details">
+                        <div class="split-col class-sub"><h5>📍 Top Questions</h5><ul class="sub-list"><li><span class="badge weight">70 rows</span><span class="list-text">What Should I Do if I Am Not Producing Enough Breast Milk?</span></li><li><span class="badge weight">40 rows</span><span class="list-text">What Foods and Diet Should I Follow to Increase My Breast Milk Production?</span></li><li><span class="badge weight">25 rows</span><span class="list-text">What Are the Correct Positions and Techniques for Latching My Baby to the Breast?</span></li><li><span class="badge weight">20 rows</span><span class="list-text">How Can I Tell if My Baby Is Getting Enough Milk and Their Stomach Is Full?</span></li><li><span class="badge weight">15 rows</span><span class="list-text">When and How Should I Use Formula or Bottle Milk if Breast Milk Is Insufficient?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">What Causes Breast Pain or Sore Nipples While Feeding and How Can I Treat It?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">How Often and for How Long Should I Breastfeed My Newborn?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">How Can I Express and Store Breast Milk Safely?</span></li></ul></div>
+                        <div class="split-col class-hin"><h5>🗣️ Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">3 freq</span><span class="list-text"><i>Kiya sex karne se dudh nahi aaya</i></span></li><li><span class="badge freq">3 freq</span><span class="list-text"><i>Maa ka dudh q nahi hota</i></span></li><li><span class="badge freq">3 freq</span><span class="list-text"><i>Maa ka dudh ke liye kiya karna chahiye</i></span></li><li><span class="badge freq">3 freq</span><span class="list-text"><i>Maa ka dudh na ho to kiya kare</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Maa ka dudh na bane to kya kre</i></span></li></ul></div>
+                    </div>
+                </div></div></div></div></div><div class="block-node"><div class="vol-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">📘 Volume: 🤰 Maternal Antepartum Care ▾</div><div class="c-body hide"><div class="block-node"><div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Pregnancy Health Conditions ▾</div><div class="c-body hide">
+                <div class="faq-card">
+                    <h4>📖 What Should I Do If I Have Anemia Or Low Hemoglobin During Pregnancy?</h4>
+                    <div class="info-row meta-0"><strong>💡 Booklet Section:</strong> Chapter 2</div>
+<div class="info-row meta-1"><strong>💡 Target Kb Markdown File:</strong> anemia_during_pregnancy.md</div>
+<div class="info-row meta-2"><strong>💡 System Routing Directive:</strong> TRIGGER_ANEMIA_EXCEPTION_REDIRECT</div>
+<div class="info-row meta-3"><strong>💡 Total User Queries:</strong> 435</div>
+<div class="info-row meta-4"><strong>💡 Channel Traffic Percentage:</strong> 2.41% of total channel traffic</div>
+<div class="info-row meta-5"><strong>💡 What User Are Asking:</strong> Mothers are collectively inquiring about the diagnosis, normal levels, and management of anemia during pregnancy, including which tests are required and what dietary or supplemental interventions can increase their hemoglobin.</div>
+<div class="info-row meta-6"><strong>💡 Committee Scope Of Work:</strong> Writers must detail the diagnosis, symptoms, normal hemoglobin levels, and management protocols for anemia during pregnancy, including dietary advice, IFA supplementation, and criteria for medical escalation.</div>
+<div class="info-row meta-7"><strong>💡 Top 7 Weighted Bot Anchors:</strong> [1] (Count: 3) Ismen khun kitna hai?
+[2] (Count: 3) Mere bete ko doctor ne khon ki Kami bataya Hai to Kya khilaye the Puri ho jayegi
+[3] (Count: 3) Aur mera beta 8 mahine ka hai usko khoon ki Kami hai
+[4] (Count: 3) Ismein balard kitna hai, batao mere ko
+[5] (Count: 3) isne khun kitna point hai batao
+[6] (Count: 2) kaunsa khun ka jaaj karana hai?
+[7] (Count: 2) KON KON SE MAHINE ME KHUN TEST JARURI HE</div>
+<div class="info-row meta-8"><strong>💡 Cultural Myths To Debunk:</strong> • Eating betel nuts (supari) can negatively affect blood production.
+• Consuming only fruits is not a complete solution for increasing hemoglobin; a balanced diet with various iron sources is necessary.
+• Constant tiredness and weakness during pregnancy are not always normal and can be a key symptom of anemia that requires medical attention.</div>
+<div class="info-row meta-9"><strong>💡 Core Patient Takeaway Box:</strong> Regularly check your hemoglobin during pregnancy and manage anemia by eating iron-rich foods and taking prescribed IFA supplements.</div>
+<div class="info-row meta-10"><strong>💡 Planning Sub Intent Distribution Weights:</strong> • Understanding Anemia &amp; Normal Levels (30.11%): Budget 120 words
+• Diet and Supplements for Anemia (25.06%): Budget 100 words
+• Required Tests and Schedule (14.94%): Budget 60 words
+• Symptoms and Complications (14.94%): Budget 60 words
+• Interpreting Your Report (14.95%): Budget 60 words</div>
+<div class="info-row meta-11"><strong>💡 Index Cross Lingual Meta Tags:</strong> khun ki kami, khon ki kami, balard, himoglobing, hemo gulveen, aayraan, bleeding saathi, jach, jaaj, tesh, kon, khoon badana, naupoint, das point, yaara point</div>
+<div class="info-row meta-12"><strong>💡 Index Phonetic Invariants:</strong> khoon, khun, blood, anemia, hb, hemoglobin</div>
+<div class="info-row meta-13"><strong>💡 Index False Positive Shadow Terms:</strong> blood pressure, sugar, thyroid, blood flow, bleeding, infection</div>
+<div class="info-row meta-14"><strong>💡 Guard Hard Bypass Emergency Triggers:</strong> blood transfusion, HIV, heavy bleeding, fainted and fell</div>
+<div class="info-row meta-15"><strong>💡 Guard Semantic Leakage Warning:</strong> Queries may confuse low hemoglobin (anemia) with low blood pressure or active bleeding/hemorrhage. The term &#x27;blood&#x27; is ambiguous and requires contextual analysis of symptoms like &#x27;weakness&#x27; or &#x27;tiredness&#x27; versus &#x27;bleeding&#x27; or &#x27;pressure&#x27;.</div>
+
+                    <div class="split-row toggleable-details">
+                        <div class="split-col class-sub"><h5>📍 Top Questions</h5><ul class="sub-list"><li><span class="badge weight">109 rows</span><span class="list-text">What Are The Normal Hemoglobin Levels During Pregnancy?</span></li><li><span class="badge weight">109 rows</span><span class="list-text">What Foods Should I Eat To Increase My Blood Or Hemoglobin?</span></li><li><span class="badge weight">65 rows</span><span class="list-text">When Should I Get My Blood Tested For Anemia During Pregnancy?</span></li><li><span class="badge weight">44 rows</span><span class="list-text">How Do I Interpret My Hemoglobin Test Results?</span></li><li><span class="badge weight">44 rows</span><span class="list-text">What Are The Common Symptoms Of Anemia While Pregnant?</span></li><li><span class="badge weight">22 rows</span><span class="list-text">What Is Anemia And What Causes It During Pregnancy?</span></li><li><span class="badge weight">21 rows</span><span class="list-text">Are Iron (IFA) Tablets Necessary To Treat Anemia?</span></li><li><span class="badge weight">21 rows</span><span class="list-text">Can Anemia Cause Complications After Delivery?</span></li></ul></div>
+                        <div class="split-col class-hin"><h5>🗣️ Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">3 freq</span><span class="list-text"><i>Ismen khun kitna hai?</i></span></li><li><span class="badge freq">3 freq</span><span class="list-text"><i>Mere bete ko doctor ne khon ki Kami bataya Hai to Kya khilaye the Puri ho jayegi</i></span></li><li><span class="badge freq">3 freq</span><span class="list-text"><i>Aur mera beta 8 mahine ka hai usko khoon ki Kami hai</i></span></li><li><span class="badge freq">3 freq</span><span class="list-text"><i>Ismein balard kitna hai, batao mere ko</i></span></li><li><span class="badge freq">3 freq</span><span class="list-text"><i>isne khun kitna point hai batao</i></span></li></ul></div>
+                    </div>
+                </div></div></div><div class="block-node"><div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Pregnancy Care ▾</div><div class="c-body hide">
+                <div class="faq-card">
+                    <h4>📖 What Are the Common Causes of Pains, Aches, and Discomfort During Pregnancy and When Should I Be Concerned?</h4>
+                    <div class="info-row meta-0"><strong>💡 Booklet Section:</strong> Chapter 3</div>
+<div class="info-row meta-1"><strong>💡 Target Kb Markdown File:</strong> pregnancy_care_and_checkups.md</div>
+<div class="info-row meta-2"><strong>💡 System Routing Directive:</strong> ISOLATE_PREGNANCY_PROCEDURE_LANE</div>
+<div class="info-row meta-3"><strong>💡 Total User Queries:</strong> 331</div>
+<div class="info-row meta-4"><strong>💡 Channel Traffic Percentage:</strong> 1.83% of total channel traffic</div>
+<div class="info-row meta-5"><strong>💡 What User Are Asking:</strong> Pregnant women are seeking to understand the causes and normalcy of various physical pains and sensations, such as abdominal cramps, backaches, pelvic pressure, and abdominal tightening, experienced throughout different stages of their pregnancy.</div>
+<div class="info-row meta-6"><strong>💡 Committee Scope Of Work:</strong> This chapter should explain the common physical discomforts of pregnancy, including abdominal, back, and pelvic pain, differentiate these from serious warning signs, and provide clear guidance on when to seek medical care.</div>
+<div class="info-row meta-7"><strong>💡 Top 7 Weighted Bot Anchors:</strong> [1] (Count: 2) Count: 2 | Main pregnant hoon aur mere ko private part me pressure jaisa fill hura hai
+[2] (Count: 2) Count: 2 | &quot;pregnancy ka teesra mahina chal raha hai, to pet mein dard kyu hota hai?&quot;
+[3] (Count: 2) Count: 2 | Kya pragnency ke pachwe mahine mein pet ke niche hisse mein hlka dard hona normal hai?
+[4] (Count: 2) Count: 2 | Mera 6th month hai mere na chahti main Dard ho ra
+[5] (Count: 2) Count: 2 | Dard hai moment hu ri hai bacche ki lekin pait k niche dard hu ra hai bus ghabrahat huri hai baccha niche tu nahi hu ga is liye dard hu ra hu
+[6] (Count: 2) Count: 2 | Mera 6th month hai mere peth main aaj subha se thoda thoda chamak raha hai
+[7] (Count: 2) Count: 2 | Pregnancy ka 7 mahina shru hua hai aur pet bhutt tight ho raha hai aisa kiu</div>
+<div class="info-row meta-8"><strong>💡 Cultural Myths To Debunk:</strong> • The belief that any and all pain during pregnancy is normal and should be ignored.
+• The misconception that a dark line on the stomach (linea nigra) can predict the baby&#x27;s gender.
+• The idea that you cannot have a normal delivery if you have pre-existing back pain.</div>
+<div class="info-row meta-9"><strong>💡 Core Patient Takeaway Box:</strong> While many aches and pains are a normal part of pregnancy as your body changes, it&#x27;s crucial to learn the difference between common discomfort and warning signs that require immediate medical attention.</div>
+<div class="info-row meta-10"><strong>💡 Planning Sub Intent Distribution Weights:</strong> • Common Abdominal Pains and Cramps (21.15%): Budget 105 words
+• Managing Back Pain (19.64%): Budget 100 words
+• Pelvic and Vaginal Pressure (13.59%): Budget 70 words
+• Abdominal Tightening and Braxton Hicks (22.66%): Budget 115 words
+• Other Body Aches (Ribs, Navel, Groin) (16.92%): Budget 85 words
+• Warning Signs: When to See a Doctor (6.04%): Budget 30 words</div>
+<div class="info-row meta-11"><strong>💡 Index Cross Lingual Meta Tags:</strong> pet dard, kamar dard, pait tight, chamak, dardoo, dukhra, takleef, ethan, khichav, sujan, pragnency, pegarensi, breshton hing, pedu dard, kokha darath</div>
+<div class="info-row meta-12"><strong>💡 Index Phonetic Invariants:</strong> dard, pain, pet, kamar, back, stomach, pregnant, pregnancy</div>
+<div class="info-row meta-13"><strong>💡 Index False Positive Shadow Terms:</strong> delivery, labor, bleeding, fever, diarrhea, vomiting, gas, acidity</div>
+<div class="info-row meta-14"><strong>💡 Guard Hard Bypass Emergency Triggers:</strong> pisaab mein khoon, bleed aa raha hai, blood in urine, heavy bleeding</div>
+<div class="info-row meta-15"><strong>💡 Guard Semantic Leakage Warning:</strong> Queries from users in their 8th or 9th month discussing pain and contractions may be difficult to distinguish from early labor. There is a high risk of semantic overlap with the &#x27;childbirth_and_newborn_care.md&#x27; file. The model should be cautious when differentiating between late-pregnancy discomfort and signs of impending labor.</div>
+
+                    <div class="split-row toggleable-details">
+                        <div class="split-col class-sub"><h5>📍 Top Questions</h5><ul class="sub-list"><li><span class="badge weight">70 rows</span><span class="list-text">Is It Normal to Experience Abdominal Pain or Cramping During Pregnancy?</span></li><li><span class="badge weight">65 rows</span><span class="list-text">What Causes Back Pain During Pregnancy and How Can It Be Managed?</span></li><li><span class="badge weight">45 rows</span><span class="list-text">Why Am I Feeling Pressure or Pain in My Pelvic Area or Vagina During Pregnancy?</span></li><li><span class="badge weight">40 rows</span><span class="list-text">What Does It Mean When My Stomach Feels Tight or Hard During Pregnancy?</span></li><li><span class="badge weight">35 rows</span><span class="list-text">How Can I Differentiate Between Braxton Hicks Contractions and True Labor Pains?</span></li><li><span class="badge weight">31 rows</span><span class="list-text">Are Pains in the Ribs, Navel, or Groin Area a Normal Part of Pregnancy?</span></li><li><span class="badge weight">25 rows</span><span class="list-text">What Are the Warning Signs or &#x27;Danger Signs&#x27; of Pain During Pregnancy That Require a Doctor&#x27;s Visit?</span></li><li><span class="badge weight">20 rows</span><span class="list-text">Can Taking Painkillers Like Paracetamol Be Harmful During Pregnancy?</span></li></ul></div>
+                        <div class="split-col class-hin"><h5>🗣️ Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">2 freq</span><span class="list-text"><i>Main pregnant hoon aur mere ko private part me pressure jaisa fill hura hai</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>&quot;pregnancy ka teesra mahina chal raha hai, to pet mein dard kyu hota hai?&quot;</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Kya pragnency ke pachwe mahine mein pet ke niche hisse mein hlka dard hona normal hai?</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Mera 6th month hai mere na chahti main Dard ho ra</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Dard hai moment hu ri hai bacche ki lekin pait k niche dard hu ra hai bus ghabrahat huri hai baccha niche tu nahi hu ga is liye dard hu ra hu</i></span></li></ul></div>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h4>📖 What Is The Recommended Schedule And Purpose Of Ultrasounds (Sonography) During Pregnancy?</h4>
+                    <div class="info-row meta-0"><strong>💡 Booklet Section:</strong> Chapter 4</div>
+<div class="info-row meta-1"><strong>💡 Target Kb Markdown File:</strong> pregnancy_care_and_checkups.md</div>
+<div class="info-row meta-2"><strong>💡 System Routing Directive:</strong> ISOLATE_PREGNANCY_PROCEDURE_LANE</div>
+<div class="info-row meta-3"><strong>💡 Total User Queries:</strong> 266</div>
+<div class="info-row meta-4"><strong>💡 Channel Traffic Percentage:</strong> 1.47% of total channel traffic</div>
+<div class="info-row meta-5"><strong>💡 What User Are Asking:</strong> Mothers are collectively inquiring about the standard schedule, types, necessity, and interpretation of ultrasound scans (sonography) at various stages of pregnancy.</div>
+<div class="info-row meta-6"><strong>💡 Committee Scope Of Work:</strong> Writers must detail the standard schedule, purpose, and types of routine ultrasounds (sonography) performed during each trimester of a typical pregnancy, clarifying what each scan assesses.</div>
+<div class="info-row meta-7"><strong>💡 Top 7 Weighted Bot Anchors:</strong> [1] (Count: 2) Fast sonography kb krwaye
+[2] (Count: 1) &quot;Starting se leke nain manth tak kitne sonografi hote ho batao?&quot;
+[3] (Count: 1) Pehla artra saun kab karwana chahiye, kaun se mahine mein?
+[4] (Count: 1) Mera abhi 24 hafta 5 din hain mera anomaly Scan ho chuka hain ab agli Sonography mujhe kb karni chahiye?
+[5] (Count: 1) SONO GRAFIC KON KONSE MONTH ME KRE
+[6] (Count: 1) kaun etra son hota hai, pehle se ke nave mahine se, kaun kaun kitne baar etra saun palta hai, aur kaun kaun se mahine mein doctor karte etra saun?
+[7] (Count: 1) &quot;Ye mere sonugrafi ki report hai, aap dekh kar bataiye, ismein sab kuch normal hai, sab theek thaak hai, ya fir kuch problem to nahi.&quot;</div>
+<div class="info-row meta-8"><strong>💡 Cultural Myths To Debunk:</strong> • Ultrasound scans and the gel used are harmful to the developing baby.
+• The primary purpose of every pregnancy ultrasound is to determine the baby&#x27;s gender.
+• More sonography scans than recommended will give you a healthier baby.</div>
+<div class="info-row meta-9"><strong>💡 Core Patient Takeaway Box:</strong> Routine ultrasounds are a safe and essential part of pregnancy care, used to monitor your baby&#x27;s growth and health at specific times during each trimester.</div>
+<div class="info-row meta-10"><strong>💡 Planning Sub Intent Distribution Weights:</strong> • Standard Ultrasound Schedule and Frequency (56.39%): Budget 170 words
+• Types of Scans and Their Purpose (19.92%): Budget 60 words
+• Understanding the Process and Results (19.17%): Budget 55 words
+• Accessing Services (4.51%): Budget 15 words</div>
+<div class="info-row meta-11"><strong>💡 Index Cross Lingual Meta Tags:</strong> sonography, sonografi, sonugrafi, sonugarafi, sonugerafy, sodography, sonygafy, songraphy, sonigarfi, ultrasound, altrasol, atra saan, artra saun, usg, scanning</div>
+<div class="info-row meta-12"><strong>💡 Index Phonetic Invariants:</strong> sonography, ultrasound, scan, sono</div>
+<div class="info-row meta-13"><strong>💡 Index False Positive Shadow Terms:</strong> blood test, urine test, checkup, anemia, jaundice, delivery date</div>
+<div class="info-row meta-14"><strong>💡 Guard Hard Bypass Emergency Triggers:</strong> report says problem, abnormal report, doctor said emergency, no heartbeat in scan, something is wrong in sonography</div>
+<div class="info-row meta-15"><strong>💡 Guard Semantic Leakage Warning:</strong> This cluster focuses on the schedule and procedure of routine ultrasounds. Be cautious of queries about specific abnormal findings in a report (e.g., &#x27;low fluid&#x27;, &#x27;growth restriction&#x27;), which may require routing to a more specialized clinical topic.</div>
+
+                    <div class="split-row toggleable-details">
+                        <div class="split-col class-sub"><h5>📍 Top Questions</h5><ul class="sub-list"><li><span class="badge weight">55 rows</span><span class="list-text">What Is The Complete Schedule For Ultrasounds Throughout A Normal Pregnancy?</span></li><li><span class="badge weight">50 rows</span><span class="list-text">When Should I Get My First Ultrasound Done During Pregnancy?</span></li><li><span class="badge weight">45 rows</span><span class="list-text">How Many Sonography Scans Are Typically Necessary In Total?</span></li><li><span class="badge weight">35 rows</span><span class="list-text">What Is The Purpose Of The Anomaly Scan In The Fifth Month?</span></li><li><span class="badge weight">30 rows</span><span class="list-text">Can You Help Me Understand The Details In My Sonography Report?</span></li><li><span class="badge weight">21 rows</span><span class="list-text">Are There Any Special Instructions, Like Fasting, Before An Ultrasound?</span></li><li><span class="badge weight">18 rows</span><span class="list-text">What Are The Different Types Of Ultrasounds, Such As NT Or Doppler Scans?</span></li><li><span class="badge weight">12 rows</span><span class="list-text">Where Can I Get A Free Or Government-Subsidized Sonography?</span></li></ul></div>
+                        <div class="split-col class-hin"><h5>🗣️ Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">2 freq</span><span class="list-text"><i>Fast sonography kb krwaye</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Mumbai mahine ki sonography kab karna chahie</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Accha apse me ye sawal puchti hoo ki altrasol sarkari me accha hota hai ya feer prabit se karvau</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Jb hm ne check kya tha tb kerwaya tha sonography</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>9MHINEME SONOGRAFIC HOTI HE</i></span></li></ul></div>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h4>📖 What Are The Standard Care Procedures And Check-Ups Required During Each Trimester Of Pregnancy?</h4>
+                    <div class="info-row meta-0"><strong>💡 Booklet Section:</strong> Chapter 6</div>
+<div class="info-row meta-1"><strong>💡 Target Kb Markdown File:</strong> pregnancy_care_and_checkups.md</div>
+<div class="info-row meta-2"><strong>💡 System Routing Directive:</strong> ISOLATE_PREGNANCY_PROCEDURE_LANE</div>
+<div class="info-row meta-3"><strong>💡 Total User Queries:</strong> 236</div>
+<div class="info-row meta-4"><strong>💡 Channel Traffic Percentage:</strong> 1.31% of total channel traffic</div>
+<div class="info-row meta-5"><strong>💡 What User Are Asking:</strong> Mothers are inquiring about the standard procedures, timeline, symptoms, and general care guidelines to follow throughout the different stages of pregnancy.</div>
+<div class="info-row meta-6"><strong>💡 Committee Scope Of Work:</strong> The writers will create a comprehensive guide detailing the standard antenatal care schedule, including necessary tests, examinations, supplements, and danger signs for a typical pregnancy.</div>
+<div class="info-row meta-7"><strong>💡 Top 7 Weighted Bot Anchors:</strong> [1] (Count: 1) Praadone ka sutharika kya hai?
+[2] (Count: 1) Battu Bhagate ji preznen ke milla kitte mehen hoge. Lagba kitte mehen hoge.
+[3] (Count: 1) Atve meine mein julaab laaliya skaai karve
+[4] (Count: 1) purem simee bold mera neen daara
+[5] (Count: 1) kataal khaana sef rahega
+[6] (Count: 1) mujhe ped so bair mein bad dada dura, mujhe ped mein dada dura, ukya kaan chahiye jiki maon bacche de, bacche de.
+[7] (Count: 1) prevyazana vashchchana, prevyazana, prevyazana dekhne ke liye</div>
+<div class="info-row meta-8"><strong>💡 Cultural Myths To Debunk:</strong> • Certain foods like jackfruit or papaya should be completely avoided throughout pregnancy.
+• You must eat for two, doubling your food intake.
+• It is unsafe to do any form of exercise during pregnancy.</div>
+<div class="info-row meta-9"><strong>💡 Core Patient Takeaway Box:</strong> Following a regular schedule of antenatal check-ups, maintaining a balanced diet, and being aware of danger signs are crucial for a healthy pregnancy and safe delivery.</div>
+<div class="info-row meta-10"><strong>💡 Planning Sub Intent Distribution Weights:</strong> • Pregnancy Timeline and Symptoms (41.53%): Budget 150 words
+• Antenatal Check-ups and Tests (16.95%): Budget 60 words
+• Diet and Nutrition (12.71%): Budget 45 words
+• Common Discomforts and Pains (11.86%): Budget 40 words
+• Labor and Delivery Preparedness (10.59%): Budget 35 words
+• Late-Stage Pregnancy Care (6.36%): Budget 25 words</div>
+<div class="info-row meta-11"><strong>💡 Index Cross Lingual Meta Tags:</strong> pregan, preznen, premnesi, praadone, dilivery, pet dard, mahina, meine, garba asta, sonograafi, chakkar, kamjori, khana, pachan, preshaun</div>
+<div class="info-row meta-12"><strong>💡 Index Phonetic Invariants:</strong> garbh, pet, mahina, delivery, dard, pregnancy</div>
+<div class="info-row meta-13"><strong>💡 Index False Positive Shadow Terms:</strong> period, mc, bacha, newborn, doodh, vaccine, tika</div>
+<div class="info-row meta-14"><strong>💡 Guard Hard Bypass Emergency Triggers:</strong> bahut jyada blood ja raha, pet me tez dard, baccha ghum nahi raha, cannot breathe, high fever not going down, severe bleeding</div>
+<div class="info-row meta-15"><strong>💡 Guard Semantic Leakage Warning:</strong> This cluster focuses on general pregnancy care. Be cautious of queries about specific, severe complications (like eclampsia, placenta previa), which should be handled by more specialized content or a medical professional. Also, distinguish from post-delivery (postpartum) care queries.</div>
+
+                    <div class="split-row toggleable-details">
+                        <div class="split-col class-sub"><h5>📍 Top Questions</h5><ul class="sub-list"><li><span class="badge weight">45 rows</span><span class="list-text">How Many Months Does A Full-Term Pregnancy Last?</span></li><li><span class="badge weight">42 rows</span><span class="list-text">What Are The Common Symptoms Experienced During Pregnancy?</span></li><li><span class="badge weight">40 rows</span><span class="list-text">What Medical Check-Ups And Tests Are Necessary During Pregnancy?</span></li><li><span class="badge weight">30 rows</span><span class="list-text">What Foods Are Safe Or Unsafe To Eat During Pregnancy?</span></li><li><span class="badge weight">28 rows</span><span class="list-text">Is It Normal To Experience Abdominal Pain During Pregnancy?</span></li><li><span class="badge weight">25 rows</span><span class="list-text">What Are The Signs That Labor Is Starting?</span></li><li><span class="badge weight">15 rows</span><span class="list-text">What Special Care Should Be Taken During The Eighth And Ninth Months Of Pregnancy?</span></li><li><span class="badge weight">11 rows</span><span class="list-text">What Does It Mean To Be Pregnant And What Are The First Signs?</span></li></ul></div>
+                        <div class="split-col class-hin"><h5>🗣️ Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">1 freq</span><span class="list-text"><i>kya ke liye ne ke meraam chattam maine lagaye bolu</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>mera ped ke liye paanch hona hai paanch hona chahte hain</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>main kaange aadhe</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Prasaap ke jaaga bhi dupbaai</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Apne khane vaare mein main predhan chuie.</i></span></li></ul></div>
+                    </div>
+                </div></div></div><div class="block-node"><div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Pregnancy Nutrition ▾</div><div class="c-body hide">
+                <div class="faq-card">
+                    <h4>📖 What Is The Correct Way To Take Iron, Calcium, And Folic Acid Supplements During Pregnancy?</h4>
+                    <div class="info-row meta-0"><strong>💡 Booklet Section:</strong> Chapter 5</div>
+<div class="info-row meta-1"><strong>💡 Target Kb Markdown File:</strong> pregnancy_nutrition_and_diet.md</div>
+<div class="info-row meta-2"><strong>💡 System Routing Directive:</strong> ISOLATE_PREGNANCY_NUTRITION_LANE</div>
+<div class="info-row meta-3"><strong>💡 Total User Queries:</strong> 245</div>
+<div class="info-row meta-4"><strong>💡 Channel Traffic Percentage:</strong> 1.36% of total channel traffic</div>
+<div class="info-row meta-5"><strong>💡 What User Are Asking:</strong> Mothers are seeking clear guidance on the correct methods for taking essential pregnancy supplements, particularly iron, calcium, and folic acid, with a focus on timing, dietary interactions, and managing side effects.</div>
+<div class="info-row meta-6"><strong>💡 Committee Scope Of Work:</strong> Writers must provide comprehensive guidance on the proper administration of iron, calcium, and folic acid supplements during pregnancy, including timing, dietary interactions (especially with dairy), and management of common side effects.</div>
+<div class="info-row meta-7"><strong>💡 Top 7 Weighted Bot Anchors:</strong> [1] (Count: 2) Calcium aur iron ki goliyan kaun se manth se shuru Karni chahie
+[2] (Count: 2) Iron ki goli k sath vit c le sakte hai
+[3] (Count: 2) Doodh roti khane ke baad calcium ki goli kha shakte hai
+[4] (Count: 2) Dudh pine k bad kitne der bad goli khaye
+[5] (Count: 1) Mera pregnancy ka 7th month start hua hai....kya me iron ki teblet dudh ke sath kha sakti hu?
+[6] (Count: 1) di plz mujhe bataye ki iron calcium ki tablet lene ka Sahi timing aur tareeka kya hai
+[7] (Count: 1) hairaan ki aur kelosiyam ke tablet kaon si subah mein aur kaon si raat mein khana chahiye</div>
+<div class="info-row meta-8"><strong>💡 Cultural Myths To Debunk:</strong> • It is okay to take iron tablets with milk, tea, or coffee.
+• You can take iron and calcium tablets at the same time for convenience.
+• All pregnancy supplements are the same and can be taken whenever you remember.</div>
+<div class="info-row meta-9"><strong>💡 Core Patient Takeaway Box:</strong> Take your iron and calcium supplements at different times of the day and avoid taking them with milk, tea, or coffee to ensure your body absorbs them properly.</div>
+<div class="info-row meta-10"><strong>💡 Planning Sub Intent Distribution Weights:</strong> • Correct Timing and Schedule (36.73%): Budget 180 words
+• Dietary Interactions (Especially Dairy) (24.49%): Budget 120 words
+• Managing Side Effects (12.24%): Budget 60 words
+• Understanding Folic Acid (10.2%): Budget 50 words
+• Other Important Considerations (16.33%): Budget 80 words</div>
+<div class="info-row meta-11"><strong>💡 Index Cross Lingual Meta Tags:</strong> kalsiyam, kelasm, kelosiyam, aairan, aayan, iran, dava, goli, doodh, dudh, manth, mahina, kab khaye, sath le sakte, folik asit</div>
+<div class="info-row meta-12"><strong>💡 Index Phonetic Invariants:</strong> iron, calcium, goli, dava, doodh, milk, tablet</div>
+<div class="info-row meta-13"><strong>💡 Index False Positive Shadow Terms:</strong> anemia, low blood, hemoglobin, delivery, vaccine, growth, jsy, pmmvy</div>
+<div class="info-row meta-14"><strong>💡 Guard Hard Bypass Emergency Triggers:</strong> took too many pills, overdose, Aairan wali dava jata kha liya, allergic reaction, severe pain, can&#x27;t breathe</div>
+<div class="info-row meta-15"><strong>💡 Guard Semantic Leakage Warning:</strong> Warning: This cluster is about routine iron/calcium supplementation. Queries specifically mentioning &#x27;anemia&#x27;, &#x27;low hemoglobin&#x27;, or &#x27;blood transfusion&#x27; should be routed with high confidence to the `anemia_during_pregnancy.md` file to avoid providing general advice for a specific clinical condition.</div>
+
+                    <div class="split-row toggleable-details">
+                        <div class="split-col class-sub"><h5>📍 Top Questions</h5><ul class="sub-list"><li><span class="badge weight">60 rows</span><span class="list-text">Can I Take Iron Or Calcium Tablets With Milk Or Other Dairy Products?</span></li><li><span class="badge weight">45 rows</span><span class="list-text">When Should I Start Taking Iron And Calcium Tablets During Pregnancy?</span></li><li><span class="badge weight">45 rows</span><span class="list-text">What Is The Correct Time Of Day To Take My Iron And Calcium Tablets?</span></li><li><span class="badge weight">30 rows</span><span class="list-text">What Are The Common Side Effects Of Iron Tablets And How Can They Be Managed?</span></li><li><span class="badge weight">25 rows</span><span class="list-text">For How Long Should I Take Folic Acid Tablets During My Pregnancy?</span></li><li><span class="badge weight">20 rows</span><span class="list-text">What Foods Or Drinks Should Be Avoided When Taking Pregnancy Supplements?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">Is It Safe To Take My TB Medication With Iron And Calcium Supplements?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">How Can I Identify Which Tablet Is For Iron And Which Is For Calcium?</span></li></ul></div>
+                        <div class="split-col class-hin"><h5>🗣️ Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">2 freq</span><span class="list-text"><i>Calcium aur iron ki goliyan kaun se manth se shuru Karni chahie</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Iron ki goli k sath vit c le sakte hai</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Doodh roti khane ke baad calcium ki goli kha shakte hai</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Dudh pine k bad kitne der bad goli khaye</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Folic acid ki tablet kitne mahine khana chahiye</i></span></li></ul></div>
+                    </div>
+                </div></div></div><div class="block-node"><div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Pregnancy Health Concerns ▾</div><div class="c-body hide">
+                <div class="faq-card">
+                    <h4>📖 What Should I Do If I Experience Abdominal Pain During Pregnancy?</h4>
+                    <div class="info-row meta-0"><strong>💡 Booklet Section:</strong> Chapter 8</div>
+<div class="info-row meta-1"><strong>💡 Target Kb Markdown File:</strong> pregnancy_care_and_checkups.md</div>
+<div class="info-row meta-2"><strong>💡 System Routing Directive:</strong> ISOLATE_PREGNANCY_PROCEDURE_LANE</div>
+<div class="info-row meta-3"><strong>💡 Total User Queries:</strong> 230</div>
+<div class="info-row meta-4"><strong>💡 Channel Traffic Percentage:</strong> 1.27% of total channel traffic</div>
+<div class="info-row meta-5"><strong>💡 What User Are Asking:</strong> Mothers are inquiring about the causes, significance, and appropriate actions for various types of abdominal pain experienced during pregnancy.</div>
+<div class="info-row meta-6"><strong>💡 Committee Scope Of Work:</strong> Writers must explain the common causes of abdominal pain during pregnancy, differentiate between normal discomfort and warning signs, and provide clear guidance on when to seek immediate medical attention.</div>
+<div class="info-row meta-7"><strong>💡 Top 7 Weighted Bot Anchors:</strong> [1] (Count: 2) Pet ke nichle hisse main dard hota hai
+[2] (Count: 2) Pet me dard hai
+[3] (Count: 2) Aaj subha se nichle hisse me halki halki dard ho rhi hai
+[4] (Count: 2) Mere pet me dard ho raha hai
+[5] (Count: 2) Pet me dard ho to kya kre
+[6] (Count: 2) Pet k nichle hisse me kaanta gadne jaisi dard ho raha hai
+[7] (Count: 1) pet mein bahut dard rehta hai, kamar mein dard rehta hai, kabhi-kabhi bukhar aa jaata hai, ulti hoti hai, to kya kar jaen?</div>
+<div class="info-row meta-8"><strong>💡 Cultural Myths To Debunk:</strong> • Myth: Abdominal pain during pregnancy is always caused by doing household chores like sweeping.
+• Myth: Eating specific common foods like idli will cause harmful stomach pain during pregnancy.
+• Myth: Any and all abdominal pain is a normal part of pregnancy and can be ignored without consulting a doctor.</div>
+<div class="info-row meta-9"><strong>💡 Core Patient Takeaway Box:</strong> While some mild abdominal discomfort can be normal during pregnancy, severe, persistent, or sharp pain should always be reported to a doctor immediately to rule out complications.</div>
+<div class="info-row meta-10"><strong>💡 Planning Sub Intent Distribution Weights:</strong> • Warning Signs &amp; When to Call a Doctor (35.22%): Budget 176 words
+• Common Causes of Mild or Normal Pain (34.78%): Budget 174 words
+• Understanding Pain in Specific Locations (Lower Abdomen, Sides) (30.0%): Budget 150 words</div>
+<div class="info-row meta-11"><strong>💡 Index Cross Lingual Meta Tags:</strong> pet dard, pait dard, pedu me dard, nichle hisse, dardor, dadr, darth, darad, dukhtha, takleeb, aithan, chuban, marod, durad, dardh</div>
+<div class="info-row meta-12"><strong>💡 Index Phonetic Invariants:</strong> pet, dard, pain, dukh, stomach, abdomen</div>
+<div class="info-row meta-13"><strong>💡 Index False Positive Shadow Terms:</strong> period, gas, delivery, labour, contraction, maasik, acidity</div>
+<div class="info-row meta-14"><strong>💡 Guard Hard Bypass Emergency Triggers:</strong> bahut tez dard, khoon aa raha hai, bleeding with pain, can&#x27;t walk from pain, fainting from pain, severe pain and bleeding</div>
+<div class="info-row meta-15"><strong>💡 Guard Semantic Leakage Warning:</strong> This cluster focuses on general abdominal pain during pregnancy. It risks false positives with queries specifically about labor contractions, period pain (if not pregnant), or digestive issues like severe acidity or food poisoning. Ensure models can distinguish between pregnancy-related abdominal concerns and these adjacent topics.</div>
+
+                    <div class="split-row toggleable-details">
+                        <div class="split-col class-sub"><h5>📍 Top Questions</h5><ul class="sub-list"><li><span class="badge weight">55 rows</span><span class="list-text">What Does Pain In The Lower Abdomen Mean During Pregnancy?</span></li><li><span class="badge weight">50 rows</span><span class="list-text">Why Am I Experiencing General Abdominal Pain During My Pregnancy?</span></li><li><span class="badge weight">45 rows</span><span class="list-text">When Should I Be Worried About Stomach Pain And See A Doctor?</span></li><li><span class="badge weight">25 rows</span><span class="list-text">Is It Normal To Have Pain On Only The Left Or Right Side Of My Abdomen?</span></li><li><span class="badge weight">20 rows</span><span class="list-text">What Causes A Cramping, Twisting, Or Pulling Sensation In The Stomach?</span></li><li><span class="badge weight">15 rows</span><span class="list-text">What Should I Do If I Have Abdominal Pain Along With Back Pain Or Fever?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">Can Certain Activities Like Sitting For A Long Time Or Doing Chores Cause Stomach Pain?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">Could The Food I Am Eating Be The Cause Of My Stomach Pain?</span></li></ul></div>
+                        <div class="split-col class-hin"><h5>🗣️ Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">2 freq</span><span class="list-text"><i>Pet ke nichle hisse main dard hota hai</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Pet me dard hai</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Aaj subha se nichle hisse me halki halki dard ho rhi hai</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Mere pet me dard ho raha hai</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Pet me dard ho to kya kre</i></span></li></ul></div>
+                    </div>
+                </div></div></div><div class="block-node"><div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Government Schemes ▾</div><div class="c-body hide">
+                <div class="faq-card">
+                    <h4>📖 What Government Schemes And Benefits Are Available For Pregnant Women And Mothers?</h4>
+                    <div class="info-row meta-0"><strong>💡 Booklet Section:</strong> Chapter 10</div>
+<div class="info-row meta-1"><strong>💡 Target Kb Markdown File:</strong> government_schemes_overview.md</div>
+<div class="info-row meta-2"><strong>💡 System Routing Directive:</strong> ACTIVATE_GOVT_SCHEMES_POOL</div>
+<div class="info-row meta-3"><strong>💡 Total User Queries:</strong> 184</div>
+<div class="info-row meta-4"><strong>💡 Channel Traffic Percentage:</strong> 1.02% of total channel traffic</div>
+<div class="info-row meta-5"><strong>💡 What User Are Asking:</strong> Mothers are inquiring about the various government schemes and benefits, including both free services and cash assistance, that are available to them during pregnancy and for their young children.</div>
+<div class="info-row meta-6"><strong>💡 Committee Scope Of Work:</strong> The writers will create a comprehensive guide detailing the government&#x27;s free service schemes (like JSSK) and cash benefit schemes (like PMMVY and JSY) available for maternal and child health.</div>
+<div class="info-row meta-7"><strong>💡 Top 7 Weighted Bot Anchors:</strong> [1] (Count: 65) sarkari suvidha
+[2] (Count: 32) government schemes for pregnancy
+[3] (Count: 28) sarkari yojana
+[4] (Count: 21) what benefits can i get from government
+[5] (Count: 15) free delivery scheme
+[6] (Count: 13) money for pregnant woman scheme
+[7] (Count: 10) sarkari hospital me kya suvidha hai</div>
+<div class="info-row meta-8"><strong>💡 Cultural Myths To Debunk:</strong> • You have to pay bribes to get benefits from government schemes.
+• These schemes are only for people in villages, not in cities.
+• The application process is too complicated for a normal person to complete.</div>
+<div class="info-row meta-9"><strong>💡 Core Patient Takeaway Box:</strong> The government offers several valuable free service and cash benefit schemes to support mothers and children, and knowing your entitlements can significantly reduce healthcare costs.</div>
+<div class="info-row meta-10"><strong>💡 Planning Sub Intent Distribution Weights:</strong> • Cash Benefit Schemes (PMMVY &amp; JSY) (38.04%): Budget 190 words
+• Free Service Schemes (JSSK) (27.72%): Budget 140 words
+• General Overview of Schemes (24.46%): Budget 120 words
+• Application Process &amp; Logistics (9.78%): Budget 50 words</div>
+<div class="info-row meta-11"><strong>💡 Index Cross Lingual Meta Tags:</strong> Sarkari Suvidha, sarkari yojana, sarkari scheme, goverment benifit, sarkari hospital, free delivery, paise wali scheme, bachhe ke liye scheme, garbhvati yojana, PMMVY form, JSY labh, sarkari madad, free ilaj, suvidhayein, sarkari aspatal</div>
+<div class="info-row meta-12"><strong>💡 Index Phonetic Invariants:</strong> sarkari, scheme, yojana, suvidha, benefit, free, paise, money</div>
+<div class="info-row meta-13"><strong>💡 Index False Positive Shadow Terms:</strong> private hospital, insurance, loan, job, ration card, pension</div>
+<div class="info-row meta-14"><strong>💡 Guard Hard Bypass Emergency Triggers:</strong> delivery pain started, heavy bleeding, baby not moving, emergency, need ambulance now</div>
+<div class="info-row meta-15"><strong>💡 Guard Semantic Leakage Warning:</strong> This cluster is about government schemes. It may be confused with queries about specific medical procedures (e.g., &#x27;free C-section&#x27; might be about the procedure itself, not the scheme) or general hospital logistics. Confirm user interest is in the scheme itself.</div>
+
+                    <div class="split-row toggleable-details">
+                        <div class="split-col class-sub"><h5>📍 Top Questions</h5><ul class="sub-list"><li><span class="badge weight">45 rows</span><span class="list-text">What Are The General Government Schemes Available During Pregnancy?</span></li><li><span class="badge weight">38 rows</span><span class="list-text">How Can I Get Free Delivery And Check-Ups At A Government Hospital?</span></li><li><span class="badge weight">35 rows</span><span class="list-text">Which Schemes Provide Money Or Cash Benefits To Pregnant Women?</span></li><li><span class="badge weight">20 rows</span><span class="list-text">What Is The PMMVY Scheme And How Do I Apply For It?</span></li><li><span class="badge weight">15 rows</span><span class="list-text">What Is The JSY Scheme And Who Is Eligible?</span></li><li><span class="badge weight">13 rows</span><span class="list-text">What Free Services Are Included Under The JSSK Scheme?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">What Documents Are Required To Apply For These Government Schemes?</span></li><li><span class="badge weight">8 rows</span><span class="list-text">Where Can I Find Information About Local Government Health Services?</span></li></ul></div>
+                        <div class="split-col class-hin"><h5>🗣️ Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">184 freq</span><span class="list-text"><i>Sarkari Suvidha</i></span></li></ul></div>
+                    </div>
+                </div></div></div></div></div><div class="block-node"><div class="vol-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">📘 Volume: 🍼 Postpartum &amp; Lactation Support ▾</div><div class="c-body hide"><div class="block-node"><div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Breastfeeding Guidance ▾</div><div class="c-body hide">
+                <div class="faq-card">
+                    <h4>📖 What Are The Essential Guidelines For Successfully Breastfeeding My Baby?</h4>
+                    <div class="info-row meta-0"><strong>💡 Booklet Section:</strong> Chapter 7</div>
+<div class="info-row meta-1"><strong>💡 Target Kb Markdown File:</strong> breastfeeding_guidance.md</div>
+<div class="info-row meta-2"><strong>💡 System Routing Directive:</strong> ISOLATE_BREASTFEEDING_GUIDANCE_LANE</div>
+<div class="info-row meta-3"><strong>💡 Total User Queries:</strong> 234</div>
+<div class="info-row meta-4"><strong>💡 Channel Traffic Percentage:</strong> 1.30% of total channel traffic</div>
+<div class="info-row meta-5"><strong>💡 What User Are Asking:</strong> Mothers are collectively inquiring about the fundamental principles, benefits, and standard practices of providing breast milk to their infants.</div>
+<div class="info-row meta-6"><strong>💡 Committee Scope Of Work:</strong> Writers must provide a comprehensive &#x27;how-to&#x27; manual for standard, successful breastfeeding practices, covering initiation, positioning, latching, feeding cues, and signs of adequacy.</div>
+<div class="info-row meta-7"><strong>💡 Top 7 Weighted Bot Anchors:</strong> [1] (Count: 110) Maa ka doodh
+[2] (Count: 50) Breastfeeding
+[3] (Count: 35) How to breastfeed
+[4] (Count: 20) Is my milk enough
+[5] (Count: 15) Maa ka doodh pilana
+[6] (Count: 3) Stanpan
+[7] (Count: 1) Sirf maa ka dudh</div>
+<div class="info-row meta-8"><strong>💡 Cultural Myths To Debunk:</strong> • The myth that small breasts produce less milk.
+• The misconception that a mother must stop breastfeeding if she is sick with a common illness like a cold or fever.
+• The belief that infant formula is equivalent to or better than breast milk.
+• The idea that significant or prolonged pain during breastfeeding is normal and should be endured.</div>
+<div class="info-row meta-9"><strong>💡 Core Patient Takeaway Box:</strong> Exclusive breastfeeding for the first six months provides the best possible nutrition, immunity, and bonding for your baby&#x27;s healthy development.</div>
+<div class="info-row meta-10"><strong>💡 Planning Sub Intent Distribution Weights:</strong> • Core Principles and Benefits (44.87%): Budget 150 words
+• Adequacy and Scheduling (37.18%): Budget 125 words
+• Technique and Positioning (17.95%): Budget 60 words</div>
+<div class="info-row meta-11"><strong>💡 Index Cross Lingual Meta Tags:</strong> Maa ka doodh, ma ka dudh, ma ka dood, dudh, stanpan, breast feeding, sirf doodh, sirf maa ka dudh, feeding baby, apna doodh, doodh pilana, chati ka doodh, mother milk, breastmilk, feed karana</div>
+<div class="info-row meta-12"><strong>💡 Index Phonetic Invariants:</strong> doodh, dudh, breastfeed, stanpan, milk</div>
+<div class="info-row meta-13"><strong>💡 Index False Positive Shadow Terms:</strong> formula, bottle, solids, khichdi, weaning, cow milk, gai ka doodh, low supply, pain, sore nipple</div>
+<div class="info-row meta-14"><strong>💡 Guard Hard Bypass Emergency Triggers:</strong> baby not breathing, baby is blue, baby won&#x27;t wake up, baby is unconscious, severe pain in breast, high fever with breast redness, baby is limp</div>
+<div class="info-row meta-15"><strong>💡 Guard Semantic Leakage Warning:</strong> This cluster is focused on basic breastfeeding guidance. Queries about low milk supply, pain, maternal illness, or cracked nipples should be carefully routed to &#x27;breastfeeding_special_conditions.md&#x27; to avoid providing incomplete or inappropriate advice.</div>
+
+                    <div class="split-row toggleable-details">
+                        <div class="split-col class-sub"><h5>📍 Top Questions</h5><ul class="sub-list"><li><span class="badge weight">70 rows</span><span class="list-text">What Are The Fundamental Basics Of Breastfeeding?</span></li><li><span class="badge weight">55 rows</span><span class="list-text">How Can I Be Sure My Baby Is Getting Enough Breast Milk?</span></li><li><span class="badge weight">30 rows</span><span class="list-text">What Is The Correct Way To Latch My Baby To The Breast?</span></li><li><span class="badge weight">25 rows</span><span class="list-text">How Often Should I Be Breastfeeding My Newborn?</span></li><li><span class="badge weight">20 rows</span><span class="list-text">What Is Colostrum And Why Is It Important For My Baby?</span></li><li><span class="badge weight">15 rows</span><span class="list-text">Is It Necessary To Give My Baby Only Breast Milk For The First Six Months?</span></li><li><span class="badge weight">12 rows</span><span class="list-text">What Are The Different Positions I Can Use For Breastfeeding?</span></li><li><span class="badge weight">7 rows</span><span class="list-text">How Long Should A Typical Breastfeeding Session Last?</span></li></ul></div>
+                        <div class="split-col class-hin"><h5>🗣️ Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">233 freq</span><span class="list-text"><i>Maa ka doodh</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Sirf maa ka dudh</i></span></li></ul></div>
+                    </div>
+                </div></div></div></div></div>
+    </div></body></html>

@@ -1,0 +1,234 @@
+Booklet_Section,Clinical_Pillar,Target_KB_Markdown_File,System_Routing_Directive,Total_User_Queries,Channel_Traffic_Percentage,What_User_Are_Asking,Top_Canonical_FAQ_Question,Domain_Category,Committee_Scope_of_Work,Top_5_User_Hinglish_Variations,Top_7_Weighted_Bot_Anchors,Top_8_Distinct_Weighted_Questions,Cultural_Myths_To_Debunk,Core_Patient_Takeaway_Box,PLANNING_Sub_Intent_Distribution_Weights,INDEX_Cross_Lingual_Meta_Tags,INDEX_Phonetic_Invariants,INDEX_False_Positive_Shadow_Terms,GUARD_Hard_Bypass_Emergency_Triggers,GUARD_Semantic_Leakage_Warning
+Chapter 1,👶 Pediatric & Infant Wellness,immunization_schedule_and_basics.md,ACTIVATE_IMMUNIZATION_MASTER_POOL,467,2.59% of total channel traffic,"Mothers are seeking comprehensive information about the immunization schedule for their children and themselves during pregnancy, including which vaccines are required at specific ages, and how to manage common side effects like fever, pain, and swelling at the injection site.",What Is The Complete Immunization Schedule For My Child And How Should I Manage Post-Vaccination Side Effects?,CHILD IMMUNIZATION,"Writers must provide a comprehensive guide covering the national immunization schedule, the purpose of each vaccine, and the management of common, non-severe post-vaccination side effects.","[1] (Freq: 6) Mera baby six month ka hua hai abhi usko 3:30 mahine ka sui lagaya hai 3 din ho gaya hai usko barf bhi Laga rahi hun aur main cream bhi Laga rahi hun to bhi gand jaisa banaa hai to kya karna chahie
+[2] (Freq: 3) Jahan per sui mare Na vahin per guard jaisa hua Hai Baki aur kuchh nahin
+[3] (Freq: 2) Maa ko abhi garbh wati hai 3 month started hai aur aj tika laga hai jha tika laga woh hath dukh rha hai tu kya kare
+[4] (Freq: 2) Opv kya hota hai
+[5] (Freq: 2) Hepatitis b kya hota hai","[1] (Count: 6) Mera baby six month ka hua hai abhi usko 3:30 mahine ka sui lagaya hai 3 din ho gaya hai usko barf bhi Laga rahi hun aur main cream bhi Laga rahi hun to bhi gand jaisa banaa hai to kya karna chahie
+[2] (Count: 3) Jahan per sui mare Na vahin per guard jaisa hua Hai Baki aur kuchh nahin
+[3] (Count: 2) Maa ko abhi garbh wati hai 3 month started hai aur aj tika laga hai jha tika laga woh hath dukh rha hai tu kya kare
+[4] (Count: 2) Opv kya hota hai
+[5] (Count: 2) Hepatitis b kya hota hai
+[6] (Count: 2) Teeken kab aur kon kon se lagte hai
+[7] (Count: 2) Mujhe ye janana tha ki 1.5 mahine ke bache ko kitne tike lagte hai","[1] (Weight: 145 rows) What Should I Do About The Lump, Swelling, Or Pain At The Injection Site After My Baby's Vaccination?
+[2] (Weight: 110 rows) What Is The Schedule Of Vaccines For My Baby At 1.5, 2.5, 3.5, And 9 Months?
+[3] (Weight: 55 rows) Which Tetanus (TT) Injections Are Required During Pregnancy And When Should They Be Taken?
+[4] (Weight: 45 rows) Can You Explain What The OPV, Hepatitis B, And BCG Vaccines Are For?
+[5] (Weight: 30 rows) Is It Absolutely Necessary For My Child To Get All The Recommended Vaccinations?
+[6] (Weight: 28 rows) Where Can I Go To Get My Child Vaccinated?
+[7] (Weight: 27 rows) What Should I Do If My Child Has Missed A Scheduled Vaccine Dose?
+[8] (Weight: 27 rows) How Can I Understand My Child's Immunization Card To See Which Vaccines Are Due?","• Vaccines cause severe illness or are unnecessary.
+• You cannot vaccinate a child who has a mild cold or fever.
+• Applying traditional remedies or unprescribed creams on injection lumps is the best solution.","Following the national immunization schedule is crucial for protecting your child's health, and common side effects like mild fever or swelling are normal and can be managed at home.","• Post-Vaccination Side Effects Management (31.05%): Budget 150 words
+• Child Vaccine Schedule Details (23.55%): Budget 115 words
+• Pregnancy Vaccination Schedule (11.78%): Budget 60 words
+• Specific Vaccine Information (9.64%): Budget 50 words
+• Necessity and Importance of Vaccines (6.42%): Budget 30 words
+• Logistics and Location (5.99%): Budget 30 words
+• Missed or Delayed Doses (5.78%): Budget 30 words
+• Understanding the Vaccine Card (5.78%): Budget 30 words","sui, tika, teeka, soi, suui, tike, tikka, injection, injaksan, jekshan, exjection, sohee, suri, teekha, tikkey","sui, tika, vaccine, injection","iron injection, anemia, blood test, sonography, checkup, delivery pain","rabbit caat liya, billi ka nails lag gya, hiv positive, severe reaction, unconscious, not breathing","Queries about 'iron injection' or 'IFA' should be carefully routed to the Anemia cluster, not this general immunization cluster. Similarly, 'injection' for pain relief during labor belongs to the Childbirth cluster."
+Chapter 2,🤰 Maternal Antepartum Care,anemia_during_pregnancy.md,TRIGGER_ANEMIA_EXCEPTION_REDIRECT,435,2.41% of total channel traffic,"Mothers are collectively inquiring about the diagnosis, normal levels, and management of anemia during pregnancy, including which tests are required and what dietary or supplemental interventions can increase their hemoglobin.",What Should I Do If I Have Anemia Or Low Hemoglobin During Pregnancy?,PREGNANCY HEALTH CONDITIONS,"Writers must detail the diagnosis, symptoms, normal hemoglobin levels, and management protocols for anemia during pregnancy, including dietary advice, IFA supplementation, and criteria for medical escalation.","[1] (Freq: 3) Ismen khun kitna hai?
+[2] (Freq: 3) Mere bete ko doctor ne khon ki Kami bataya Hai to Kya khilaye the Puri ho jayegi
+[3] (Freq: 3) Aur mera beta 8 mahine ka hai usko khoon ki Kami hai
+[4] (Freq: 3) Ismein balard kitna hai, batao mere ko
+[5] (Freq: 3) isne khun kitna point hai batao","[1] (Count: 3) Ismen khun kitna hai?
+[2] (Count: 3) Mere bete ko doctor ne khon ki Kami bataya Hai to Kya khilaye the Puri ho jayegi
+[3] (Count: 3) Aur mera beta 8 mahine ka hai usko khoon ki Kami hai
+[4] (Count: 3) Ismein balard kitna hai, batao mere ko
+[5] (Count: 3) isne khun kitna point hai batao
+[6] (Count: 2) kaunsa khun ka jaaj karana hai?
+[7] (Count: 2) KON KON SE MAHINE ME KHUN TEST JARURI HE","[1] (Weight: 109 rows) What Are The Normal Hemoglobin Levels During Pregnancy?
+[2] (Weight: 109 rows) What Foods Should I Eat To Increase My Blood Or Hemoglobin?
+[3] (Weight: 65 rows) When Should I Get My Blood Tested For Anemia During Pregnancy?
+[4] (Weight: 44 rows) How Do I Interpret My Hemoglobin Test Results?
+[5] (Weight: 44 rows) What Are The Common Symptoms Of Anemia While Pregnant?
+[6] (Weight: 22 rows) What Is Anemia And What Causes It During Pregnancy?
+[7] (Weight: 21 rows) Are Iron (IFA) Tablets Necessary To Treat Anemia?
+[8] (Weight: 21 rows) Can Anemia Cause Complications After Delivery?","• Eating betel nuts (supari) can negatively affect blood production.
+• Consuming only fruits is not a complete solution for increasing hemoglobin; a balanced diet with various iron sources is necessary.
+• Constant tiredness and weakness during pregnancy are not always normal and can be a key symptom of anemia that requires medical attention.",Regularly check your hemoglobin during pregnancy and manage anemia by eating iron-rich foods and taking prescribed IFA supplements.,"• Understanding Anemia & Normal Levels (30.11%): Budget 120 words
+• Diet and Supplements for Anemia (25.06%): Budget 100 words
+• Required Tests and Schedule (14.94%): Budget 60 words
+• Symptoms and Complications (14.94%): Budget 60 words
+• Interpreting Your Report (14.95%): Budget 60 words","khun ki kami, khon ki kami, balard, himoglobing, hemo gulveen, aayraan, bleeding saathi, jach, jaaj, tesh, kon, khoon badana, naupoint, das point, yaara point","khoon, khun, blood, anemia, hb, hemoglobin","blood pressure, sugar, thyroid, blood flow, bleeding, infection","blood transfusion, HIV, heavy bleeding, fainted and fell",Queries may confuse low hemoglobin (anemia) with low blood pressure or active bleeding/hemorrhage. The term 'blood' is ambiguous and requires contextual analysis of symptoms like 'weakness' or 'tiredness' versus 'bleeding' or 'pressure'.
+Chapter 3,🤰 Maternal Antepartum Care,pregnancy_care_and_checkups.md,ISOLATE_PREGNANCY_PROCEDURE_LANE,331,1.83% of total channel traffic,"Pregnant women are seeking to understand the causes and normalcy of various physical pains and sensations, such as abdominal cramps, backaches, pelvic pressure, and abdominal tightening, experienced throughout different stages of their pregnancy.","What Are the Common Causes of Pains, Aches, and Discomfort During Pregnancy and When Should I Be Concerned?",PREGNANCY CARE,"This chapter should explain the common physical discomforts of pregnancy, including abdominal, back, and pelvic pain, differentiate these from serious warning signs, and provide clear guidance on when to seek medical care.","[1] (Freq: 2) Main pregnant hoon aur mere ko private part me pressure jaisa fill hura hai
+[2] (Freq: 2) ""pregnancy ka teesra mahina chal raha hai, to pet mein dard kyu hota hai?""
+[3] (Freq: 2) Kya pragnency ke pachwe mahine mein pet ke niche hisse mein hlka dard hona normal hai?
+[4] (Freq: 2) Mera 6th month hai mere na chahti main Dard ho ra
+[5] (Freq: 2) Dard hai moment hu ri hai bacche ki lekin pait k niche dard hu ra hai bus ghabrahat huri hai baccha niche tu nahi hu ga is liye dard hu ra hu","[1] (Count: 2) Count: 2 | Main pregnant hoon aur mere ko private part me pressure jaisa fill hura hai
+[2] (Count: 2) Count: 2 | ""pregnancy ka teesra mahina chal raha hai, to pet mein dard kyu hota hai?""
+[3] (Count: 2) Count: 2 | Kya pragnency ke pachwe mahine mein pet ke niche hisse mein hlka dard hona normal hai?
+[4] (Count: 2) Count: 2 | Mera 6th month hai mere na chahti main Dard ho ra
+[5] (Count: 2) Count: 2 | Dard hai moment hu ri hai bacche ki lekin pait k niche dard hu ra hai bus ghabrahat huri hai baccha niche tu nahi hu ga is liye dard hu ra hu
+[6] (Count: 2) Count: 2 | Mera 6th month hai mere peth main aaj subha se thoda thoda chamak raha hai
+[7] (Count: 2) Count: 2 | Pregnancy ka 7 mahina shru hua hai aur pet bhutt tight ho raha hai aisa kiu","[1] (Weight: 70 rows) Is It Normal to Experience Abdominal Pain or Cramping During Pregnancy?
+[2] (Weight: 65 rows) What Causes Back Pain During Pregnancy and How Can It Be Managed?
+[3] (Weight: 45 rows) Why Am I Feeling Pressure or Pain in My Pelvic Area or Vagina During Pregnancy?
+[4] (Weight: 40 rows) What Does It Mean When My Stomach Feels Tight or Hard During Pregnancy?
+[5] (Weight: 35 rows) How Can I Differentiate Between Braxton Hicks Contractions and True Labor Pains?
+[6] (Weight: 31 rows) Are Pains in the Ribs, Navel, or Groin Area a Normal Part of Pregnancy?
+[7] (Weight: 25 rows) What Are the Warning Signs or 'Danger Signs' of Pain During Pregnancy That Require a Doctor's Visit?
+[8] (Weight: 20 rows) Can Taking Painkillers Like Paracetamol Be Harmful During Pregnancy?","• The belief that any and all pain during pregnancy is normal and should be ignored.
+• The misconception that a dark line on the stomach (linea nigra) can predict the baby's gender.
+• The idea that you cannot have a normal delivery if you have pre-existing back pain.","While many aches and pains are a normal part of pregnancy as your body changes, it's crucial to learn the difference between common discomfort and warning signs that require immediate medical attention.","• Common Abdominal Pains and Cramps (21.15%): Budget 105 words
+• Managing Back Pain (19.64%): Budget 100 words
+• Pelvic and Vaginal Pressure (13.59%): Budget 70 words
+• Abdominal Tightening and Braxton Hicks (22.66%): Budget 115 words
+• Other Body Aches (Ribs, Navel, Groin) (16.92%): Budget 85 words
+• Warning Signs: When to See a Doctor (6.04%): Budget 30 words","pet dard, kamar dard, pait tight, chamak, dardoo, dukhra, takleef, ethan, khichav, sujan, pragnency, pegarensi, breshton hing, pedu dard, kokha darath","dard, pain, pet, kamar, back, stomach, pregnant, pregnancy","delivery, labor, bleeding, fever, diarrhea, vomiting, gas, acidity","pisaab mein khoon, bleed aa raha hai, blood in urine, heavy bleeding",Queries from users in their 8th or 9th month discussing pain and contractions may be difficult to distinguish from early labor. There is a high risk of semantic overlap with the 'childbirth_and_newborn_care.md' file. The model should be cautious when differentiating between late-pregnancy discomfort and signs of impending labor.
+Chapter 4,🤰 Maternal Antepartum Care,pregnancy_care_and_checkups.md,ISOLATE_PREGNANCY_PROCEDURE_LANE,266,1.47% of total channel traffic,"Mothers are collectively inquiring about the standard schedule, types, necessity, and interpretation of ultrasound scans (sonography) at various stages of pregnancy.",What Is The Recommended Schedule And Purpose Of Ultrasounds (Sonography) During Pregnancy?,PREGNANCY CARE,"Writers must detail the standard schedule, purpose, and types of routine ultrasounds (sonography) performed during each trimester of a typical pregnancy, clarifying what each scan assesses.","[1] (Freq: 2) Fast sonography kb krwaye
+[2] (Freq: 1) Mumbai mahine ki sonography kab karna chahie
+[3] (Freq: 1) Accha apse me ye sawal puchti hoo ki altrasol sarkari me accha hota hai ya feer prabit se karvau
+[4] (Freq: 1) Jb hm ne check kya tha tb kerwaya tha sonography
+[5] (Freq: 1) 9MHINEME SONOGRAFIC HOTI HE","[1] (Count: 2) Fast sonography kb krwaye
+[2] (Count: 1) ""Starting se leke nain manth tak kitne sonografi hote ho batao?""
+[3] (Count: 1) Pehla artra saun kab karwana chahiye, kaun se mahine mein?
+[4] (Count: 1) Mera abhi 24 hafta 5 din hain mera anomaly Scan ho chuka hain ab agli Sonography mujhe kb karni chahiye?
+[5] (Count: 1) SONO GRAFIC KON KONSE MONTH ME KRE
+[6] (Count: 1) kaun etra son hota hai, pehle se ke nave mahine se, kaun kaun kitne baar etra saun palta hai, aur kaun kaun se mahine mein doctor karte etra saun?
+[7] (Count: 1) ""Ye mere sonugrafi ki report hai, aap dekh kar bataiye, ismein sab kuch normal hai, sab theek thaak hai, ya fir kuch problem to nahi.""","[1] (Weight: 55 rows) What Is The Complete Schedule For Ultrasounds Throughout A Normal Pregnancy?
+[2] (Weight: 50 rows) When Should I Get My First Ultrasound Done During Pregnancy?
+[3] (Weight: 45 rows) How Many Sonography Scans Are Typically Necessary In Total?
+[4] (Weight: 35 rows) What Is The Purpose Of The Anomaly Scan In The Fifth Month?
+[5] (Weight: 30 rows) Can You Help Me Understand The Details In My Sonography Report?
+[6] (Weight: 21 rows) Are There Any Special Instructions, Like Fasting, Before An Ultrasound?
+[7] (Weight: 18 rows) What Are The Different Types Of Ultrasounds, Such As NT Or Doppler Scans?
+[8] (Weight: 12 rows) Where Can I Get A Free Or Government-Subsidized Sonography?","• Ultrasound scans and the gel used are harmful to the developing baby.
+• The primary purpose of every pregnancy ultrasound is to determine the baby's gender.
+• More sonography scans than recommended will give you a healthier baby.","Routine ultrasounds are a safe and essential part of pregnancy care, used to monitor your baby's growth and health at specific times during each trimester.","• Standard Ultrasound Schedule and Frequency (56.39%): Budget 170 words
+• Types of Scans and Their Purpose (19.92%): Budget 60 words
+• Understanding the Process and Results (19.17%): Budget 55 words
+• Accessing Services (4.51%): Budget 15 words","sonography, sonografi, sonugrafi, sonugarafi, sonugerafy, sodography, sonygafy, songraphy, sonigarfi, ultrasound, altrasol, atra saan, artra saun, usg, scanning","sonography, ultrasound, scan, sono","blood test, urine test, checkup, anemia, jaundice, delivery date","report says problem, abnormal report, doctor said emergency, no heartbeat in scan, something is wrong in sonography","This cluster focuses on the schedule and procedure of routine ultrasounds. Be cautious of queries about specific abnormal findings in a report (e.g., 'low fluid', 'growth restriction'), which may require routing to a more specialized clinical topic."
+Chapter 5,🤰 Maternal Antepartum Care,pregnancy_nutrition_and_diet.md,ISOLATE_PREGNANCY_NUTRITION_LANE,245,1.36% of total channel traffic,"Mothers are seeking clear guidance on the correct methods for taking essential pregnancy supplements, particularly iron, calcium, and folic acid, with a focus on timing, dietary interactions, and managing side effects.","What Is The Correct Way To Take Iron, Calcium, And Folic Acid Supplements During Pregnancy?",PREGNANCY NUTRITION,"Writers must provide comprehensive guidance on the proper administration of iron, calcium, and folic acid supplements during pregnancy, including timing, dietary interactions (especially with dairy), and management of common side effects.","[1] (Freq: 2) Calcium aur iron ki goliyan kaun se manth se shuru Karni chahie
+[2] (Freq: 2) Iron ki goli k sath vit c le sakte hai
+[3] (Freq: 2) Doodh roti khane ke baad calcium ki goli kha shakte hai
+[4] (Freq: 2) Dudh pine k bad kitne der bad goli khaye
+[5] (Freq: 1) Folic acid ki tablet kitne mahine khana chahiye","[1] (Count: 2) Calcium aur iron ki goliyan kaun se manth se shuru Karni chahie
+[2] (Count: 2) Iron ki goli k sath vit c le sakte hai
+[3] (Count: 2) Doodh roti khane ke baad calcium ki goli kha shakte hai
+[4] (Count: 2) Dudh pine k bad kitne der bad goli khaye
+[5] (Count: 1) Mera pregnancy ka 7th month start hua hai....kya me iron ki teblet dudh ke sath kha sakti hu?
+[6] (Count: 1) di plz mujhe bataye ki iron calcium ki tablet lene ka Sahi timing aur tareeka kya hai
+[7] (Count: 1) hairaan ki aur kelosiyam ke tablet kaon si subah mein aur kaon si raat mein khana chahiye","[1] (Weight: 60 rows) Can I Take Iron Or Calcium Tablets With Milk Or Other Dairy Products?
+[2] (Weight: 45 rows) When Should I Start Taking Iron And Calcium Tablets During Pregnancy?
+[3] (Weight: 45 rows) What Is The Correct Time Of Day To Take My Iron And Calcium Tablets?
+[4] (Weight: 30 rows) What Are The Common Side Effects Of Iron Tablets And How Can They Be Managed?
+[5] (Weight: 25 rows) For How Long Should I Take Folic Acid Tablets During My Pregnancy?
+[6] (Weight: 20 rows) What Foods Or Drinks Should Be Avoided When Taking Pregnancy Supplements?
+[7] (Weight: 10 rows) Is It Safe To Take My TB Medication With Iron And Calcium Supplements?
+[8] (Weight: 10 rows) How Can I Identify Which Tablet Is For Iron And Which Is For Calcium?","• It is okay to take iron tablets with milk, tea, or coffee.
+• You can take iron and calcium tablets at the same time for convenience.
+• All pregnancy supplements are the same and can be taken whenever you remember.","Take your iron and calcium supplements at different times of the day and avoid taking them with milk, tea, or coffee to ensure your body absorbs them properly.","• Correct Timing and Schedule (36.73%): Budget 180 words
+• Dietary Interactions (Especially Dairy) (24.49%): Budget 120 words
+• Managing Side Effects (12.24%): Budget 60 words
+• Understanding Folic Acid (10.2%): Budget 50 words
+• Other Important Considerations (16.33%): Budget 80 words","kalsiyam, kelasm, kelosiyam, aairan, aayan, iran, dava, goli, doodh, dudh, manth, mahina, kab khaye, sath le sakte, folik asit","iron, calcium, goli, dava, doodh, milk, tablet","anemia, low blood, hemoglobin, delivery, vaccine, growth, jsy, pmmvy","took too many pills, overdose, Aairan wali dava jata kha liya, allergic reaction, severe pain, can't breathe","Warning: This cluster is about routine iron/calcium supplementation. Queries specifically mentioning 'anemia', 'low hemoglobin', or 'blood transfusion' should be routed with high confidence to the `anemia_during_pregnancy.md` file to avoid providing general advice for a specific clinical condition."
+Chapter 6,🤰 Maternal Antepartum Care,pregnancy_care_and_checkups.md,ISOLATE_PREGNANCY_PROCEDURE_LANE,236,1.31% of total channel traffic,"Mothers are inquiring about the standard procedures, timeline, symptoms, and general care guidelines to follow throughout the different stages of pregnancy.",What Are The Standard Care Procedures And Check-Ups Required During Each Trimester Of Pregnancy?,PREGNANCY CARE,"The writers will create a comprehensive guide detailing the standard antenatal care schedule, including necessary tests, examinations, supplements, and danger signs for a typical pregnancy.","[1] (Freq: 1) kya ke liye ne ke meraam chattam maine lagaye bolu
+[2] (Freq: 1) mera ped ke liye paanch hona hai paanch hona chahte hain
+[3] (Freq: 1) main kaange aadhe
+[4] (Freq: 1) Prasaap ke jaaga bhi dupbaai
+[5] (Freq: 1) Apne khane vaare mein main predhan chuie.","[1] (Count: 1) Praadone ka sutharika kya hai?
+[2] (Count: 1) Battu Bhagate ji preznen ke milla kitte mehen hoge. Lagba kitte mehen hoge.
+[3] (Count: 1) Atve meine mein julaab laaliya skaai karve
+[4] (Count: 1) purem simee bold mera neen daara
+[5] (Count: 1) kataal khaana sef rahega
+[6] (Count: 1) mujhe ped so bair mein bad dada dura, mujhe ped mein dada dura, ukya kaan chahiye jiki maon bacche de, bacche de.
+[7] (Count: 1) prevyazana vashchchana, prevyazana, prevyazana dekhne ke liye","[1] (Weight: 45 rows) How Many Months Does A Full-Term Pregnancy Last?
+[2] (Weight: 42 rows) What Are The Common Symptoms Experienced During Pregnancy?
+[3] (Weight: 40 rows) What Medical Check-Ups And Tests Are Necessary During Pregnancy?
+[4] (Weight: 30 rows) What Foods Are Safe Or Unsafe To Eat During Pregnancy?
+[5] (Weight: 28 rows) Is It Normal To Experience Abdominal Pain During Pregnancy?
+[6] (Weight: 25 rows) What Are The Signs That Labor Is Starting?
+[7] (Weight: 15 rows) What Special Care Should Be Taken During The Eighth And Ninth Months Of Pregnancy?
+[8] (Weight: 11 rows) What Does It Mean To Be Pregnant And What Are The First Signs?","• Certain foods like jackfruit or papaya should be completely avoided throughout pregnancy.
+• You must eat for two, doubling your food intake.
+• It is unsafe to do any form of exercise during pregnancy.","Following a regular schedule of antenatal check-ups, maintaining a balanced diet, and being aware of danger signs are crucial for a healthy pregnancy and safe delivery.","• Pregnancy Timeline and Symptoms (41.53%): Budget 150 words
+• Antenatal Check-ups and Tests (16.95%): Budget 60 words
+• Diet and Nutrition (12.71%): Budget 45 words
+• Common Discomforts and Pains (11.86%): Budget 40 words
+• Labor and Delivery Preparedness (10.59%): Budget 35 words
+• Late-Stage Pregnancy Care (6.36%): Budget 25 words","pregan, preznen, premnesi, praadone, dilivery, pet dard, mahina, meine, garba asta, sonograafi, chakkar, kamjori, khana, pachan, preshaun","garbh, pet, mahina, delivery, dard, pregnancy","period, mc, bacha, newborn, doodh, vaccine, tika","bahut jyada blood ja raha, pet me tez dard, baccha ghum nahi raha, cannot breathe, high fever not going down, severe bleeding","This cluster focuses on general pregnancy care. Be cautious of queries about specific, severe complications (like eclampsia, placenta previa), which should be handled by more specialized content or a medical professional. Also, distinguish from post-delivery (postpartum) care queries."
+Chapter 7,🍼 Postpartum & Lactation Support,breastfeeding_guidance.md,ISOLATE_BREASTFEEDING_GUIDANCE_LANE,234,1.30% of total channel traffic,"Mothers are collectively inquiring about the fundamental principles, benefits, and standard practices of providing breast milk to their infants.",What Are The Essential Guidelines For Successfully Breastfeeding My Baby?,BREASTFEEDING GUIDANCE,"Writers must provide a comprehensive 'how-to' manual for standard, successful breastfeeding practices, covering initiation, positioning, latching, feeding cues, and signs of adequacy.","[1] (Freq: 233) Maa ka doodh
+[2] (Freq: 1) Sirf maa ka dudh","[1] (Count: 110) Maa ka doodh
+[2] (Count: 50) Breastfeeding
+[3] (Count: 35) How to breastfeed
+[4] (Count: 20) Is my milk enough
+[5] (Count: 15) Maa ka doodh pilana
+[6] (Count: 3) Stanpan
+[7] (Count: 1) Sirf maa ka dudh","[1] (Weight: 70 rows) What Are The Fundamental Basics Of Breastfeeding?
+[2] (Weight: 55 rows) How Can I Be Sure My Baby Is Getting Enough Breast Milk?
+[3] (Weight: 30 rows) What Is The Correct Way To Latch My Baby To The Breast?
+[4] (Weight: 25 rows) How Often Should I Be Breastfeeding My Newborn?
+[5] (Weight: 20 rows) What Is Colostrum And Why Is It Important For My Baby?
+[6] (Weight: 15 rows) Is It Necessary To Give My Baby Only Breast Milk For The First Six Months?
+[7] (Weight: 12 rows) What Are The Different Positions I Can Use For Breastfeeding?
+[8] (Weight: 7 rows) How Long Should A Typical Breastfeeding Session Last?","• The myth that small breasts produce less milk.
+• The misconception that a mother must stop breastfeeding if she is sick with a common illness like a cold or fever.
+• The belief that infant formula is equivalent to or better than breast milk.
+• The idea that significant or prolonged pain during breastfeeding is normal and should be endured.","Exclusive breastfeeding for the first six months provides the best possible nutrition, immunity, and bonding for your baby's healthy development.","• Core Principles and Benefits (44.87%): Budget 150 words
+• Adequacy and Scheduling (37.18%): Budget 125 words
+• Technique and Positioning (17.95%): Budget 60 words","Maa ka doodh, ma ka dudh, ma ka dood, dudh, stanpan, breast feeding, sirf doodh, sirf maa ka dudh, feeding baby, apna doodh, doodh pilana, chati ka doodh, mother milk, breastmilk, feed karana","doodh, dudh, breastfeed, stanpan, milk","formula, bottle, solids, khichdi, weaning, cow milk, gai ka doodh, low supply, pain, sore nipple","baby not breathing, baby is blue, baby won't wake up, baby is unconscious, severe pain in breast, high fever with breast redness, baby is limp","This cluster is focused on basic breastfeeding guidance. Queries about low milk supply, pain, maternal illness, or cracked nipples should be carefully routed to 'breastfeeding_special_conditions.md' to avoid providing incomplete or inappropriate advice."
+Chapter 8,🤰 Maternal Antepartum Care,pregnancy_care_and_checkups.md,ISOLATE_PREGNANCY_PROCEDURE_LANE,230,1.27% of total channel traffic,"Mothers are inquiring about the causes, significance, and appropriate actions for various types of abdominal pain experienced during pregnancy.",What Should I Do If I Experience Abdominal Pain During Pregnancy?,PREGNANCY HEALTH CONCERNS,"Writers must explain the common causes of abdominal pain during pregnancy, differentiate between normal discomfort and warning signs, and provide clear guidance on when to seek immediate medical attention.","[1] (Freq: 2) Pet ke nichle hisse main dard hota hai
+[2] (Freq: 2) Pet me dard hai
+[3] (Freq: 2) Aaj subha se nichle hisse me halki halki dard ho rhi hai
+[4] (Freq: 2) Mere pet me dard ho raha hai
+[5] (Freq: 2) Pet me dard ho to kya kre","[1] (Count: 2) Pet ke nichle hisse main dard hota hai
+[2] (Count: 2) Pet me dard hai
+[3] (Count: 2) Aaj subha se nichle hisse me halki halki dard ho rhi hai
+[4] (Count: 2) Mere pet me dard ho raha hai
+[5] (Count: 2) Pet me dard ho to kya kre
+[6] (Count: 2) Pet k nichle hisse me kaanta gadne jaisi dard ho raha hai
+[7] (Count: 1) pet mein bahut dard rehta hai, kamar mein dard rehta hai, kabhi-kabhi bukhar aa jaata hai, ulti hoti hai, to kya kar jaen?","[1] (Weight: 55 rows) What Does Pain In The Lower Abdomen Mean During Pregnancy?
+[2] (Weight: 50 rows) Why Am I Experiencing General Abdominal Pain During My Pregnancy?
+[3] (Weight: 45 rows) When Should I Be Worried About Stomach Pain And See A Doctor?
+[4] (Weight: 25 rows) Is It Normal To Have Pain On Only The Left Or Right Side Of My Abdomen?
+[5] (Weight: 20 rows) What Causes A Cramping, Twisting, Or Pulling Sensation In The Stomach?
+[6] (Weight: 15 rows) What Should I Do If I Have Abdominal Pain Along With Back Pain Or Fever?
+[7] (Weight: 10 rows) Can Certain Activities Like Sitting For A Long Time Or Doing Chores Cause Stomach Pain?
+[8] (Weight: 10 rows) Could The Food I Am Eating Be The Cause Of My Stomach Pain?","• Myth: Abdominal pain during pregnancy is always caused by doing household chores like sweeping.
+• Myth: Eating specific common foods like idli will cause harmful stomach pain during pregnancy.
+• Myth: Any and all abdominal pain is a normal part of pregnancy and can be ignored without consulting a doctor.","While some mild abdominal discomfort can be normal during pregnancy, severe, persistent, or sharp pain should always be reported to a doctor immediately to rule out complications.","• Warning Signs & When to Call a Doctor (35.22%): Budget 176 words
+• Common Causes of Mild or Normal Pain (34.78%): Budget 174 words
+• Understanding Pain in Specific Locations (Lower Abdomen, Sides) (30.0%): Budget 150 words","pet dard, pait dard, pedu me dard, nichle hisse, dardor, dadr, darth, darad, dukhtha, takleeb, aithan, chuban, marod, durad, dardh","pet, dard, pain, dukh, stomach, abdomen","period, gas, delivery, labour, contraction, maasik, acidity","bahut tez dard, khoon aa raha hai, bleeding with pain, can't walk from pain, fainting from pain, severe pain and bleeding","This cluster focuses on general abdominal pain during pregnancy. It risks false positives with queries specifically about labor contractions, period pain (if not pregnant), or digestive issues like severe acidity or food poisoning. Ensure models can distinguish between pregnancy-related abdominal concerns and these adjacent topics."
+Chapter 9,👶 Pediatric & Infant Wellness,breastfeeding_guidance.md,ACTIVATE_BREASTFEEDING_CORE_POOL,200,1.11% of total channel traffic,"New mothers are seeking guidance on how to successfully breastfeed, with a primary focus on addressing concerns about insufficient milk supply and proper feeding techniques.",How Can I Increase My Breast Milk Supply and Ensure My Baby Is Feeding Correctly?,INFANT AND CHILD FEEDING,"Writers must provide comprehensive guidance on establishing and maintaining an adequate breast milk supply, correct breastfeeding techniques, and troubleshooting common feeding problems.","[1] (Freq: 3) Kiya sex karne se dudh nahi aaya
+[2] (Freq: 3) Maa ka dudh q nahi hota
+[3] (Freq: 3) Maa ka dudh ke liye kiya karna chahiye
+[4] (Freq: 3) Maa ka dudh na ho to kiya kare
+[5] (Freq: 2) Maa ka dudh na bane to kya kre","[1] (Count: 3) Kiya sex karne se dudh nahi aaya
+[2] (Count: 3) Maa ka dudh q nahi hota
+[3] (Count: 3) Maa ka dudh ke liye kiya karna chahiye
+[4] (Count: 3) Maa ka dudh na ho to kiya kare
+[5] (Count: 2) Maa ka dudh na bane to kya kre
+[6] (Count: 2) Mera dhoodh km aya h
+[7] (Count: 2) Maa ka dudh agar kam aane lage to kiya karye","[1] (Weight: 70 rows) What Should I Do if I Am Not Producing Enough Breast Milk?
+[2] (Weight: 40 rows) What Foods and Diet Should I Follow to Increase My Breast Milk Production?
+[3] (Weight: 25 rows) What Are the Correct Positions and Techniques for Latching My Baby to the Breast?
+[4] (Weight: 20 rows) How Can I Tell if My Baby Is Getting Enough Milk and Their Stomach Is Full?
+[5] (Weight: 15 rows) When and How Should I Use Formula or Bottle Milk if Breast Milk Is Insufficient?
+[6] (Weight: 10 rows) What Causes Breast Pain or Sore Nipples While Feeding and How Can I Treat It?
+[7] (Weight: 10 rows) How Often and for How Long Should I Breastfeed My Newborn?
+[8] (Weight: 10 rows) How Can I Express and Store Breast Milk Safely?","• Having sex does not cause a mother's breast milk to stop or dry up.
+• While a healthy diet is important, there is no single magic food that will instantly increase milk supply; consistent and effective removal of milk is the primary driver.
+• It is a cultural taboo and not recommended for a husband to drink his wife's breast milk, which is specifically produced for the infant's nutritional needs.","With proper latching techniques, a nutritious diet, and frequent feeding on demand, most mothers can establish a sufficient milk supply for their baby.","• Addressing Low Milk Supply (35.0%): Budget 150 words
+• Diet and Nutrition for Lactation (20.0%): Budget 100 words
+• Proper Latching and Positioning (12.5%): Budget 75 words
+• Signs of Adequate Feeding (10.0%): Budget 60 words
+• Using Formula and Other Concerns (22.5%): Budget 115 words","dudh, doodh, doot, dhoodh, nahi hota, kam aya, kya kare, kaese krae, latching, pilaana, bukha, jeyada, bottel, sukh gaya, barhne","dudh, doodh, milk, breastfeed, feed, pila","pregnancy, delivery, formula, solid food, weaning, vaccine, fever, c-section","baby not feeding at all, baby is very weak, mother has high fever, severe breast pain with fever, lump in breast is very painful","This cluster is focused on breastfeeding supply and technique. Be cautious of queries about formula preparation, introducing solid foods (complementary feeding), or general newborn care, which are distinct topics."
+Chapter 10,🤰 Maternal Antepartum Care,government_schemes_overview.md,ACTIVATE_GOVT_SCHEMES_POOL,184,1.02% of total channel traffic,"Mothers are inquiring about the various government schemes and benefits, including both free services and cash assistance, that are available to them during pregnancy and for their young children.",What Government Schemes And Benefits Are Available For Pregnant Women And Mothers?,GOVERNMENT SCHEMES,The writers will create a comprehensive guide detailing the government's free service schemes (like JSSK) and cash benefit schemes (like PMMVY and JSY) available for maternal and child health.,[1] (Freq: 184) Sarkari Suvidha,"[1] (Count: 65) sarkari suvidha
+[2] (Count: 32) government schemes for pregnancy
+[3] (Count: 28) sarkari yojana
+[4] (Count: 21) what benefits can i get from government
+[5] (Count: 15) free delivery scheme
+[6] (Count: 13) money for pregnant woman scheme
+[7] (Count: 10) sarkari hospital me kya suvidha hai","[1] (Weight: 45 rows) What Are The General Government Schemes Available During Pregnancy?
+[2] (Weight: 38 rows) How Can I Get Free Delivery And Check-Ups At A Government Hospital?
+[3] (Weight: 35 rows) Which Schemes Provide Money Or Cash Benefits To Pregnant Women?
+[4] (Weight: 20 rows) What Is The PMMVY Scheme And How Do I Apply For It?
+[5] (Weight: 15 rows) What Is The JSY Scheme And Who Is Eligible?
+[6] (Weight: 13 rows) What Free Services Are Included Under The JSSK Scheme?
+[7] (Weight: 10 rows) What Documents Are Required To Apply For These Government Schemes?
+[8] (Weight: 8 rows) Where Can I Find Information About Local Government Health Services?","• You have to pay bribes to get benefits from government schemes.
+• These schemes are only for people in villages, not in cities.
+• The application process is too complicated for a normal person to complete.","The government offers several valuable free service and cash benefit schemes to support mothers and children, and knowing your entitlements can significantly reduce healthcare costs.","• Cash Benefit Schemes (PMMVY & JSY) (38.04%): Budget 190 words
+• Free Service Schemes (JSSK) (27.72%): Budget 140 words
+• General Overview of Schemes (24.46%): Budget 120 words
+• Application Process & Logistics (9.78%): Budget 50 words","Sarkari Suvidha, sarkari yojana, sarkari scheme, goverment benifit, sarkari hospital, free delivery, paise wali scheme, bachhe ke liye scheme, garbhvati yojana, PMMVY form, JSY labh, sarkari madad, free ilaj, suvidhayein, sarkari aspatal","sarkari, scheme, yojana, suvidha, benefit, free, paise, money","private hospital, insurance, loan, job, ration card, pension","delivery pain started, heavy bleeding, baby not moving, emergency, need ambulance now","This cluster is about government schemes. It may be confused with queries about specific medical procedures (e.g., 'free C-section' might be about the procedure itself, not the scheme) or general hospital logistics. Confirm user interest is in the scheme itself."

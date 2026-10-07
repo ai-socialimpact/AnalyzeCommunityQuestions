@@ -1,0 +1,220 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
+        body { font-family: sans-serif; background: #fafafa; padding: 15px; color: #333; }
+        .wrapper { max-width: 1000px; margin: 0 auto; background: #fff; border: 1px solid #ddd; padding: 25px; border-radius: 4px; }
+        .summary-dashboard { display: flex; gap: 15px; margin-bottom: 15px; }
+        .metric-card { flex: 1; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 4px; padding: 12px; text-align: center; }
+        .metric-card h3 { margin: 0; font-size: 24px; color: #0284c7; }
+        .metric-card p { margin: 2px 0 0 0; font-size: 12px; color: #475569; }
+        .control-bar { background: #f1f5f9; padding: 10px; border: 1px solid #e2e8f0; border-radius: 4px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; font-size: 12px; color: #64748b; }
+        .btn { background: #0284c7; color: white; border: none; padding: 6px 12px; font-weight: bold; border-radius: 4px; cursor: pointer; }
+        .vol-hdr { background: #f0f4f8; font-weight: bold; padding: 10px; margin-top: 10px; cursor: pointer; border-radius: 4px; color: #1e3a8a; }
+        .ch-hdr { background: #fef3c7; font-weight: bold; padding: 7px; margin: 6px 0 0 15px; cursor: pointer; border-radius: 4px; color: #92400e; }
+        .faq-card { margin: 10px 0 10px 25px; padding: 15px; border-left: 4px solid #94a3b8; background: #f8fafc; font-size: 13px; }
+        .card-side-badge { font-weight: bold; font-size: 11px; color: #475569; background: #e2e8f0; padding: 3px 8px; border-radius: 4px; margin-bottom: 8px; display: inline-block; }
+        .info-grid { background: #ffffff; padding: 10px; border: 1px solid #e2e8f0; border-radius: 4px; margin: 8px 0; line-height: 1.4; }
+        .split-row { display: flex; gap: 15px; margin-top: 10px; }
+        .split-col { flex: 1; min-width: 0; }
+        .sub-list { padding-left: 0; list-style: none; font-size: 12px; color: #444; }
+        .sub-list li { display: flex; align-items: flex-start; margin-bottom: 6px; }
+        .list-text { flex: 1; min-width: 0; }
+        .badge { font-weight: bold; padding: 1px 5px; border-radius: 8px; font-size: 10px; margin-right: 6px; display: inline-block; white-space: nowrap; flex-shrink: 0; }
+        .badge.weight { background: #dcfce7; color: #15803d; }
+        .badge.freq { background: #e0f2fe; color: #0369a1; }
+        .hide { display: none !important; }
+        h4, h5 { margin: 0 0 6px 0; color: #0f172a; }
+        h5 { font-size: 11px; color: #64748b; text-transform: uppercase; border-bottom: 1px solid #e2e8f0; padding-bottom: 2px; }
+        code { background: #f1f5f9; padding: 1px 3px; border-radius: 3px; color: #b45309; font-family: monospace; }
+    </style><script>
+        let expanded = true;
+        function toggleAll() {
+            expanded = !expanded;
+            document.querySelectorAll('.toggleable-details').forEach(r => expanded ? r.classList.remove('hide') : r.classList.add('hide'));
+            document.getElementById('toggleBtn').innerText = expanded ? "Master Collapse Lists ▴" : "Master Expand Lists ▾";
+        }
+    </script></head><body><div class="wrapper">
+        <h2>BOOK CONTENT INDEX ARCHITECTURE</h2>
+        <div class="summary-dashboard">
+            <div class="metric-card"><h3>10</h3><p>Total FAQ Chapters</p></div>
+            <div class="metric-card"><h3>70</h3><p>High-Impact Questions (&gt;10 rows)</p></div>
+            <div class="metric-card"><h3>15.67%</h3><p>Total WhatsApp Traffic Handled</p></div>
+        </div>
+        <div class="control-bar">
+            <button id="toggleBtn" class="btn" onclick="toggleAll()">Master Collapse Lists ▴</button>
+            <span>(Toggles all Question & Variation fields globally without closing volume panels)</span>
+        </div>
+        
+                <div class="block">
+                    <div class="vol-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">📘 Volume: 👶 Pediatric &amp; Infant Wellness ▾</div>
+                    <div>
+                <div class="block">
+                    <div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Child Immunization ▾</div>
+                    <div>
+                <div class="faq-card">
+                    <div class="card-side-badge">📊 2.59% of total channel traffic (467 queries)</div>
+                    <h4>📖 What Is The Complete Immunization Schedule For My Child And How Should I Manage Post-Vaccination Side Effects?</h4>
+                    <div class="info-grid">
+                        <div><strong>💡 Intent:</strong> Mothers are seeking comprehensive information about the immunization schedule for their children and themselves during pregnancy, including which vaccines are required at specific ages, and how to manage common side effects like fever, pain, and swelling at the injection site.</div>
+                        <div style="margin-top:4px;"><strong>🛠️ Scope:</strong> Writers must provide a comprehensive guide covering the national immunization schedule, the purpose of each vaccine, and the management of common, non-severe post-vaccination side effects.</div>
+                        <div style="margin-top:4px;"><strong>📁 Asset:</strong> <code>docs/immunization_schedule_and_basics.md</code></div>
+                    </div>
+                    <div class="split-row toggleable-details">
+                        <div class="split-col"><h5>📍 Top 8 Distinct Questions</h5><ul class="sub-list"><li><span class="badge weight">145 rows</span><span class="list-text">What Should I Do About The Lump, Swelling, Or Pain At The Injection Site After My Baby&#x27;s Vaccination?</span></li><li><span class="badge weight">110 rows</span><span class="list-text">What Is The Schedule Of Vaccines For My Baby At 1.5, 2.5, 3.5, And 9 Months?</span></li><li><span class="badge weight">55 rows</span><span class="list-text">Which Tetanus (TT) Injections Are Required During Pregnancy And When Should They Be Taken?</span></li><li><span class="badge weight">45 rows</span><span class="list-text">Can You Explain What The OPV, Hepatitis B, And BCG Vaccines Are For?</span></li><li><span class="badge weight">30 rows</span><span class="list-text">Is It Absolutely Necessary For My Child To Get All The Recommended Vaccinations?</span></li><li><span class="badge weight">28 rows</span><span class="list-text">Where Can I Go To Get My Child Vaccinated?</span></li><li><span class="badge weight">27 rows</span><span class="list-text">What Should I Do If My Child Has Missed A Scheduled Vaccine Dose?</span></li><li><span class="badge weight">27 rows</span><span class="list-text">How Can I Understand My Child&#x27;s Immunization Card To See Which Vaccines Are Due?</span></li></ul></div>
+                        <div class="split-col"><h5>🗣️ Top 5 Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">6 freq</span><span class="list-text"><i>Mera baby six month ka hua hai abhi usko 3:30 mahine ka sui lagaya hai 3 din ho gaya hai usko barf bhi Laga rahi hun aur main cream bhi Laga rahi hun to bhi gand jaisa banaa hai to kya karna chahie</i></span></li><li><span class="badge freq">3 freq</span><span class="list-text"><i>Jahan per sui mare Na vahin per guard jaisa hua Hai Baki aur kuchh nahin</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Maa ko abhi garbh wati hai 3 month started hai aur aj tika laga hai jha tika laga woh hath dukh rha hai tu kya kare</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Opv kya hota hai</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Hepatitis b kya hota hai</i></span></li></ul></div>
+                    </div>
+                </div></div>
+                </div>
+                <div class="block">
+                    <div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Infant And Child Feeding ▾</div>
+                    <div>
+                <div class="faq-card">
+                    <div class="card-side-badge">📊 1.11% of total channel traffic (200 queries)</div>
+                    <h4>📖 How Can I Increase My Breast Milk Supply and Ensure My Baby Is Feeding Correctly?</h4>
+                    <div class="info-grid">
+                        <div><strong>💡 Intent:</strong> New mothers are seeking guidance on how to successfully breastfeed, with a primary focus on addressing concerns about insufficient milk supply and proper feeding techniques.</div>
+                        <div style="margin-top:4px;"><strong>🛠️ Scope:</strong> Writers must provide comprehensive guidance on establishing and maintaining an adequate breast milk supply, correct breastfeeding techniques, and troubleshooting common feeding problems.</div>
+                        <div style="margin-top:4px;"><strong>📁 Asset:</strong> <code>docs/breastfeeding_guidance.md</code></div>
+                    </div>
+                    <div class="split-row toggleable-details">
+                        <div class="split-col"><h5>📍 Top 8 Distinct Questions</h5><ul class="sub-list"><li><span class="badge weight">70 rows</span><span class="list-text">What Should I Do if I Am Not Producing Enough Breast Milk?</span></li><li><span class="badge weight">40 rows</span><span class="list-text">What Foods and Diet Should I Follow to Increase My Breast Milk Production?</span></li><li><span class="badge weight">25 rows</span><span class="list-text">What Are the Correct Positions and Techniques for Latching My Baby to the Breast?</span></li><li><span class="badge weight">20 rows</span><span class="list-text">How Can I Tell if My Baby Is Getting Enough Milk and Their Stomach Is Full?</span></li><li><span class="badge weight">15 rows</span><span class="list-text">When and How Should I Use Formula or Bottle Milk if Breast Milk Is Insufficient?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">What Causes Breast Pain or Sore Nipples While Feeding and How Can I Treat It?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">How Often and for How Long Should I Breastfeed My Newborn?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">How Can I Express and Store Breast Milk Safely?</span></li></ul></div>
+                        <div class="split-col"><h5>🗣️ Top 5 Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">3 freq</span><span class="list-text"><i>Kiya sex karne se dudh nahi aaya</i></span></li><li><span class="badge freq">3 freq</span><span class="list-text"><i>Maa ka dudh q nahi hota</i></span></li><li><span class="badge freq">3 freq</span><span class="list-text"><i>Maa ka dudh ke liye kiya karna chahiye</i></span></li><li><span class="badge freq">3 freq</span><span class="list-text"><i>Maa ka dudh na ho to kiya kare</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Maa ka dudh na bane to kya kre</i></span></li></ul></div>
+                    </div>
+                </div></div>
+                </div></div>
+                </div>
+                <div class="block">
+                    <div class="vol-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">📘 Volume: 🤰 Maternal Antepartum Care ▾</div>
+                    <div>
+                <div class="block">
+                    <div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Pregnancy Health Conditions ▾</div>
+                    <div>
+                <div class="faq-card">
+                    <div class="card-side-badge">📊 2.41% of total channel traffic (435 queries)</div>
+                    <h4>📖 What Should I Do If I Have Anemia Or Low Hemoglobin During Pregnancy?</h4>
+                    <div class="info-grid">
+                        <div><strong>💡 Intent:</strong> Mothers are collectively inquiring about the diagnosis, normal levels, and management of anemia during pregnancy, including which tests are required and what dietary or supplemental interventions can increase their hemoglobin.</div>
+                        <div style="margin-top:4px;"><strong>🛠️ Scope:</strong> Writers must detail the diagnosis, symptoms, normal hemoglobin levels, and management protocols for anemia during pregnancy, including dietary advice, IFA supplementation, and criteria for medical escalation.</div>
+                        <div style="margin-top:4px;"><strong>📁 Asset:</strong> <code>docs/anemia_during_pregnancy.md</code></div>
+                    </div>
+                    <div class="split-row toggleable-details">
+                        <div class="split-col"><h5>📍 Top 8 Distinct Questions</h5><ul class="sub-list"><li><span class="badge weight">109 rows</span><span class="list-text">What Are The Normal Hemoglobin Levels During Pregnancy?</span></li><li><span class="badge weight">109 rows</span><span class="list-text">What Foods Should I Eat To Increase My Blood Or Hemoglobin?</span></li><li><span class="badge weight">65 rows</span><span class="list-text">When Should I Get My Blood Tested For Anemia During Pregnancy?</span></li><li><span class="badge weight">44 rows</span><span class="list-text">How Do I Interpret My Hemoglobin Test Results?</span></li><li><span class="badge weight">44 rows</span><span class="list-text">What Are The Common Symptoms Of Anemia While Pregnant?</span></li><li><span class="badge weight">22 rows</span><span class="list-text">What Is Anemia And What Causes It During Pregnancy?</span></li><li><span class="badge weight">21 rows</span><span class="list-text">Are Iron (IFA) Tablets Necessary To Treat Anemia?</span></li><li><span class="badge weight">21 rows</span><span class="list-text">Can Anemia Cause Complications After Delivery?</span></li></ul></div>
+                        <div class="split-col"><h5>🗣️ Top 5 Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">3 freq</span><span class="list-text"><i>Ismen khun kitna hai?</i></span></li><li><span class="badge freq">3 freq</span><span class="list-text"><i>Mere bete ko doctor ne khon ki Kami bataya Hai to Kya khilaye the Puri ho jayegi</i></span></li><li><span class="badge freq">3 freq</span><span class="list-text"><i>Aur mera beta 8 mahine ka hai usko khoon ki Kami hai</i></span></li><li><span class="badge freq">3 freq</span><span class="list-text"><i>Ismein balard kitna hai, batao mere ko</i></span></li><li><span class="badge freq">3 freq</span><span class="list-text"><i>isne khun kitna point hai batao</i></span></li></ul></div>
+                    </div>
+                </div></div>
+                </div>
+                <div class="block">
+                    <div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Pregnancy Care ▾</div>
+                    <div>
+                <div class="faq-card">
+                    <div class="card-side-badge">📊 1.83% of total channel traffic (331 queries)</div>
+                    <h4>📖 What Are the Common Causes of Pains, Aches, and Discomfort During Pregnancy and When Should I Be Concerned?</h4>
+                    <div class="info-grid">
+                        <div><strong>💡 Intent:</strong> Pregnant women are seeking to understand the causes and normalcy of various physical pains and sensations, such as abdominal cramps, backaches, pelvic pressure, and abdominal tightening, experienced throughout different stages of their pregnancy.</div>
+                        <div style="margin-top:4px;"><strong>🛠️ Scope:</strong> This chapter should explain the common physical discomforts of pregnancy, including abdominal, back, and pelvic pain, differentiate these from serious warning signs, and provide clear guidance on when to seek medical care.</div>
+                        <div style="margin-top:4px;"><strong>📁 Asset:</strong> <code>docs/pregnancy_care_and_checkups.md</code></div>
+                    </div>
+                    <div class="split-row toggleable-details">
+                        <div class="split-col"><h5>📍 Top 8 Distinct Questions</h5><ul class="sub-list"><li><span class="badge weight">70 rows</span><span class="list-text">Is It Normal to Experience Abdominal Pain or Cramping During Pregnancy?</span></li><li><span class="badge weight">65 rows</span><span class="list-text">What Causes Back Pain During Pregnancy and How Can It Be Managed?</span></li><li><span class="badge weight">45 rows</span><span class="list-text">Why Am I Feeling Pressure or Pain in My Pelvic Area or Vagina During Pregnancy?</span></li><li><span class="badge weight">40 rows</span><span class="list-text">What Does It Mean When My Stomach Feels Tight or Hard During Pregnancy?</span></li><li><span class="badge weight">35 rows</span><span class="list-text">How Can I Differentiate Between Braxton Hicks Contractions and True Labor Pains?</span></li><li><span class="badge weight">31 rows</span><span class="list-text">Are Pains in the Ribs, Navel, or Groin Area a Normal Part of Pregnancy?</span></li><li><span class="badge weight">25 rows</span><span class="list-text">What Are the Warning Signs or &#x27;Danger Signs&#x27; of Pain During Pregnancy That Require a Doctor&#x27;s Visit?</span></li><li><span class="badge weight">20 rows</span><span class="list-text">Can Taking Painkillers Like Paracetamol Be Harmful During Pregnancy?</span></li></ul></div>
+                        <div class="split-col"><h5>🗣️ Top 5 Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">2 freq</span><span class="list-text"><i>Main pregnant hoon aur mere ko private part me pressure jaisa fill hura hai</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>&quot;pregnancy ka teesra mahina chal raha hai, to pet mein dard kyu hota hai?&quot;</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Kya pragnency ke pachwe mahine mein pet ke niche hisse mein hlka dard hona normal hai?</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Mera 6th month hai mere na chahti main Dard ho ra</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Dard hai moment hu ri hai bacche ki lekin pait k niche dard hu ra hai bus ghabrahat huri hai baccha niche tu nahi hu ga is liye dard hu ra hu</i></span></li></ul></div>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <div class="card-side-badge">📊 1.47% of total channel traffic (266 queries)</div>
+                    <h4>📖 What Is The Recommended Schedule And Purpose Of Ultrasounds (Sonography) During Pregnancy?</h4>
+                    <div class="info-grid">
+                        <div><strong>💡 Intent:</strong> Mothers are collectively inquiring about the standard schedule, types, necessity, and interpretation of ultrasound scans (sonography) at various stages of pregnancy.</div>
+                        <div style="margin-top:4px;"><strong>🛠️ Scope:</strong> Writers must detail the standard schedule, purpose, and types of routine ultrasounds (sonography) performed during each trimester of a typical pregnancy, clarifying what each scan assesses.</div>
+                        <div style="margin-top:4px;"><strong>📁 Asset:</strong> <code>docs/pregnancy_care_and_checkups.md</code></div>
+                    </div>
+                    <div class="split-row toggleable-details">
+                        <div class="split-col"><h5>📍 Top 8 Distinct Questions</h5><ul class="sub-list"><li><span class="badge weight">55 rows</span><span class="list-text">What Is The Complete Schedule For Ultrasounds Throughout A Normal Pregnancy?</span></li><li><span class="badge weight">50 rows</span><span class="list-text">When Should I Get My First Ultrasound Done During Pregnancy?</span></li><li><span class="badge weight">45 rows</span><span class="list-text">How Many Sonography Scans Are Typically Necessary In Total?</span></li><li><span class="badge weight">35 rows</span><span class="list-text">What Is The Purpose Of The Anomaly Scan In The Fifth Month?</span></li><li><span class="badge weight">30 rows</span><span class="list-text">Can You Help Me Understand The Details In My Sonography Report?</span></li><li><span class="badge weight">21 rows</span><span class="list-text">Are There Any Special Instructions, Like Fasting, Before An Ultrasound?</span></li><li><span class="badge weight">18 rows</span><span class="list-text">What Are The Different Types Of Ultrasounds, Such As NT Or Doppler Scans?</span></li><li><span class="badge weight">12 rows</span><span class="list-text">Where Can I Get A Free Or Government-Subsidized Sonography?</span></li></ul></div>
+                        <div class="split-col"><h5>🗣️ Top 5 Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">2 freq</span><span class="list-text"><i>Fast sonography kb krwaye</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Mumbai mahine ki sonography kab karna chahie</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Accha apse me ye sawal puchti hoo ki altrasol sarkari me accha hota hai ya feer prabit se karvau</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Jb hm ne check kya tha tb kerwaya tha sonography</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>9MHINEME SONOGRAFIC HOTI HE</i></span></li></ul></div>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <div class="card-side-badge">📊 1.31% of total channel traffic (236 queries)</div>
+                    <h4>📖 What Are The Standard Care Procedures And Check-Ups Required During Each Trimester Of Pregnancy?</h4>
+                    <div class="info-grid">
+                        <div><strong>💡 Intent:</strong> Mothers are inquiring about the standard procedures, timeline, symptoms, and general care guidelines to follow throughout the different stages of pregnancy.</div>
+                        <div style="margin-top:4px;"><strong>🛠️ Scope:</strong> The writers will create a comprehensive guide detailing the standard antenatal care schedule, including necessary tests, examinations, supplements, and danger signs for a typical pregnancy.</div>
+                        <div style="margin-top:4px;"><strong>📁 Asset:</strong> <code>docs/pregnancy_care_and_checkups.md</code></div>
+                    </div>
+                    <div class="split-row toggleable-details">
+                        <div class="split-col"><h5>📍 Top 8 Distinct Questions</h5><ul class="sub-list"><li><span class="badge weight">45 rows</span><span class="list-text">How Many Months Does A Full-Term Pregnancy Last?</span></li><li><span class="badge weight">42 rows</span><span class="list-text">What Are The Common Symptoms Experienced During Pregnancy?</span></li><li><span class="badge weight">40 rows</span><span class="list-text">What Medical Check-Ups And Tests Are Necessary During Pregnancy?</span></li><li><span class="badge weight">30 rows</span><span class="list-text">What Foods Are Safe Or Unsafe To Eat During Pregnancy?</span></li><li><span class="badge weight">28 rows</span><span class="list-text">Is It Normal To Experience Abdominal Pain During Pregnancy?</span></li><li><span class="badge weight">25 rows</span><span class="list-text">What Are The Signs That Labor Is Starting?</span></li><li><span class="badge weight">15 rows</span><span class="list-text">What Special Care Should Be Taken During The Eighth And Ninth Months Of Pregnancy?</span></li><li><span class="badge weight">11 rows</span><span class="list-text">What Does It Mean To Be Pregnant And What Are The First Signs?</span></li></ul></div>
+                        <div class="split-col"><h5>🗣️ Top 5 Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">1 freq</span><span class="list-text"><i>kya ke liye ne ke meraam chattam maine lagaye bolu</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>mera ped ke liye paanch hona hai paanch hona chahte hain</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>main kaange aadhe</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Prasaap ke jaaga bhi dupbaai</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Apne khane vaare mein main predhan chuie.</i></span></li></ul></div>
+                    </div>
+                </div></div>
+                </div>
+                <div class="block">
+                    <div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Pregnancy Nutrition ▾</div>
+                    <div>
+                <div class="faq-card">
+                    <div class="card-side-badge">📊 1.36% of total channel traffic (245 queries)</div>
+                    <h4>📖 What Is The Correct Way To Take Iron, Calcium, And Folic Acid Supplements During Pregnancy?</h4>
+                    <div class="info-grid">
+                        <div><strong>💡 Intent:</strong> Mothers are seeking clear guidance on the correct methods for taking essential pregnancy supplements, particularly iron, calcium, and folic acid, with a focus on timing, dietary interactions, and managing side effects.</div>
+                        <div style="margin-top:4px;"><strong>🛠️ Scope:</strong> Writers must provide comprehensive guidance on the proper administration of iron, calcium, and folic acid supplements during pregnancy, including timing, dietary interactions (especially with dairy), and management of common side effects.</div>
+                        <div style="margin-top:4px;"><strong>📁 Asset:</strong> <code>docs/pregnancy_nutrition_and_diet.md</code></div>
+                    </div>
+                    <div class="split-row toggleable-details">
+                        <div class="split-col"><h5>📍 Top 8 Distinct Questions</h5><ul class="sub-list"><li><span class="badge weight">60 rows</span><span class="list-text">Can I Take Iron Or Calcium Tablets With Milk Or Other Dairy Products?</span></li><li><span class="badge weight">45 rows</span><span class="list-text">When Should I Start Taking Iron And Calcium Tablets During Pregnancy?</span></li><li><span class="badge weight">45 rows</span><span class="list-text">What Is The Correct Time Of Day To Take My Iron And Calcium Tablets?</span></li><li><span class="badge weight">30 rows</span><span class="list-text">What Are The Common Side Effects Of Iron Tablets And How Can They Be Managed?</span></li><li><span class="badge weight">25 rows</span><span class="list-text">For How Long Should I Take Folic Acid Tablets During My Pregnancy?</span></li><li><span class="badge weight">20 rows</span><span class="list-text">What Foods Or Drinks Should Be Avoided When Taking Pregnancy Supplements?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">Is It Safe To Take My TB Medication With Iron And Calcium Supplements?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">How Can I Identify Which Tablet Is For Iron And Which Is For Calcium?</span></li></ul></div>
+                        <div class="split-col"><h5>🗣️ Top 5 Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">2 freq</span><span class="list-text"><i>Calcium aur iron ki goliyan kaun se manth se shuru Karni chahie</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Iron ki goli k sath vit c le sakte hai</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Doodh roti khane ke baad calcium ki goli kha shakte hai</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Dudh pine k bad kitne der bad goli khaye</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Folic acid ki tablet kitne mahine khana chahiye</i></span></li></ul></div>
+                    </div>
+                </div></div>
+                </div>
+                <div class="block">
+                    <div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Pregnancy Health Concerns ▾</div>
+                    <div>
+                <div class="faq-card">
+                    <div class="card-side-badge">📊 1.27% of total channel traffic (230 queries)</div>
+                    <h4>📖 What Should I Do If I Experience Abdominal Pain During Pregnancy?</h4>
+                    <div class="info-grid">
+                        <div><strong>💡 Intent:</strong> Mothers are inquiring about the causes, significance, and appropriate actions for various types of abdominal pain experienced during pregnancy.</div>
+                        <div style="margin-top:4px;"><strong>🛠️ Scope:</strong> Writers must explain the common causes of abdominal pain during pregnancy, differentiate between normal discomfort and warning signs, and provide clear guidance on when to seek immediate medical attention.</div>
+                        <div style="margin-top:4px;"><strong>📁 Asset:</strong> <code>docs/pregnancy_care_and_checkups.md</code></div>
+                    </div>
+                    <div class="split-row toggleable-details">
+                        <div class="split-col"><h5>📍 Top 8 Distinct Questions</h5><ul class="sub-list"><li><span class="badge weight">55 rows</span><span class="list-text">What Does Pain In The Lower Abdomen Mean During Pregnancy?</span></li><li><span class="badge weight">50 rows</span><span class="list-text">Why Am I Experiencing General Abdominal Pain During My Pregnancy?</span></li><li><span class="badge weight">45 rows</span><span class="list-text">When Should I Be Worried About Stomach Pain And See A Doctor?</span></li><li><span class="badge weight">25 rows</span><span class="list-text">Is It Normal To Have Pain On Only The Left Or Right Side Of My Abdomen?</span></li><li><span class="badge weight">20 rows</span><span class="list-text">What Causes A Cramping, Twisting, Or Pulling Sensation In The Stomach?</span></li><li><span class="badge weight">15 rows</span><span class="list-text">What Should I Do If I Have Abdominal Pain Along With Back Pain Or Fever?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">Can Certain Activities Like Sitting For A Long Time Or Doing Chores Cause Stomach Pain?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">Could The Food I Am Eating Be The Cause Of My Stomach Pain?</span></li></ul></div>
+                        <div class="split-col"><h5>🗣️ Top 5 Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">2 freq</span><span class="list-text"><i>Pet ke nichle hisse main dard hota hai</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Pet me dard hai</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Aaj subha se nichle hisse me halki halki dard ho rhi hai</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Mere pet me dard ho raha hai</i></span></li><li><span class="badge freq">2 freq</span><span class="list-text"><i>Pet me dard ho to kya kre</i></span></li></ul></div>
+                    </div>
+                </div></div>
+                </div>
+                <div class="block">
+                    <div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Government Schemes ▾</div>
+                    <div>
+                <div class="faq-card">
+                    <div class="card-side-badge">📊 1.02% of total channel traffic (184 queries)</div>
+                    <h4>📖 What Government Schemes And Benefits Are Available For Pregnant Women And Mothers?</h4>
+                    <div class="info-grid">
+                        <div><strong>💡 Intent:</strong> Mothers are inquiring about the various government schemes and benefits, including both free services and cash assistance, that are available to them during pregnancy and for their young children.</div>
+                        <div style="margin-top:4px;"><strong>🛠️ Scope:</strong> The writers will create a comprehensive guide detailing the government&#x27;s free service schemes (like JSSK) and cash benefit schemes (like PMMVY and JSY) available for maternal and child health.</div>
+                        <div style="margin-top:4px;"><strong>📁 Asset:</strong> <code>docs/government_schemes_overview.md</code></div>
+                    </div>
+                    <div class="split-row toggleable-details">
+                        <div class="split-col"><h5>📍 Top 8 Distinct Questions</h5><ul class="sub-list"><li><span class="badge weight">45 rows</span><span class="list-text">What Are The General Government Schemes Available During Pregnancy?</span></li><li><span class="badge weight">38 rows</span><span class="list-text">How Can I Get Free Delivery And Check-Ups At A Government Hospital?</span></li><li><span class="badge weight">35 rows</span><span class="list-text">Which Schemes Provide Money Or Cash Benefits To Pregnant Women?</span></li><li><span class="badge weight">20 rows</span><span class="list-text">What Is The PMMVY Scheme And How Do I Apply For It?</span></li><li><span class="badge weight">15 rows</span><span class="list-text">What Is The JSY Scheme And Who Is Eligible?</span></li><li><span class="badge weight">13 rows</span><span class="list-text">What Free Services Are Included Under The JSSK Scheme?</span></li><li><span class="badge weight">10 rows</span><span class="list-text">What Documents Are Required To Apply For These Government Schemes?</span></li><li><span class="badge weight">8 rows</span><span class="list-text">Where Can I Find Information About Local Government Health Services?</span></li></ul></div>
+                        <div class="split-col"><h5>🗣️ Top 5 Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">184 freq</span><span class="list-text"><i>Sarkari Suvidha</i></span></li></ul></div>
+                    </div>
+                </div></div>
+                </div></div>
+                </div>
+                <div class="block">
+                    <div class="vol-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">📘 Volume: 🍼 Postpartum &amp; Lactation Support ▾</div>
+                    <div>
+                <div class="block">
+                    <div class="ch-hdr" onclick="this.nextElementSibling.classList.toggle('hide')">🔖 Chapter Focus: Breastfeeding Guidance ▾</div>
+                    <div>
+                <div class="faq-card">
+                    <div class="card-side-badge">📊 1.30% of total channel traffic (234 queries)</div>
+                    <h4>📖 What Are The Essential Guidelines For Successfully Breastfeeding My Baby?</h4>
+                    <div class="info-grid">
+                        <div><strong>💡 Intent:</strong> Mothers are collectively inquiring about the fundamental principles, benefits, and standard practices of providing breast milk to their infants.</div>
+                        <div style="margin-top:4px;"><strong>🛠️ Scope:</strong> Writers must provide a comprehensive &#x27;how-to&#x27; manual for standard, successful breastfeeding practices, covering initiation, positioning, latching, feeding cues, and signs of adequacy.</div>
+                        <div style="margin-top:4px;"><strong>📁 Asset:</strong> <code>docs/breastfeeding_guidance.md</code></div>
+                    </div>
+                    <div class="split-row toggleable-details">
+                        <div class="split-col"><h5>📍 Top 8 Distinct Questions</h5><ul class="sub-list"><li><span class="badge weight">70 rows</span><span class="list-text">What Are The Fundamental Basics Of Breastfeeding?</span></li><li><span class="badge weight">55 rows</span><span class="list-text">How Can I Be Sure My Baby Is Getting Enough Breast Milk?</span></li><li><span class="badge weight">30 rows</span><span class="list-text">What Is The Correct Way To Latch My Baby To The Breast?</span></li><li><span class="badge weight">25 rows</span><span class="list-text">How Often Should I Be Breastfeeding My Newborn?</span></li><li><span class="badge weight">20 rows</span><span class="list-text">What Is Colostrum And Why Is It Important For My Baby?</span></li><li><span class="badge weight">15 rows</span><span class="list-text">Is It Necessary To Give My Baby Only Breast Milk For The First Six Months?</span></li><li><span class="badge weight">12 rows</span><span class="list-text">What Are The Different Positions I Can Use For Breastfeeding?</span></li><li><span class="badge weight">7 rows</span><span class="list-text">How Long Should A Typical Breastfeeding Session Last?</span></li></ul></div>
+                        <div class="split-col"><h5>🗣️ Top 5 Hinglish Variations</h5><ul class="sub-list"><li><span class="badge freq">233 freq</span><span class="list-text"><i>Maa ka doodh</i></span></li><li><span class="badge freq">1 freq</span><span class="list-text"><i>Sirf maa ka dudh</i></span></li></ul></div>
+                    </div>
+                </div></div>
+                </div></div>
+                </div>
+    </div></body></html>

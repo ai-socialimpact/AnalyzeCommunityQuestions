@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WhatsApp FAQ Directory Tree</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            margin: 0;
+            padding: 40px;
+        }
+        .tree-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 24px;
+            background-color: #fafbfc;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 22px;
+            color: #24292e;
+            border-bottom: 1px solid #e1e4e8;
+            padding-bottom: 12px;
+        }
+        .root-node {
+            font-weight: bold;
+            font-size: 16px;
+            color: #0366d6;
+            margin-bottom: 8px;
+            cursor: default;
+        }
+        /* Classic Windows Directory CSS Connector Branch Lines */
+        .tree-container ul {
+            list-style-type: none;
+            padding-left: 24px;
+            margin: 4px 0;
+            position: relative;
+        }
+        .tree-container ul ul::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 8px;
+            width: 1px;
+            height: 100%;
+            border-left: 1px dotted #a0a0a0;
+        }
+        .tree-container li {
+            margin: 0;
+            padding: 5px 0 5px 15px;
+            position: relative;
+        }
+        .tree-container li::before {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: -8px;
+            width: 18px;
+            height: 1px;
+            border-top: 1px dotted #a0a0a0;
+        }
+        .tree-container li:last-child::before {
+            height: auto;
+        }
+        /* Interactive click actions style attributes */
+        .folder-label {
+            font-weight: 600;
+            color: #24292e;
+            cursor: pointer;
+            padding: 3px 6px;
+            border-radius: 4px;
+            display: inline-block;
+            user-select: none;
+        }
+        .folder-label:hover {
+            background-color: #eaecef;
+            color: #0366d6;
+        }
+        .leaf-label {
+            color: #444444;
+            padding: 2px 4px;
+            display: inline-block;
+            font-weight: 500;
+        }
+        /* Smooth collapsing branch settings toggled via Javascript functions */
+        .tree-folder > ul {
+            display: block; /* Expanded by default */
+        }
+        .tree-folder.collapsed > ul {
+            display: none; /* Collapses children rows smoothly */
+        }
+        .tree-folder.collapsed > .folder-label {
+            color: #6a737d;
+        }
+        /* Details callout summary plaque styling cards */
+        .leaf-details {
+            margin: 6px 0 12px 24px;
+            padding: 12px 16px;
+            background-color: #ffffff;
+            border-left: 3px solid #2ca02c;
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            font-size: 13px;
+        }
+        .leaf-details p {
+            margin: 4px 0;
+            line-height: 1.5;
+        }
+        .file-code {
+            background-color: #f6f8fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            color: #0366d6;
+        }
+    </style>
+    <script>
+        // Native vanilla JS engine to manage directory toggling transitions instantly
+        function toggleFolderNode(element) {
+            const parentLi = element.parentElement;
+            parentLi.classList.toggle('collapsed');
+
+            // Toggle the folder emoji representation dynamically
+            if (parentLi.classList.contains('collapsed')) {
+                element.innerHTML = element.innerHTML.replace('📁', '📁 (Click to expand...)');
+            } else {
+                element.innerHTML = element.innerHTML.replace('📁 (Click to expand...)', '📁');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="tree-container">
+        <h2>💻 System Directory: Community Health FAQ Content Matrix</h2>
+        <div class="root-node">📁 C:\Production_Environment\FAQ_Booklet_Root</div>
+        <ul>
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 👶 Pediatric &amp; Infant Wellness</span>
+                    <ul>
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 Child Immunization</span>
+                    <ul>
+                <li class="tree-leaf">
+                    <span class="leaf-label">❓ What Is The Complete Immunization Schedule For My Child And How Should I Manage Post-Vaccination Side Effects?</span>
+                    <div class="leaf-details">
+                        <p><strong>📊 Volume Density:</strong> 467 rows (2.59% traffic)</p>
+                        <p><strong>📝 Core Summary:</strong> Mothers are seeking comprehensive information about the immunization schedule for their children and themselves during pregnancy, including which vaccines are required at specific ages, and how to manage common side effects like fever, pain, and swelling at the injection site.</p>
+                        <p><strong>📁 Engineering Asset Location:</strong> <code class="file-code">📂 docs/immunization_schedule_and_basics.md</code></p>
+                    </div>
+                </li>
+                </ul>
+                </li>
+                
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 Infant And Child Feeding</span>
+                    <ul>
+                <li class="tree-leaf">
+                    <span class="leaf-label">❓ How Can I Increase My Breast Milk Supply and Ensure My Baby Is Feeding Correctly?</span>
+                    <div class="leaf-details">
+                        <p><strong>📊 Volume Density:</strong> 200 rows (1.11% traffic)</p>
+                        <p><strong>📝 Core Summary:</strong> New mothers are seeking guidance on how to successfully breastfeed, with a primary focus on addressing concerns about insufficient milk supply and proper feeding techniques.</p>
+                        <p><strong>📁 Engineering Asset Location:</strong> <code class="file-code">📂 docs/breastfeeding_guidance.md</code></p>
+                    </div>
+                </li>
+                </ul>
+                </li>
+                </ul>
+                </li>
+                
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 🤰 Maternal Antepartum Care</span>
+                    <ul>
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 Pregnancy Health Conditions</span>
+                    <ul>
+                <li class="tree-leaf">
+                    <span class="leaf-label">❓ What Should I Do If I Have Anemia Or Low Hemoglobin During Pregnancy?</span>
+                    <div class="leaf-details">
+                        <p><strong>📊 Volume Density:</strong> 435 rows (2.41% traffic)</p>
+                        <p><strong>📝 Core Summary:</strong> Mothers are collectively inquiring about the diagnosis, normal levels, and management of anemia during pregnancy, including which tests are required and what dietary or supplemental interventions can increase their hemoglobin.</p>
+                        <p><strong>📁 Engineering Asset Location:</strong> <code class="file-code">📂 docs/anemia_during_pregnancy.md</code></p>
+                    </div>
+                </li>
+                </ul>
+                </li>
+                
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 Pregnancy Care</span>
+                    <ul>
+                <li class="tree-leaf">
+                    <span class="leaf-label">❓ What Are the Common Causes of Pains, Aches, and Discomfort During Pregnancy and When Should I Be Concerned?</span>
+                    <div class="leaf-details">
+                        <p><strong>📊 Volume Density:</strong> 331 rows (1.83% traffic)</p>
+                        <p><strong>📝 Core Summary:</strong> Pregnant women are seeking to understand the causes and normalcy of various physical pains and sensations, such as abdominal cramps, backaches, pelvic pressure, and abdominal tightening, experienced throughout different stages of their pregnancy.</p>
+                        <p><strong>📁 Engineering Asset Location:</strong> <code class="file-code">📂 docs/pregnancy_care_and_checkups.md</code></p>
+                    </div>
+                </li>
+                
+                <li class="tree-leaf">
+                    <span class="leaf-label">❓ What Is The Recommended Schedule And Purpose Of Ultrasounds (Sonography) During Pregnancy?</span>
+                    <div class="leaf-details">
+                        <p><strong>📊 Volume Density:</strong> 266 rows (1.47% traffic)</p>
+                        <p><strong>📝 Core Summary:</strong> Mothers are collectively inquiring about the standard schedule, types, necessity, and interpretation of ultrasound scans (sonography) at various stages of pregnancy.</p>
+                        <p><strong>📁 Engineering Asset Location:</strong> <code class="file-code">📂 docs/pregnancy_care_and_checkups.md</code></p>
+                    </div>
+                </li>
+                
+                <li class="tree-leaf">
+                    <span class="leaf-label">❓ What Are The Standard Care Procedures And Check-Ups Required During Each Trimester Of Pregnancy?</span>
+                    <div class="leaf-details">
+                        <p><strong>📊 Volume Density:</strong> 236 rows (1.31% traffic)</p>
+                        <p><strong>📝 Core Summary:</strong> Mothers are inquiring about the standard procedures, timeline, symptoms, and general care guidelines to follow throughout the different stages of pregnancy.</p>
+                        <p><strong>📁 Engineering Asset Location:</strong> <code class="file-code">📂 docs/pregnancy_care_and_checkups.md</code></p>
+                    </div>
+                </li>
+                </ul>
+                </li>
+                
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 Pregnancy Nutrition</span>
+                    <ul>
+                <li class="tree-leaf">
+                    <span class="leaf-label">❓ What Is The Correct Way To Take Iron, Calcium, And Folic Acid Supplements During Pregnancy?</span>
+                    <div class="leaf-details">
+                        <p><strong>📊 Volume Density:</strong> 245 rows (1.36% traffic)</p>
+                        <p><strong>📝 Core Summary:</strong> Mothers are seeking clear guidance on the correct methods for taking essential pregnancy supplements, particularly iron, calcium, and folic acid, with a focus on timing, dietary interactions, and managing side effects.</p>
+                        <p><strong>📁 Engineering Asset Location:</strong> <code class="file-code">📂 docs/pregnancy_nutrition_and_diet.md</code></p>
+                    </div>
+                </li>
+                </ul>
+                </li>
+                
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 Pregnancy Health Concerns</span>
+                    <ul>
+                <li class="tree-leaf">
+                    <span class="leaf-label">❓ What Should I Do If I Experience Abdominal Pain During Pregnancy?</span>
+                    <div class="leaf-details">
+                        <p><strong>📊 Volume Density:</strong> 230 rows (1.27% traffic)</p>
+                        <p><strong>📝 Core Summary:</strong> Mothers are inquiring about the causes, significance, and appropriate actions for various types of abdominal pain experienced during pregnancy.</p>
+                        <p><strong>📁 Engineering Asset Location:</strong> <code class="file-code">📂 docs/pregnancy_care_and_checkups.md</code></p>
+                    </div>
+                </li>
+                </ul>
+                </li>
+                
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 Government Schemes</span>
+                    <ul>
+                <li class="tree-leaf">
+                    <span class="leaf-label">❓ What Government Schemes And Benefits Are Available For Pregnant Women And Mothers?</span>
+                    <div class="leaf-details">
+                        <p><strong>📊 Volume Density:</strong> 184 rows (1.02% traffic)</p>
+                        <p><strong>📝 Core Summary:</strong> Mothers are inquiring about the various government schemes and benefits, including both free services and cash assistance, that are available to them during pregnancy and for their young children.</p>
+                        <p><strong>📁 Engineering Asset Location:</strong> <code class="file-code">📂 docs/government_schemes_overview.md</code></p>
+                    </div>
+                </li>
+                </ul>
+                </li>
+                </ul>
+                </li>
+                
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 🍼 Postpartum &amp; Lactation Support</span>
+                    <ul>
+                <li class="tree-folder">
+                    <span class="folder-label" onclick="toggleFolderNode(this)">📁 Breastfeeding Guidance</span>
+                    <ul>
+                <li class="tree-leaf">
+                    <span class="leaf-label">❓ What Are The Essential Guidelines For Successfully Breastfeeding My Baby?</span>
+                    <div class="leaf-details">
+                        <p><strong>📊 Volume Density:</strong> 234 rows (1.30% traffic)</p>
+                        <p><strong>📝 Core Summary:</strong> Mothers are collectively inquiring about the fundamental principles, benefits, and standard practices of providing breast milk to their infants.</p>
+                        <p><strong>📁 Engineering Asset Location:</strong> <code class="file-code">📂 docs/breastfeeding_guidance.md</code></p>
+                    </div>
+                </li>
+                </ul>
+                </li>
+                </ul>
+                </li>
+                </ul>
+    </div>
+</body>
+</html>

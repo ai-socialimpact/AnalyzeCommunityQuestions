@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Conversational Intelligence Portal</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Vertical Sidebar Container */
+        .nav-sidebar {
+            width: 260px;
+            background-color: #0f172a; /* Slate 900 */
+            color: #f1f5f9;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid #1e293b;
+            flex-shrink: 0;
+        }
+        .sidebar-brand-title {
+            padding: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #1e293b;
+            background-color: #1e293b;
+            color: #38bdf8;
+        }
+        .nav-buttons-group {
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        /* Navigation Sidebar Items style properties */
+        .nav-btn {
+            background: none;
+            border: none;
+            color: #94a3b8;
+            text-align: left;
+            padding: 10px 14px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            display: block;
+            width: 100%;
+        }
+        .nav-btn:hover {
+            background-color: #1e293b;
+            color: #ffffff;
+        }
+        .nav-btn.active {
+            background-color: #0284c7; /* Sky 600 */
+            color: #ffffff;
+        }
+
+        /* Workspace Dashboard Frame Views Content View viewport */
+        .main-portal-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background-color: #ffffff;
+            position: relative;
+        }
+        .iframe-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .iframe-header-bar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #64748b;
+        }
+        .iframe-header-bar code {
+            background-color: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #0f172a;
+            font-family: monospace;
+        }
+        .open-tab-btn {
+            color: #0284c7;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .open-tab-btn:hover {
+            text-decoration: underline;
+        }
+        iframe {
+            flex: 1;
+            border: none;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+        }
+    </style>
+
+    <script>
+        // Vanilla JavaScript framework engine switcher loop to cycle active frame states
+        function switchDashboardTab(buttonElement, targetTabId) {
+            // Deactivate all button active style vectors
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            // Hide all dashboard iframe window layers
+            document.querySelectorAll('.iframe-container').forEach(frame => frame.style.display = 'none');
+
+            # Activate specific button and show its target iframe window natively
+            buttonElement.classList.add('active');
+            document.getElementById(targetTabId).style.display = 'flex';
+        }
+    </script>
+</head>
+<body>
+    <div class="nav-sidebar">
+        <div class="sidebar-brand-title">📊 NGO CONTROL PORTAL</div>
+        <div class="nav-buttons-group">
+            
+        <button class="nav-btn active" onclick="switchDashboardTab(this, 'behavioral')">
+            📈 Behavioral Insights
+        </button>
+        
+        <button class="nav-btn " onclick="switchDashboardTab(this, 'workbook')">
+            🎛️ Complete Workbook
+        </button>
+        
+        <button class="nav-btn " onclick="switchDashboardTab(this, 'virtual_book')">
+            📖 Virtual Book TOC
+        </button>
+        
+        <button class="nav-btn " onclick="switchDashboardTab(this, 'sankey')">
+            🔀 Traffic Flow (Sankey)
+        </button>
+        
+        <button class="nav-btn " onclick="switchDashboardTab(this, 'sunburst')">
+            ☀️ Sunburst Hierarchy
+        </button>
+        
+        <button class="nav-btn " onclick="switchDashboardTab(this, 'bar_chart')">
+            📊 Sorted Bar Chart
+        </button>
+        
+        <button class="nav-btn " onclick="switchDashboardTab(this, 'landscape_3d')">
+            🌌 3D Topic Landscape
+        </button>
+        
+        <button class="nav-btn " onclick="switchDashboardTab(this, 'skyline_3d')">
+            🏙️ 3D Skyline View
+        </button>
+        
+        <button class="nav-btn " onclick="switchDashboardTab(this, 'umap_2d')">
+            🗺️ 2D Semantic Map
+        </button>
+        
+        <button class="nav-btn " onclick="switchDashboardTab(this, 'dir_tree')">
+            📁 OS Directory Tree
+        </button>
+        
+        <button class="nav-btn " onclick="switchDashboardTab(this, 'dec_tree')">
+            🌿 Decision Tree
+        </button>
+        
+        </div>
+    </div>
+    <div class="main-portal-content">
+        
+        <div id="behavioral" class="iframe-container" >
+            <div class="iframe-header-bar">
+                <span>⚡ Active Target Asset: <code>/content/advanced_behavioral_insights.html</code></span>
+                <a href="./advanced_behavioral_insights.html" target="_blank" class="open-tab-btn">Open in New Tab ↗</a>
+            </div>
+            <iframe src="./advanced_behavioral_insights.html"></iframe>
+        </div>
+        
+        <div id="workbook" class="iframe-container" style="display:none;">
+            <div class="iframe-header-bar">
+                <span>⚡ Active Target Asset: <code>/content/comprehensive_faq_workbook.html</code></span>
+                <a href="./comprehensive_faq_workbook.html" target="_blank" class="open-tab-btn">Open in New Tab ↗</a>
+            </div>
+            <iframe src="./comprehensive_faq_workbook.html"></iframe>
+        </div>
+        
+        <div id="virtual_book" class="iframe-container" style="display:none;">
+            <div class="iframe-header-bar">
+                <span>⚡ Active Target Asset: <code>/content/virtual_book_toc_complete.html</code></span>
+                <a href="./virtual_book_toc_complete.html" target="_blank" class="open-tab-btn">Open in New Tab ↗</a>
+            </div>
+            <iframe src="./virtual_book_toc_complete.html"></iframe>
+        </div>
+        
+        <div id="sankey" class="iframe-container" style="display:none;">
+            <div class="iframe-header-bar">
+                <span>⚡ Active Target Asset: <code>/content/routing_flow_weighted_sankey.html</code></span>
+                <a href="./routing_flow_weighted_sankey.html" target="_blank" class="open-tab-btn">Open in New Tab ↗</a>
+            </div>
+            <iframe src="./routing_flow_weighted_sankey.html"></iframe>
+        </div>
+        
+        <div id="sunburst" class="iframe-container" style="display:none;">
+            <div class="iframe-header-bar">
+                <span>⚡ Active Target Asset: <code>/content/cluster_hierarchy_sunburst.html</code></span>
+                <a href="./cluster_hierarchy_sunburst.html" target="_blank" class="open-tab-btn">Open in New Tab ↗</a>
+            </div>
+            <iframe src="./cluster_hierarchy_sunburst.html"></iframe>
+        </div>
+        
+        <div id="bar_chart" class="iframe-container" style="display:none;">
+            <div class="iframe-header-bar">
+                <span>⚡ Active Target Asset: <code>/content/categorical_distribution_report.html</code></span>
+                <a href="./categorical_distribution_report.html" target="_blank" class="open-tab-btn">Open in New Tab ↗</a>
+            </div>
+            <iframe src="./categorical_distribution_report.html"></iframe>
+        </div>
+        
+        <div id="landscape_3d" class="iframe-container" style="display:none;">
+            <div class="iframe-header-bar">
+                <span>⚡ Active Target Asset: <code>/content/3d_semantic_landscape.html</code></span>
+                <a href="./3d_semantic_landscape.html" target="_blank" class="open-tab-btn">Open in New Tab ↗</a>
+            </div>
+            <iframe src="./3d_semantic_landscape.html"></iframe>
+        </div>
+        
+        <div id="skyline_3d" class="iframe-container" style="display:none;">
+            <div class="iframe-header-bar">
+                <span>⚡ Active Target Asset: <code>/content/whatsapp_3d_skyline_labeled.html</code></span>
+                <a href="./whatsapp_3d_skyline_labeled.html" target="_blank" class="open-tab-btn">Open in New Tab ↗</a>
+            </div>
+            <iframe src="./whatsapp_3d_skyline_labeled.html"></iframe>
+        </div>
+        
+        <div id="umap_2d" class="iframe-container" style="display:none;">
+            <div class="iframe-header-bar">
+                <span>⚡ Active Target Asset: <code>/content/semantic_manifold_report.html</code></span>
+                <a href="./semantic_manifold_report.html" target="_blank" class="open-tab-btn">Open in New Tab ↗</a>
+            </div>
+            <iframe src="./semantic_manifold_report.html"></iframe>
+        </div>
+        
+        <div id="dir_tree" class="iframe-container" style="display:none;">
+            <div class="iframe-header-bar">
+                <span>⚡ Active Target Asset: <code>/content/faq_directory_tree.html</code></span>
+                <a href="./faq_directory_tree.html" target="_blank" class="open-tab-btn">Open in New Tab ↗</a>
+            </div>
+            <iframe src="./faq_directory_tree.html"></iframe>
+        </div>
+        
+        <div id="dec_tree" class="iframe-container" style="display:none;">
+            <div class="iframe-header-bar">
+                <span>⚡ Active Target Asset: <code>/content/faq_decision_tree.html</code></span>
+                <a href="./faq_decision_tree.html" target="_blank" class="open-tab-btn">Open in New Tab ↗</a>
+            </div>
+            <iframe src="./faq_decision_tree.html"></iframe>
+        </div>
+        
+    </div>
+</body>
+</html>
