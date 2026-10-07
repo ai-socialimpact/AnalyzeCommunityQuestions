@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipeline Dashboard</title>
+    <style>
+        :root {
+            --bg-main: #f8fafc; --bg-card: #ffffff; --bg-badge: #e2e8f0;
+            --accent: #0f766e; --text-main: #0f172a; --text-sub: #475569;
+            --border-color: #e2e8f0; --alert-border: #ea580c; --success-border: #16a34a;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg-main); color: var(--text-main);
+            font-family: -apple-system, system-ui, sans-serif; font-size: 13px;
+            line-height: 1.6; padding: 2rem 1rem;
+        }
+        .container { max-width: 850px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem; }
+        header { border-bottom: 2px solid var(--border-color); padding-bottom: 1.25rem; }
+        h1 { font-size: 1.8rem; font-weight: 800; tracking-tight: -0.025em; margin-bottom: 0.35rem; color: #000; }
+        .grid { display: flex; flex-direction: column; gap: 1.25rem; w-axis: 100%; }
+        .card {
+            background-color: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 8px; padding: 1.25rem; display: flex; flex-direction: column; 
+            justify-content: space-between; gap: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .badge {
+            display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+            color: var(--accent); background-color: var(--bg-badge); padding: 0.25rem 0.5rem; border-radius: 4px; align-self: flex-start;
+        }
+        h2 { font-size: 1.2rem; font-weight: 700; color: #000; }
+        p { color: var(--text-sub); }
+        code { background-color: var(--bg-main); color: var(--accent); padding: 0.15rem 0.3rem; border-radius: 4px; font-family: monospace; font-size: 0.85rem; font-weight: 600; }
+        .note-alert { background: rgba(234,88,12,0.06); border-left: 4px solid var(--alert-border); color: #c2410c; padding: 0.6rem 0.75rem; font-weight: 600; border-radius: 0 6px 6px 0; }
+        .note-success { background: rgba(22,163,74,0.06); border-left: 4px solid var(--success-border); color: var(--accent); padding: 0.6rem 0.75rem; font-weight: 600; border-radius: 0 6px 6px 0; }
+        .highlight-section { background: linear-gradient(135deg, rgba(22,163,74,0.05), rgba(248,250,252,1)); border: 2px solid var(--success-border); border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .matrix-container { background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .matrix-header { background-color: #fff; padding: 1rem; border-bottom: 2px solid var(--border-color); }
+        .table-responsive { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; text-align: left; color: var(--text-sub); }
+        th { background-color: var(--bg-main); color: var(--text-main); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; padding: 0.75rem 1rem; border-bottom: 2px solid var(--border-color); }
+        td { padding: 0.85rem 1rem; border-bottom: 1px solid var(--border-color); vertical-align: top; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background-color: var(--bg-main); }
+        .table-phase { font-weight: 700; color: #000; }
+        .table-benefit { color: var(--accent); font-weight: 600; }
+        footer { background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.25rem; color: var(--text-sub); border-left: 4px solid #2563eb; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .footer-title { color: #2563eb; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 0.35rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <h1>  Tool to create FAQ starting with Gliffic Question funnel </h1>
+
+        <h2>  Consulting NGOs?: This tool advices Optimal FAQ Clustering and taxonomically consistent FAQ Synthesis  </h2>
+        <div class="subtitle">Converts Gliffic Question funnel for any NGO into a taxonomically consistent FAQ (Questions only) booklet, and suggest Gliffic % traffic flow into FAQ  .</div>
+    </header>
+
+<div>
+<img src='workflow5.jpg' height=500 />
+</div>
+<div class="matrix-container">
+
+
+        <div class="matrix-header"><h2>📋   Design  </h2></div>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr><th>Phase</th><th>Challenge Context</th><th>Strategic Solution</th><th>Downstream Benefit</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td class="table-phase">1: Input </td><td>18,044 Gliffic Question Funnel (raw logs with errors and spelling mutations).</td><td>Pure data capture funnel.</td><td>Establishes real demand baseline.</td></tr>
+                    <tr><td class="table-phase">2: Map human readable language to Machine understandable Vectors (Embed)</td><td>Traditional Keyword filters miss multi-dialect intent as different people ask the same thing in different styles.</td><td>Batch vector mapping via SoTA Indic language understanding , Google EMBEDDING 2.</td><td> This hiqh quality  semantic mapping allows for high accurate representation of Indic whatsapp question during the next clustering efforts. Embedding is one time only with batch api, but re-used across 100's of clustering simulations, saving cost.</td></tr>
+                    <tr><td class="table-phase">3: Find optimal Clustering by running 100's of experiments </td><td> What could be optimal density size and distance across clusters? Ideal mapping can know the difference between vaccine sideeffects and vaccine schedule, so can drop this 2 seperate clusters </td><td>GPU-accelerated grid search tuning to automatically identify the optimal clustering configuration.</td><td> Finds the optimal clustering by multiple simulations on GPU.</td></tr>
+                    <tr><td class="table-phase">4: Translate</td><td> Move from machine readable vectors/clusterid to human readable word format  </td><td>Reverse canonical mapping over a balanced slice.</td><td>Collapses data into brief canonical entries.</td></tr>
+                    <tr><td class="table-phase">5: Output</td><td>Stateless semantic drift across stateless LLM during Translate.</td><td> Ensures translation happens to a consistent Taxonomy by using a structured domain taxomony context.</td><td class="table-benefit">Guarantees unified consisent structure for easy human review etc</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="grid">
+        <!-- Phase 1 -->
+        <div class="card">
+            <div>
+                <span class="badge">Phase 1</span>
+                <h2>Ingest (Raw Community Feed)</h2>
+                <p>Ingests 18,044 conversational inquiries from the logging stream. Data contains phonetic variations, greetings, and spelling mutations that defeat traditional rule-based filters.</p>
+            </div>
+            <div class="note-alert">⚠️ No cleaning is applied here; captures raw user demand baseline.</div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="card">
+            <div>
+                <span class="badge">Phase 2</span>
+                <h2>Embed (Semantic Translation)</h2>
+                <p>Pipes text into <code>gemini-embedding-2</code> for a 3,072-D dense coordinate matrix. Maps intent, bypasses errors, and caching coordinates saves cloud costs.</p>
+            </div>
+            <div class="note-success">💡 One-time conversion saves downstream lookups.</div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="card">
+            <div>
+                <span class="badge">Phase 3</span>
+                <h2>Cluster (Intention Isolation)</h2>
+                <p>Runs a 12-iteration hyperparameter grid search. Optimizes for the Relative Validity Index (RVI) via GPU-accelerated cuUMAP and HDBSCAN.</p>
+            </div>
+            <div class="note-success">💡 Isolates 419 micro-intents with zero group overlap.</div>
+        </div>
+
+        <!-- Phase 4 -->
+        <div class="card">
+            <div>
+                <span class="badge">Phase 4</span>
+                <h2>Translate (Canonical LLM Map)</h2>
+                <p>Uses cosine geometry to pull a balanced context slice (top 10 repeaters + 20 outliers). Gemini Pro maps vector crowds to human-intelligible questions.</p>
+            </div>
+            <div class="note-success">💡 Compresses machine data to ease reviewer fatigue.</div>
+        </div>
+
+        <!-- Phase 5 -->
+        <div class="card highlight-section">
+            <div>
+                <span class="badge" style="background-color: rgba(22,163,74,0.1); border: 1px solid var(--success-border); color: var(--accent);">Phase 5</span>
+                <h2 style="margin-top: 0.25rem;">Output (The Taxonomic Consistency Lock)</h2>
+                <p style="margin-top: 0.25rem;">Because LLMs are stateless across sequential generation loops, unguided pipelines invent conflicting taxonomies. Phase 5 fixes this by streaming a pre-approved taxonomy file into a strict Pydantic response schema window. Resulting sheet has broad summaries, canonical questions, and indexing meta-tags.</p>
+            </div>
+        </div>
+    </div>
+    
+ 
+
+</div>
+</body>
+</html>
